@@ -1,4 +1,4 @@
-# OAS-demo
+# Sync OAS files via GitHub Actions
 Uses to show how to update spec on readme.com. Check https://docs.readme.com/reference/intro-to-the-readme-api
 Only branch `petstore-relase` is connected to README.
 `petstore-API.json` is the simple example of OAS file
