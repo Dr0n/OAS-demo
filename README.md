@@ -4,6 +4,6 @@ Only branch `main` is connected to README. When you change `petstore-API.json` i
 
 Step by step instruction:
 1) Commit and push the new version of `petstore-API.json` to `from-build` branch. It could be done in scope of TC or octopus relase build pipeline. 
-2) Merge `petstore-API.json` from `from-build` branch into `main` branch and apply needed changed. It should be done manually, but pull requests will be created automatically.
+2) Merge `petstore-API.json` from `from-build` branch into `main` branch and apply needed changed. It should be done manually.
 3) Resolve pull request in the `main` branch and commit changes.
 4) Check result in the README
