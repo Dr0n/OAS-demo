@@ -19,4 +19,4 @@ jobs:
       - uses: readmeio/github-readme-sync@v2
         with:
           readme-oas-key: ${{ secrets.README_OAS_KEY_API2 }}
-          oas-file-path: './petstore-API.json'
+          oas-file-path: './petstore-API-2.json'
