@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "From-build Swagger Petstore 6/17/2021 12:01 PM",
+    "title": "From Main Swagger Petstore 6/17/2021 12:01 PM",
     "license": {
       "name": "MIT"
     }
@@ -15,7 +15,7 @@
   "paths": {
     "/pets": {
       "get": {
-        "summary": "List all pets",
+        "summary": "List all pets from main branch",
         "operationId": "listPets",
         "tags": [
           "pets"
