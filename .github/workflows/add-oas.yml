@@ -1,5 +1,5 @@
 # This is a workflow to upload new OAS file to the repo and commit
-name: Download new OAS file to the current branch
+name: Download new OAS files to the current branch
 
 # Controls when the action will run. 
 on:
@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Download OAS files
         run: |
-          curl ${{ secrets.OAS_URL_EXTERNAL_PORTALONE }} -o ${{ github.workspace }}/PortalOneExternalApi.json
-          curl ${{ secrets.OAS_URL_EXTERNAL_CLAIMSPAY }} -o ${{ github.workspace }}/ClaimsPayExternalApi.json
-          curl ${{ secrets.OAS_URL_EXTERNAL_COMMUNICATIONMODEULE }} -o ${{ github.workspace }}/CommunicationModuleExternalApi.json
-          curl ${{ secrets.OAS_URL_EXTERNAL_INSTALLMENTSONE }} -o ${{ github.workspace }}/InstallmentsOneExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_PORTALONE }} -o ${{ github.workspace }}/Test/PortalOneExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_CLAIMSPAY }} -o ${{ github.workspace }}/Test/ClaimsPayExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_COMMUNICATIONMODEULE }} -o ${{ github.workspace }}/Test/CommunicationModuleExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_INSTALLMENTSONE }} -o ${{ github.workspace }}/Test/InstallmentsOneExternalApi.json
       - name: Commit to current branch
         run: |
           git config --global user.name "github-actions[bot]"
