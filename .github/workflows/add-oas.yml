@@ -12,8 +12,12 @@ jobs:
     steps:
       - name: Checkout current brannch
         uses: actions/checkout@v2
-      - name: Download OAS
-        run: curl ${{ secrets.PORTALONEAPI_OAS }} -o ${{ github.workspace }}/PortalOneApi.json
+      - name: Download OAS files
+        run: |
+          curl ${{ secrets.OAS_URL_EXTERNAL_PORTALONE }} -o ${{ github.workspace }}/PortalOneExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_CLAIMSPAY }} -o ${{ github.workspace }}/ClaimsPayExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_COMMUNICATIONMODEULE }} -o ${{ github.workspace }}/CommunicationModuleExternalApi.json
+          curl ${{ secrets.OAS_URL_EXTERNAL_INSTALLMENTSONE }} -o ${{ github.workspace }}/InstallmentsOneExternalApi.json
       - name: Commit to current branch
         run: |
           git config --global user.name "github-actions[bot]"
