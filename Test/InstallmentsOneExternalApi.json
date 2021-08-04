@@ -1,0 +1,2408 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "External",
+    "title": "OneInc.PortalOne.InstallmentsOne"
+  },
+  "host": "testportalone.processonepayments.com",
+  "basePath": "/InstallmentsOne",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/InstallmentPlan/Enroll": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to create a new installment plan that will process payments based upon the schedule which is created.",
+        "operationId": "Enroll",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EnrollInstallmentPlanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EnrollInstallmentPlanResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetByInstallmentPlanId": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) by the InstallmentPlanId.",
+        "operationId": "GetByInstallmentPlanId",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlanByIdRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlanByIdResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetByProfileId": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a ProfileId.",
+        "operationId": "GetByProfileId",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByProfileIdRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByProfileIdResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetByPolicyRefNumber": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a PolicyRefNumber.",
+        "operationId": "GetByPolicyRefNumber",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByPolicyRefNumberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByPolicyRefNumberResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetActiveInstallmentPlanByPolicyRefNumber": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the current installment plan information (including the InstallmentPlanPaymentDetail) that are associated to a PolicyRefNumber.",
+        "operationId": "GetActiveInstallmentPlanByPolicyRefNumber",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetActiveInstallmentPlanByPolicyRefNumberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetActiveInstallmentPlanByPolicyRefNumberResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetByCustomerId": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a Customer Id.",
+        "operationId": "GetByCustomerId",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByCustomerIdRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetInstallmentPlansByCustomerIdResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/Cancel": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to cancel existing installment plan.",
+        "operationId": "Cancel",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelInstallmentPlanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CancelInstallmentPlanResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/Update": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to update an existing installment plan.",
+        "operationId": "Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/UpdateInstallmentPlanAmount": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to update remaining amount an existing installment plan.",
+        "operationId": "UpdateInstallmentPlanAmount",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanAmountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/UpdateInstallmentPlanFrequency": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to update installment frequency an existing installment plan.",
+        "operationId": "UpdateInstallmentPlanFrequency",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanFrequencyRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/GetPaymentMethodInstallmentsInfoByToken": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to get the payment method information",
+        "operationId": "GetPaymentMethodInstallmentsInfoByToken",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetPaymentMethodInstallmentsInfoByTokenRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetPaymentMethodInstallmentsInfoByTokenResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlan/ChargePayment": {
+      "post": {
+        "tags": [
+          "InstallmentPlan"
+        ],
+        "summary": "This method is used to charge payment via external scheduler.",
+        "operationId": "ChargePayment",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Data for request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChargePaymentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ChargePaymentResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlanCustomerProfile/Update": {
+      "post": {
+        "tags": [
+          "InstallmentPlanCustomerProfile"
+        ],
+        "summary": "This method is used to update the customer profile that is associated to one or more installment plan(s).",
+        "operationId": "Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateCustomerProfileRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateCustomerProfileResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlanPayment/Update": {
+      "post": {
+        "tags": [
+          "InstallmentPlanPayment"
+        ],
+        "summary": "This method is used to update an individual payment that is in existing installment plan.",
+        "operationId": "Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanPaymentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateInstallmentPlanPaymentResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InstallmentPlanPayment/Cancel": {
+      "post": {
+        "tags": [
+          "InstallmentPlanPayment"
+        ],
+        "summary": "This method is used to cancel existing individual installment plan payment.",
+        "operationId": "Cancel",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelInstallmentPlanPaymentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CancelInstallmentPlanPaymentResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "InstallmentFrequency": {
+      "description": "Specifies how often payments should be made. Options: monthly, quarterly, semiannually, annually.",
+      "enum": [
+        "Monthly",
+        "Quarterly",
+        "Semiannually",
+        "Annually"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "InstallmentFrequency",
+        "values": [
+          {
+            "name": "Monthly",
+            "value": 1
+          },
+          {
+            "name": "Quarterly",
+            "value": 3
+          },
+          {
+            "name": "Semiannually",
+            "value": 6
+          },
+          {
+            "name": "Annually",
+            "value": 12
+          }
+        ]
+      }
+    },
+    "InstallmentPlanEngineType": {
+      "description": "This field will define who will control the AutoPay Payment Plan generation and recurring scheduling.",
+      "enum": [
+        "InstallmentsEngine",
+        "Carrier"
+      ],
+      "type": "string",
+      "x-nullable": true,
+      "x-ms-enum": {
+        "name": "InstallmentPlanEngineType",
+        "values": [
+          {
+            "name": "InstallmentsEngine",
+            "value": 0
+          },
+          {
+            "name": "Carrier",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "FeeContext": {
+      "description": "Indicates if convenience fees will be applied to payments",
+      "enum": [
+        "AllPaymentsWithFee",
+        "AllPaymentsWithoutFee",
+        "InstallmentPaymentsOnlyWithFee"
+      ],
+      "type": "string",
+      "x-nullable": true,
+      "x-ms-enum": {
+        "name": "FeeContext",
+        "values": [
+          {
+            "name": "AllPaymentsWithFee",
+            "value": 0
+          },
+          {
+            "name": "AllPaymentsWithoutFee",
+            "value": 1
+          },
+          {
+            "name": "InstallmentPaymentsOnlyWithFee",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "EnrollInstallmentPlanRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "PolicyRefNumber",
+        "InstallmentPlanTotalAmount",
+        "NumberOfInstallments",
+        "InstallmentPlanEffectiveDate",
+        "InstallmentFrequency",
+        "InstallmentPlanPaymentMethodDetails"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ProfileId": {
+          "format": "int32",
+          "description": "One, Inc. customer identifier. The ProfileId will be created when an Enroll Request is sent with ProfileDetails.\r\nIt can then be used for future enrollments for the same customer.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "ProfileDetails": {
+          "$ref": "#/definitions/CustomerProfileDetails",
+          "description": "Customer profile information. See ProfileDetails object definition."
+        },
+        "PolicyRefNumber": {
+          "description": "Used to pass policy number or quote number for reference. This value is searchable and displayed in the Transaction search.",
+          "type": "string"
+        },
+        "InstallmentPlanTotalAmount": {
+          "format": "decimal",
+          "description": "The total amount that will be collected by the Installment Payment Plan.",
+          "maximum": 300000,
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "NumberOfInstallments": {
+          "format": "int32",
+          "description": "Number of installment payments to be made by the installment plan.",
+          "maximum": 300,
+          "minimum": 1,
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentPlanEffectiveDate": {
+          "format": "date-time",
+          "description": "The date on which the first installment plan payment will be made. Must be at least plus one day from the current date.",
+          "type": "string",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentFrequency": {
+          "$ref": "#/definitions/InstallmentFrequency"
+        },
+        "InstallmentPlanEngineType": {
+          "$ref": "#/definitions/InstallmentPlanEngineType"
+        },
+        "ExternalSchedulerEndpoint": {
+          "description": "This field value should only be sent when autoPayEngineType = \"Carrier\".\r\nDigital Payments will then use this endpoint to eventually send user-selected Payment Preferences for Auto-Pay Plan creation and scheduling.",
+          "type": "string"
+        },
+        "InstallmentPlanPaymentMethodDetails": {
+          "$ref": "#/definitions/InstallmentPlanPaymentMethodDetails",
+          "description": "Details that will be used to define the payment method for the installment plan.\r\nSee InstallmentPlanPaymentMethodDetails object definition."
+        },
+        "DownPaymentDetails": {
+          "$ref": "#/definitions/InstallmentPlanDownPaymentDetails",
+          "description": "Details that will be used to define the downpayment amount and payment method.\r\nIf null, no downpayment will be made. See DownPaymentDetails object definition."
+        },
+        "FeeContext": {
+          "$ref": "#/definitions/FeeContext"
+        },
+        "ConvenienceFeeType": {
+          "description": "Customizable convenience fee type that is matched with different types of transactions",
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails. Client specific properties.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        },
+        "SuppressPlanChangedSignalIOnEnrollment": {
+          "description": "Suppresses SignalInstallmentPlanChanged sending on Enrollment when the flag value is true.",
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "PaymentDay": {
+          "format": "int32",
+          "description": "Specifies day of month when payments should be made.",
+          "maximum": 31,
+          "minimum": 1,
+          "type": "integer",
+          "x-nullable": true
+        }
+      }
+    },
+    "CustomerProfileDetails": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CustomerName": {
+          "description": "Customer Name for which the Installment Plan is created.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Email": {
+          "description": "Customer email address(es). Send multiple addresses as semicolon delimited values.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CustomerId": {
+          "description": "Customer identification value.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails. Specific property names will be determined during client implementation.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        }
+      }
+    },
+    "InstallmentPlanPaymentMethodDetails": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "TokenId": {
+          "description": "The tokenId that will be used for the remaining installment payments.",
+          "type": "string"
+        },
+        "AccountGroupCode": {
+          "description": "This field is used to route money to different accounts based on a predefined groups. If this option is used a mapping must be setup in ProcessOne before this value can be used.",
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CreditCardDetails": {
+          "$ref": "#/definitions/CreditCardDetails",
+          "description": "Credit Card Details that will be used for the remaining installment payments. See CreditCardDetails object definition."
+        },
+        "EftDetails": {
+          "$ref": "#/definitions/EftDetails",
+          "description": "EFT Details that will be used for the remaining installment payments. See EftDetails object definition."
+        }
+      }
+    },
+    "InstallmentPlanDownPaymentDetails": {
+      "description": "TBD",
+      "required": [
+        "Amount"
+      ],
+      "type": "object",
+      "properties": {
+        "Amount": {
+          "format": "decimal",
+          "description": "The amount of the downpayment to be made with the enrollment into an Installment Payment Plan.",
+          "maximum": 100000,
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "TokenId": {
+          "description": "Previously saved payment method token which will be used for the downpayment.",
+          "type": "string"
+        },
+        "AccountGroupCode": {
+          "description": "This field is used to route money to different accounts based on a predefined groups. If this option is used a mapping must be setup in ProcessOne before this value can be used.",
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CreditCardDetails": {
+          "$ref": "#/definitions/CreditCardDetails",
+          "description": "Credit Card Details that will be used for the downpayment. See CreditCardDetails object definition."
+        },
+        "EftDetails": {
+          "$ref": "#/definitions/EftDetails",
+          "description": "EFT Details that will be used for the downpayment. See EftDetails object definition."
+        }
+      }
+    },
+    "ClientRefValueDetails": {
+      "description": "Client ref value details",
+      "required": [
+        "PropertyName"
+      ],
+      "type": "object",
+      "properties": {
+        "PropertyName": {
+          "description": "Property name.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "PropertyValue": {
+          "description": "Property value.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "CreditCardDetails": {
+      "description": "TBD",
+      "required": [
+        "Number",
+        "ExpirationYear",
+        "ExpirationMonth",
+        "HolderNameAsAppearsOnCard"
+      ],
+      "type": "object",
+      "properties": {
+        "Number": {
+          "description": "Credit or debit card number.",
+          "type": "string"
+        },
+        "ValidationValue": {
+          "description": "CVV2 or validation code found on card.",
+          "type": "string"
+        },
+        "ExpirationYear": {
+          "format": "int32",
+          "description": "Four digit expiration year.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "ExpirationMonth": {
+          "format": "int32",
+          "description": "Expiration month.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "HolderZip": {
+          "description": "Zip code of card holder.",
+          "type": "string"
+        },
+        "HolderAddress": {
+          "description": "Street address of card holder.",
+          "maxLength": 255,
+          "minLength": 0,
+          "type": "string"
+        },
+        "HolderNameAsAppearsOnCard": {
+          "description": "Customer name as it appears on card.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "EftAccountType": {
+      "description": "Checking / Savings.",
+      "enum": [
+        "Checking",
+        "Savings"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "EftAccountType",
+        "values": [
+          {
+            "name": "Checking",
+            "value": 1
+          },
+          {
+            "name": "Savings",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "EftDetails": {
+      "description": "TBD",
+      "required": [
+        "RoutingNumber",
+        "AccountNumber",
+        "AccountType",
+        "CustomerName"
+      ],
+      "type": "object",
+      "properties": {
+        "RoutingNumber": {
+          "description": "Routing number.",
+          "type": "string"
+        },
+        "AccountNumber": {
+          "description": "Alphanumeric. Can contain dash.",
+          "type": "string"
+        },
+        "AccountType": {
+          "$ref": "#/definitions/EftAccountType"
+        },
+        "CustomerName": {
+          "description": "Customer Name for this EFT.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "EnrollInstallmentPlanResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "$ref": "#/definitions/InstallmentPlanDetails",
+              "description": "Information on the Installment Plan and payment details. See InstallmentPlanDetails object definition."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "InstallmentPlanStatus": {
+      "description": "The status of the installment plan: Active, Cancelled, Completed.",
+      "enum": [
+        "Active",
+        "Completed",
+        "Cancelled"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "InstallmentPlanStatus",
+        "values": [
+          {
+            "name": "Active",
+            "value": 0
+          },
+          {
+            "name": "Completed",
+            "value": 1
+          },
+          {
+            "name": "Cancelled",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "InstallmentPlanDetails": {
+      "description": "Installment plan details",
+      "required": [
+        "InstallmentPlanStatus",
+        "InstallmentPlanEngineType",
+        "InstallmentFrequency"
+      ],
+      "type": "object",
+      "properties": {
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentPlanStatus": {
+          "$ref": "#/definitions/InstallmentPlanStatus"
+        },
+        "ProfileId": {
+          "format": "int32",
+          "description": "The ProfileId associated to the Installment Plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "CustomerId": {
+          "description": "The CustomerId associated with Installment Plan.",
+          "type": "string"
+        },
+        "InstallmentPlanTokenId": {
+          "description": "Payment method TokenId that will be used for the payments.",
+          "type": "string"
+        },
+        "InstallmentPlanEngineType": {
+          "$ref": "#/definitions/InstallmentPlanEngineType"
+        },
+        "ExternalSchedulerEndpoint": {
+          "description": "This field value should only be sent when autoPayEngineType = \"Carrier\".\r\nDigital Payments will then use this endpoint to eventually send user-selected Payment Preferences for Auto-Pay Plan creation and scheduling.",
+          "type": "string"
+        },
+        "AmountPerInstallment": {
+          "format": "decimal",
+          "description": "Payment amount for each installment.",
+          "type": "number",
+          "x-nullable": true
+        },
+        "NumberOfInstallments": {
+          "format": "int32",
+          "description": "Number of installment payments to be made by the installment plan.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "PaymentDay": {
+          "format": "int32",
+          "description": "Day of the month that future installment payments will be processed.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "IncludeFee": {
+          "description": "Indicates if convenience fees will be applied to payments.",
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "ConvenienceFeeType": {
+          "description": "Customizable convenience fee type that is matched with different types of transactions",
+          "type": "string"
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "description": "The date on which the first installment plan payment will be made. Must be at least plus one day from the current date.",
+          "type": "string",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentFrequency": {
+          "$ref": "#/definitions/InstallmentFrequency"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails associated to the ProfileId.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        },
+        "PolicyRefNumber": {
+          "description": "Used to pass policy number or quote number for reference.",
+          "type": "string"
+        },
+        "InstallmentPlanPaymentDetails": {
+          "description": "Details on each of the payments associated to the InstallmentPlan as an array. If a downpayment was made with the enrollment,\r\nthe details will be provided as part of the array. See InstallmentPlanPaymentDetail object definition.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InstallmentPlanPaymentDetails"
+          }
+        }
+      }
+    },
+    "InstallmentPlanPaymentStatus": {
+      "description": "The status of the Installment Plan Payment. Values: scheduled, processed, retry (payment will be retried on retry date),\r\nfailed (retry counts has been met, payment will not process again),\r\ncancelled (payment will be skipped or was skipped if date is in the past).",
+      "enum": [
+        "Scheduled",
+        "Processed",
+        "Retry",
+        "Failed",
+        "Cancelled",
+        "Deleted"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "InstallmentPlanPaymentStatus",
+        "values": [
+          {
+            "name": "Scheduled",
+            "value": 0
+          },
+          {
+            "name": "Processed",
+            "value": 1
+          },
+          {
+            "name": "Retry",
+            "value": 2
+          },
+          {
+            "name": "Failed",
+            "value": 3
+          },
+          {
+            "name": "Cancelled",
+            "value": 4
+          },
+          {
+            "name": "Deleted",
+            "value": 5
+          }
+        ]
+      }
+    },
+    "PaymentType": {
+      "description": "The category of payment that will be or was used for the payment. Values: CreditCard or Eft.",
+      "enum": [
+        "CreditCard",
+        "Eft"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "PaymentType",
+        "values": [
+          {
+            "name": "CreditCard",
+            "value": 1
+          },
+          {
+            "name": "Eft",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "InstallmentPlanPaymentDetails": {
+      "description": "Installment plan payment details",
+      "required": [
+        "InstallmentPlanPaymentStatus",
+        "PaymentCategory"
+      ],
+      "type": "object",
+      "properties": {
+        "InstallmentPlanPaymentId": {
+          "format": "int32",
+          "description": "Unique value for each payment under the installment payment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "PolicyRefNumber": {
+          "description": "Used to pass policy number or quote number for reference. This value is searchable and displayed in the Transaction search.",
+          "type": "string"
+        },
+        "InstallmentPlanPaymentStatus": {
+          "$ref": "#/definitions/InstallmentPlanPaymentStatus"
+        },
+        "IsDownpayment": {
+          "description": "If the payment was a downpayment made during enrollment the value will be true. For all other installment payments value will be false.",
+          "type": "boolean",
+          "x-emitDefaultValue": true
+        },
+        "Amount": {
+          "format": "decimal",
+          "description": "The dollar amount of the payment.",
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "IncludeFee": {
+          "description": "Indicates if the payment will be/was processed with or without a fee",
+          "type": "boolean",
+          "x-emitDefaultValue": true
+        },
+        "ConvenienceFeeType": {
+          "description": "Customizable convenience fee type that is matched with different types of transactions",
+          "type": "string"
+        },
+        "PostedAmount": {
+          "format": "decimal",
+          "description": "The total amount processed. Includes the amount of fees.",
+          "type": "number",
+          "x-nullable": true
+        },
+        "EffectiveDate": {
+          "format": "date-time",
+          "description": "The scheduled date of the payment as determined by the installment plan.",
+          "type": "string",
+          "x-emitDefaultValue": true
+        },
+        "NextRetryDate": {
+          "format": "date-time",
+          "description": "The next retry date for a payment that failed during processing and was subsequently scheduled to be retried (based upon retry settings).",
+          "type": "string",
+          "x-nullable": true
+        },
+        "UpdatedDate": {
+          "format": "date-time",
+          "description": "The most recent date and time stamp on which the payment was updated by payment processing or via an API change.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "PaymentCategory": {
+          "$ref": "#/definitions/PaymentType"
+        },
+        "TokenId": {
+          "description": "Token ID that was or will be used for the payment.",
+          "type": "string"
+        },
+        "TimeZone": {
+          "description": "Timezone code (PST, EST).",
+          "type": "string"
+        },
+        "TransactionDetails": {
+          "$ref": "#/definitions/TransactionDetails",
+          "description": "Payment transaction results details. See TransactionDetails object definition."
+        },
+        "CreditCardDetails": {
+          "$ref": "#/definitions/ProcessedCreditCardDetails",
+          "description": "Credit Card payment response details. See ProcessedCreditCardDetails object definition."
+        },
+        "EftDetails": {
+          "$ref": "#/definitions/ProcessedEftDetails",
+          "description": "Eft payment response details. See ProcessedEftDetails object definition."
+        }
+      }
+    },
+    "TransactionDetails": {
+      "description": "Transaction details",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ProcessedDate": {
+          "format": "date-time",
+          "description": "Date and time stamp on which the payment was processed.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "ProcessOneTransactionId": {
+          "format": "int32",
+          "description": "ProcessOne payment Transaction number.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "AuthCode": {
+          "description": "Authorization code sent from Bank. Can be used for reference.",
+          "type": "string"
+        },
+        "BatchNumber": {
+          "format": "int32",
+          "description": "The batch number to which the ProcessOne transaction was attached.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "PaymentResponseCode": {
+          "description": "Response code received when payment was made.",
+          "type": "string"
+        },
+        "PaymentResponseMessage": {
+          "description": "Readable response description received when payment was made.",
+          "type": "string"
+        }
+      }
+    },
+    "CreditCardType": {
+      "description": "Type of card: Visa, MasterCard, AmericanExpress, Discover, or Debit.",
+      "enum": [
+        "Visa",
+        "MasterCard",
+        "AmericanExpress",
+        "Discover",
+        "PinlessDebitGeneric",
+        "Star",
+        "Nyce",
+        "Pulse",
+        "Other"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "CreditCardType",
+        "values": [
+          {
+            "name": "Visa",
+            "value": 1
+          },
+          {
+            "name": "MasterCard",
+            "value": 2
+          },
+          {
+            "name": "AmericanExpress",
+            "value": 3
+          },
+          {
+            "name": "Discover",
+            "value": 4
+          },
+          {
+            "name": "PinlessDebitGeneric",
+            "value": 5
+          },
+          {
+            "name": "Star",
+            "value": 6
+          },
+          {
+            "name": "Nyce",
+            "value": 7
+          },
+          {
+            "name": "Pulse",
+            "value": 8
+          },
+          {
+            "name": "Other",
+            "value": 99
+          }
+        ]
+      }
+    },
+    "ProcessedCreditCardDetails": {
+      "description": "Processed credit card details",
+      "required": [
+        "CardType"
+      ],
+      "type": "object",
+      "properties": {
+        "LastFourDigits": {
+          "description": "Last four digits for the credit card number.",
+          "type": "string"
+        },
+        "ExpirationMonth": {
+          "format": "int32",
+          "description": "The expiration month of the card associated to the payment method.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "ExpirationYear": {
+          "format": "int32",
+          "description": "The expiration year of the card associated to the payment method.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "HolderAddress": {
+          "description": "The street address of card holder of the card associated to the payment method.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code of card holder of the card associated to the payment method.",
+          "type": "string"
+        },
+        "CardHolderName": {
+          "description": "The cardholder name.",
+          "type": "string"
+        },
+        "CardType": {
+          "$ref": "#/definitions/CreditCardType"
+        },
+        "Type": {
+          "description": "Information type",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "ProcessedEftDetails": {
+      "description": "Processed eft details",
+      "required": [
+        "AccountType"
+      ],
+      "type": "object",
+      "properties": {
+        "LastFourDigits": {
+          "description": "Last four digits of the bank account.",
+          "type": "string"
+        },
+        "CustomerName": {
+          "description": "Customer Name associated to the bank account.",
+          "type": "string"
+        },
+        "BankName": {
+          "description": "The name of the Bank based off of Routing Number.",
+          "type": "string"
+        },
+        "AccountType": {
+          "$ref": "#/definitions/EftAccountType"
+        },
+        "Type": {
+          "description": "Information type",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "GetInstallmentPlanByIdRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "integer",
+          "x-emitDefaultValue": true
+        }
+      }
+    },
+    "GetInstallmentPlanByIdResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "$ref": "#/definitions/InstallmentPlanDetails",
+              "description": "An array with a single result for the InstallmentPlanId."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetInstallmentPlansByProfileIdRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ProfileId": {
+          "format": "int32",
+          "description": "One, Inc. customer profile identifier.",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "integer",
+          "x-emitDefaultValue": true
+        }
+      }
+    },
+    "GetInstallmentPlansByProfileIdResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "description": "An array of the Installment Plans associated to the ProfileId.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstallmentPlanDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetInstallmentPlansByPolicyRefNumberRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "PolicyRefNumber"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "PolicyRefNumber": {
+          "description": "Policy number or quote number associated to the installment plan.",
+          "type": "string"
+        }
+      }
+    },
+    "GetInstallmentPlansByPolicyRefNumberResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "description": "An array of the Installment Plans associated to the PolicyRefNumber.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstallmentPlanDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetActiveInstallmentPlanByPolicyRefNumberRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "PolicyRefNumber"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "PolicyRefNumber": {
+          "description": "Policy number or quote number associated to the installment plan.",
+          "type": "string"
+        }
+      }
+    },
+    "GetActiveInstallmentPlanByPolicyRefNumberResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "$ref": "#/definitions/InstallmentPlanDetails",
+              "description": "Information on the Installment Plan and payment details. See InstallmentPlanDetails object definition."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetInstallmentPlansByCustomerIdRequest": {
+      "description": "A request to get installment plans by CustomerId",
+      "required": [
+        "AuthenticationKey",
+        "CustomerId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CustomerId": {
+          "description": "External customer identification value associated to the installment plan.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "GetInstallmentPlansByCustomerIdResponse": {
+      "description": "A response to a request to get installment plans by CustomerId",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "description": "An array of the Installment Plans associated to the PolicyRefNumber.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstallmentPlanDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelInstallmentPlanRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails. Client specific properties.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        }
+      }
+    },
+    "CancelInstallmentPlanResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateInstallmentPlanRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "PolicyRefNumber": {
+          "description": "Used to pass policy number or quote number for reference. This value is searchable and displayed in the Transaction search.",
+          "type": "string"
+        },
+        "PaymentDay": {
+          "format": "int32",
+          "description": "Day of the month that future installment payments will be processed.",
+          "type": "integer",
+          "x-nullable": true
+        },
+        "ApplyPaymentDayChangeCurrentMonth": {
+          "description": "A setting to determine when the payment date change should be applied. If value is set to true, any payments that are scheduled in the current month will have the day changed\r\n(unless the new day would be in the past); If value is set to false, the day changes will not apply to any payments that are scheduled during the current month.",
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "PaymentMethodDetails": {
+          "$ref": "#/definitions/InstallmentPlanPaymentMethodDetails",
+          "description": "Details that will be used to define the payment method for the payment. See InstallmentPlanPaymentMethodDetails object definition."
+        },
+        "IncludeFee": {
+          "description": "Indicates if convenience fees will be applied to payments.\r\nIf the IncludeFee value is true, the payment will be processed with a fee. If it is false, it will be processed without a fee.",
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "ConvenienceFeeType": {
+          "description": "Customizable convenience fee type that is matched with different types of transactions",
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails. Client specific properties.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        },
+        "InstallmentFrequency": {
+          "$ref": "#/definitions/InstallmentFrequency"
+        },
+        "ExternalSchedulerEndpoint": {
+          "description": "This field value should only be sent when autoPayEngineType = \"Carrier\".\r\nDigital Payments will then use this endpoint to eventually send user-selected Payment Preferences for Auto-Pay Plan creation and scheduling.",
+          "type": "string"
+        },
+        "NumberOfInstallments": {
+          "format": "int32",
+          "description": "Number of installment payments to be made by the installment plan.",
+          "maximum": 300,
+          "minimum": 1,
+          "type": "integer",
+          "x-nullable": true
+        },
+        "InstallmentPlanAmount": {
+          "format": "decimal",
+          "description": "The total amount that will be collected by the Installment Payment Plan.",
+          "maximum": 300000,
+          "type": "number",
+          "x-nullable": true
+        },
+        "RemainingAmount": {
+          "format": "decimal",
+          "description": "Amount provided by customer that the remaining installments will need to cover",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "number",
+          "x-nullable": true
+        },
+        "PolicyEndDate": {
+          "format": "date-time",
+          "description": "Policy End date provided by customer to calculate frequency period",
+          "type": "string",
+          "x-nullable": true
+        }
+      }
+    },
+    "UpdateInstallmentPlanResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "$ref": "#/definitions/InstallmentPlanDetails",
+              "description": "Information on the Installment Plan and payment details. See InstallmentPlanDetails object definition."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateInstallmentPlanAmountRequest": {
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId",
+        "RemainingAmount"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "RemainingAmount": {
+          "format": "decimal",
+          "description": "Amount provided by customer that the remaining installments will need to cover",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "number",
+          "x-nullable": true
+        }
+      }
+    },
+    "UpdateInstallmentPlanFrequencyRequest": {
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId",
+        "RemainingAmount",
+        "PolicyEndDate"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "RemainingAmount": {
+          "format": "decimal",
+          "description": "Amount provided by customer that the remaining installments will need to cover",
+          "maximum": 2147483647,
+          "minimum": 1,
+          "type": "number",
+          "x-nullable": true
+        },
+        "InstallmentFrequency": {
+          "$ref": "#/definitions/InstallmentFrequency"
+        },
+        "PolicyEndDate": {
+          "format": "date-time",
+          "description": "Policy End date provided by customer to calculate frequency period",
+          "type": "string",
+          "x-nullable": true
+        }
+      }
+    },
+    "GetPaymentMethodInstallmentsInfoByTokenRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "TokenId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "TokenId": {
+          "description": "Payment method TokenId",
+          "type": "string"
+        }
+      }
+    },
+    "GetPaymentMethodInstallmentsInfoByTokenResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AutoPayEnrolled": {
+              "description": "Indicates if payment method is used for autopay",
+              "type": "boolean",
+              "x-emitDefaultValue": true
+            },
+            "PaymentMethodInstallmentPlanDetails": {
+              "description": "AutoPay Enrollment Summary associated to the Payment method TokenId.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PaymentMethodInstallmentPlanDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "PaymentMethodInstallmentPlanDetails": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "PolicyRefNumber": {
+          "description": "Policy number or quote number associated to the installment plan.",
+          "type": "string"
+        }
+      }
+    },
+    "ChargePaymentRequest": {
+      "description": "API request for making Installments One Payment",
+      "required": [
+        "AuthenticationKey",
+        "PolicyRefNumber",
+        "Amount"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "PolicyRefNumber": {
+          "description": "Used to pass policy number or quote number for reference. This value is also referred to as ClientReferenceData1 field in ClientRefValues collection. This value is searchable and displayed in the Transaction search.",
+          "type": "string"
+        },
+        "Amount": {
+          "format": "decimal",
+          "description": "Amount to charge excludes fees.",
+          "maximum": 100000,
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "AccountGroupCode": {
+          "description": "This field is used to route money to different accounts based on a predefined groups. If this option is used a mapping must be setup in ProcessOne before this value can be used.",
+          "maxLength": 50,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails. Client specific properties.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        }
+      }
+    },
+    "ChargePaymentResponse": {
+      "description": "API response for making Installments One Payment",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "PaymentDetails": {
+              "$ref": "#/definitions/ChargePaymentDetails",
+              "description": "Payment information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ChargePaymentDetails": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "AuthCode": {
+          "description": "Authorization code sent from Bank. Can be used for reference.",
+          "type": "string"
+        },
+        "BatchNumber": {
+          "format": "int32",
+          "description": "The batch number to which the ProcessOne transaction was attached.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "CustomerId": {
+          "description": "One Inc customer identifier.",
+          "type": "string"
+        },
+        "ExternalCustomerId": {
+          "description": "External generated ID of Customer.",
+          "type": "string"
+        },
+        "CustomerName": {
+          "description": "Name that was provided with a card or bank account information. Passed back as Customer Name.",
+          "type": "string"
+        },
+        "PaymentAmount": {
+          "format": "decimal",
+          "description": "The premium payment amount excluding any convenience fees.",
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "ConvenienceFee": {
+          "format": "decimal",
+          "description": "The convenience fee applied to payment amount.",
+          "type": "number",
+          "x-emitDefaultValue": true
+        },
+        "TimeZone": {
+          "description": "Time zone code.",
+          "type": "string"
+        },
+        "TokenId": {
+          "description": "Payment method TokenId that will be used for the payments.",
+          "type": "string"
+        },
+        "TransactionDate": {
+          "format": "date-time",
+          "description": "Date Stamp of the payment.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "TransactionId": {
+          "description": "Transaction identifier for the payment.",
+          "type": "string"
+        },
+        "PaymentMethod": {
+          "$ref": "#/definitions/ProcessedDetailsBase",
+          "description": "Payment Method."
+        },
+        "PolicyNumber": {
+          "description": "Policy Number.",
+          "type": "string"
+        },
+        "AccountGroupCode": {
+          "description": "This field is used to route money to different accounts based on a predefined groups. If this option is used a mapping must be setup in ProcessOne before this value can be used.",
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Array of ClientRefValueDetails associated to the ProfileId.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        }
+      }
+    },
+    "ProcessedDetailsBase": {
+      "description": "Base class for processed payment details",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Type": {
+          "description": "Information type",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "UpdateCustomerProfileRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "ProfileId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ProfileId": {
+          "format": "int32",
+          "description": "ProfileId associated to the Installment Plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "CustomerName": {
+          "description": "Customer Name on the Installment Plan.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Email": {
+          "description": "Customer email address(es). Send multiple addresses as semicolon delimited values.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CustomerId": {
+          "description": "Customer identification value.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ClientRefValues": {
+          "description": "Delimited name value pairs.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClientRefValueDetails"
+          }
+        }
+      }
+    },
+    "UpdateCustomerProfileResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateInstallmentPlanPaymentRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId",
+        "InstallmentPlanPaymentId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentPlanPaymentId": {
+          "format": "int32",
+          "description": "InstallmentPlanPaymentId of the payment to be updated (as provided in the PaymentPlanDetails).",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "PaymentAmount": {
+          "format": "decimal",
+          "description": "The new amount of the payment.",
+          "maximum": 100000,
+          "type": "number",
+          "x-nullable": true
+        },
+        "PaymentDate": {
+          "format": "date-time",
+          "description": "The new date of the payment. Must be at least plus one day from the current date.",
+          "type": "string",
+          "x-nullable": true
+        },
+        "IncludeFee": {
+          "description": "Indicates if convenience fees will be applied to payment.\r\nIf the IncludeFee value is true, the payment will be processed with a fee. If it is false, it will be processed without a fee.",
+          "type": "boolean",
+          "x-nullable": true
+        },
+        "ConvenienceFeeType": {
+          "description": "Customizable convenience fee type that is matched with different types of transactions",
+          "type": "string"
+        },
+        "PaymentMethodDetails": {
+          "$ref": "#/definitions/InstallmentPlanPaymentMethodDetails",
+          "description": "The new details that will be used to define the payment method for the payment. See InstallmentPlanPaymentMethodDetails object definition."
+        }
+      }
+    },
+    "UpdateInstallmentPlanPaymentResponse": {
+      "description": "TBD",
+      "required": [
+        "InstallmentPlanPaymentStatus",
+        "PaymentCategory"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [
+            "InstallmentPlanPaymentStatus",
+            "PaymentCategory"
+          ],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanPaymentId": {
+              "format": "int32",
+              "description": "Unique value for each payment under the installment payment plan.",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            },
+            "PolicyRefNumber": {
+              "description": "Used to pass policy number or quote number for reference. This value is searchable and displayed in the Transaction search.",
+              "type": "string"
+            },
+            "InstallmentPlanPaymentStatus": {
+              "$ref": "#/definitions/InstallmentPlanPaymentStatus"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "The dollar amount of the payment.",
+              "type": "number",
+              "x-emitDefaultValue": true
+            },
+            "IncludeFee": {
+              "description": "Indicates if the payment will be/was processed with or without a fee",
+              "type": "boolean",
+              "x-emitDefaultValue": true
+            },
+            "EffectiveDate": {
+              "format": "date-time",
+              "description": "The scheduled date of the payment.",
+              "type": "string",
+              "x-emitDefaultValue": true
+            },
+            "NextRetryDate": {
+              "format": "date-time",
+              "description": "The next retry date for a payment that failed during processing and was subsequently scheduled to be retried (based upon retry settings).",
+              "type": "string",
+              "x-nullable": true
+            },
+            "UpdatedDate": {
+              "format": "date-time",
+              "description": "The most recent date and time stamp on which the payment was updated by payment processing or via an API change.",
+              "type": "string",
+              "x-emitDefaultValue": true
+            },
+            "PaymentCategory": {
+              "$ref": "#/definitions/PaymentType"
+            },
+            "TokenId": {
+              "description": "Token ID that was or will be used for the payment.",
+              "type": "string"
+            },
+            "CreditCardDetails": {
+              "$ref": "#/definitions/ProcessedCreditCardDetails",
+              "description": "Credit Card payment method details."
+            },
+            "EftDetails": {
+              "$ref": "#/definitions/ProcessedEftDetails",
+              "description": "EFT payment method details."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelInstallmentPlanPaymentRequest": {
+      "description": "TBD",
+      "required": [
+        "AuthenticationKey",
+        "InstallmentPlanId",
+        "InstallmentPlanPaymentId"
+      ],
+      "type": "object",
+      "properties": {
+        "AuthenticationKey": {
+          "description": "Unique key that will be assigned to you.",
+          "maxLength": 36,
+          "minLength": 0,
+          "type": "string"
+        },
+        "InstallmentPlanId": {
+          "format": "int32",
+          "description": "Unique value for each payment under the installment payment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "InstallmentPlanPaymentId": {
+          "format": "int32",
+          "description": "Unique identifier for the installment plan.",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        }
+      }
+    },
+    "CancelInstallmentPlanPaymentResponse": {
+      "description": "TBD",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "InstallmentsResponseBase": {
+      "description": "TBD",
+      "required": [
+        "discriminator_InstallmentsResponseBase"
+      ],
+      "type": "object",
+      "properties": {
+        "ResponseCode": {
+          "description": "Operation response code.",
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "description": "Readable error description.",
+          "type": "string"
+        },
+        "discriminator_InstallmentsResponseBase": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_InstallmentsResponseBase"
+    },
+    "GetAllInstallmentPlansByCustomerIdResponse": {
+      "description": "A response to a request to get installment plans by CustomerId",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/InstallmentsResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "InstallmentPlanDetails": {
+              "description": "An array of the Installment Plans associated to the PolicyRefNumber.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/InstallmentPlanDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    }
+  }
+}
