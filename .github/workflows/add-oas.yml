@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout current brannch
+      - name: Checkout needed branch
         uses: actions/checkout@v2
         with:
           ref: add-oas-example
