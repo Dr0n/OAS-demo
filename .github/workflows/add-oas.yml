@@ -1,5 +1,5 @@
 # This is a workflow to upload new OAS file to the repo and commit
-name: Sync OAS to ReadMe
+name: Download new OAS file to the current branch
 
 # Controls when the action will run. 
 on:
