@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "External",
-    "title": "OneInc.PortalOne.Api fgdg df gdfg"
+    "title": "OneInc.PortalOne.Api"
   },
   "host": "testportalone.processonepayments.com",
   "basePath": "/Api",
