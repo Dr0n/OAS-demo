@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout current brannch
         uses: actions/checkout@v2
+        with:
+          path: add-oas-example
       - name: Create needed folders at GitHub
         run: |
           mkdir -p ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}
