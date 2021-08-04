@@ -19,11 +19,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --all
-          git commit -am "Added OAS"
-      - name: push changes to current repo
-        run: git push
-      - name: show job status
-        if: always()
-        run: echo $status
-        env:
-         status: ${{job.status}}
+          git diff-index --quiet HEAD || 
+          git commit -am "Updating OAS files"
+          git push
