@@ -13,7 +13,7 @@ jobs:
       - name: Checkout current brannch
         uses: actions/checkout@v2
       - name: Download OAS
-        run: curl ${{ secrets.PORTALONEAPI_OAS }} -O ~/PortalOneApi.json
+        run: curl ${{ secrets.PORTALONEAPI_OAS }} -o PortalOneApi.json
       - name: Commit to current branch
         run: |
           git commit -am "Added OAS"
