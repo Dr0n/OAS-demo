@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout current brannch
         uses: actions/checkout@v2
+      - name: Create needed folders at GitHub
+        run: |
+          mkdir -p ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}
+          mkdir -p ${{ github.workspace }}/${{ secrets.OAS_PRODENVIRONMENT_FOLDER_NAME }}
       - name: Download OAS files
         run: |
           curl ${{ secrets.OAS_URL_EXTERNAL_PORTALONE }} -o ${{ github.workspace }}/Test/PortalOneExternalApi.json
