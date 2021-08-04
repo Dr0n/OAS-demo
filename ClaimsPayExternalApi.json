@@ -1,0 +1,6444 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "External",
+    "title": "OneInc.PortalOne.ClaimsPay"
+  },
+  "host": "testportalone.processonepayments.com",
+  "basePath": "/ClaimsPay",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/Account/Create": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "This method is used to create a ClaimsPay account and associated claims records, company/contact records and individual records.",
+        "operationId": "Create",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Create ClaimsPay account request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.Account.CreateAccountRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CreateAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Account/CreateContact": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "This method is used to create a ClaimsPay contact associated with ClaimsPay account.",
+        "operationId": "CreateContact",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Create contact request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.Account.CreateContactRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateContactRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CreateContactResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Account/Update": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "This method is used to update a ClaimsPay account profile and Prepaid Account vendor profile.",
+        "operationId": "Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Update ClaimsPay account request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.Account.UpdateAccountRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Account/GetInfo": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "This method is used to get a ClaimsPay account information.",
+        "operationId": "GetInfo",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Get ClaimsPay account information request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.Account.GetAccountInfoRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetAccountInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetAccountInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/Create": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to create new approval request. The approval request will send a communication to each of the approval request parties and direct them to a portal where they will complete their approval request actions per their role.",
+        "operationId": "Create",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Create approval request model{OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.CreateApprovalRequestRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateApprovalRequestRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CreateApprovalRequestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/GetById": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to get approval request by id.",
+        "operationId": "GetById",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Get ApprovalRequest by id model{OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.GetApprovalRequestByIdRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetApprovalRequestByIdRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetApprovalRequestByIdResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/GetByStatus": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to get approval requests by status.",
+        "operationId": "GetByStatus",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "requestsByStatusRequest",
+            "in": "body",
+            "description": "Get approval requests by status {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.GetApprovalRequestsByStatusRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetApprovalRequestsByStatusRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetApprovalRequestsByStatusResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/Cancel": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to cancel approval request.",
+        "operationId": "Cancel",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Cancel ApprovalRequests by id model{OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.CancelApprovalRequestRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelApprovalRequestRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CancelApprovalRequestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/Resend": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to resend invitation message to one or more approval request parties.",
+        "operationId": "Resend",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Resend invitation message to approval request party model{OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.ResendApprovalRequestRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResendApprovalRequestRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResendApprovalRequestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ApprovalRequest/Release": {
+      "post": {
+        "tags": [
+          "ApprovalRequest"
+        ],
+        "summary": "This method is used to resend invitation message to one or more approval request parties.",
+        "operationId": "Release",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Resend invitation message to approval request party model{OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.ApprovalRequest.ResendApprovalRequestRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReleaseApprovalRequestRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ReleaseApprovalRequestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/BankAccount/Credit": {
+      "post": {
+        "tags": [
+          "BankAccount"
+        ],
+        "summary": "This method is used to submit BankAccount payment.",
+        "operationId": "Credit",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Credit bank account request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.BankAccount.CreditBankAccountRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreditBankAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CreditBankAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/BankAccount/VoidCredit": {
+      "post": {
+        "tags": [
+          "BankAccount"
+        ],
+        "summary": "This method is used to void EFT payment.",
+        "operationId": "VoidCredit",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Void credit bank account request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.BankAccount.VoidCreditRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VoidCreditRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VoidCreditResponse"
+            }
+          }
+        }
+      }
+    },
+    "/BankAccount/Verify": {
+      "post": {
+        "tags": [
+          "BankAccount"
+        ],
+        "summary": "This method is used to verify BankAccount.",
+        "operationId": "Verify",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Credit bank account request {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.BankAccount.CreditBankAccountRequest}",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VerifyBankAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/VerifyBankAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InternalApi/BulkNotificationService/{clientKey}/ApprovalRequestUpdate": {
+      "post": {
+        "tags": [
+          "BulkNotificationService"
+        ],
+        "operationId": "ApprovalRequestUpdate",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "clientKey",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Core.ClaimsPayApprovalRequestUpdateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Core.ClaimsPayApprovalRequestUpdateResponse"
+            }
+          }
+        }
+      }
+    },
+    "/InternalApi/BulkNotificationService/{clientKey}/ApprovalRequestPartyUpdate": {
+      "post": {
+        "tags": [
+          "BulkNotificationService"
+        ],
+        "operationId": "ApprovalRequestPartyUpdate",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "clientKey",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Core.ClaimsPayApprovalRequestPartyUpdateRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Core.ClaimsPayApprovalRequestPartyUpdateResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Card/PushFunds": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "operationId": "PushFunds",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PushFundsToCardRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PushFundsToCardResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Card": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "operationId": "PushFunds",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PushFundsToCardRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PushFundsToCardResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Check/Issue": {
+      "post": {
+        "tags": [
+          "Check"
+        ],
+        "summary": "This method is used to issue a check associated to a ClaimsPay AccountID.",
+        "operationId": "Issue",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Issue check request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IssueCheckRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/IssueCheckResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Check/Cancel": {
+      "post": {
+        "tags": [
+          "Check"
+        ],
+        "summary": "This method is used to cancel a check.",
+        "operationId": "Cancel",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Cancel check request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelCheckRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CancelCheckResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Configuration/GetScreenFlows": {
+      "get": {
+        "tags": [
+          "Configuration"
+        ],
+        "summary": "This operation returns default ScreenFlows",
+        "operationId": "GetScreenFlows",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/AdjusterModal.GetScreenFlowsConfigurationResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Configuration/GetDefaultConfiguration": {
+      "get": {
+        "tags": [
+          "Configuration"
+        ],
+        "operationId": "GetDefaultConfiguration",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/PaymentMethod/Remove": {
+      "post": {
+        "tags": [
+          "PaymentMethod"
+        ],
+        "summary": "This method is used to remove a saved payment method that is associated to a ClaimsPay AccountID.",
+        "operationId": "Remove",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Remove payment method request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RemovePaymentMethodRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RemovePaymentMethodResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PaymentMethod/Save": {
+      "post": {
+        "tags": [
+          "PaymentMethod"
+        ],
+        "summary": "This method is used to save a payment method under an associated ClaimsPay AccountID.",
+        "operationId": "Save",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Save payment method request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SavePaymentMethodRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SavePaymentMethodResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PaymentMethod/GetInfo": {
+      "post": {
+        "tags": [
+          "PaymentMethod"
+        ],
+        "summary": "This method is used to get information on the payment methods that are associated to a ClaimsPay AccountID.",
+        "operationId": "GetInfo",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "GetPaymentMethodInfo Request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetPaymentMethodInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetPaymentMethodInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PaymentMethod/UpdateCard": {
+      "post": {
+        "tags": [
+          "PaymentMethod"
+        ],
+        "summary": "This method is intended to update the stored card information with a new information.",
+        "operationId": "UpdateCard",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "GetPaymentMethodInfo Request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateCardRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UpdateCardResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PrepaidCardAccount/Load": {
+      "post": {
+        "tags": [
+          "PrepaidCardAccount"
+        ],
+        "summary": "This method is used to make a payment to a virtual or physical prepaid card account.",
+        "operationId": "Load",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Load prepaid card account request.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoadPrepaidCardAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LoadPrepaidCardAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PrepaidCardAccount/ReverseLoad": {
+      "post": {
+        "tags": [
+          "PrepaidCardAccount"
+        ],
+        "summary": "This method is used to reverse a payment in full that was previously made to a prepaid card account.",
+        "operationId": "ReverseLoad",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Reverse load request.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReverseLoadPrepaidCardAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ReverseLoadPrepaidCardAccountResponse"
+            }
+          }
+        }
+      }
+    },
+    "/PrepaidCardAccount/DisburseFunds": {
+      "post": {
+        "tags": [
+          "PrepaidCardAccount"
+        ],
+        "summary": "This method is used to disburse funds from a prepaid card account.\r\nYou can use DisbursementType.Ach or DisbursementType.Check",
+        "operationId": "DisburseFunds",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Reverse load request.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DisburseFundsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DisburseFundsResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateAccountRequest": {
+      "description": "CreateAccount Request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "CompanyDetails": {
+              "$ref": "#/definitions/CompanyDetails",
+              "description": "Details on the company and contact for which the ClaimsPay Account will be created."
+            },
+            "IndividualDetails": {
+              "$ref": "#/definitions/IndividualDetails",
+              "description": "Details on the individual for which the ClaimsPay Account will be created."
+            },
+            "ClaimNumber": {
+              "description": "Optional field for a claim number that will be associated to the operation.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CompanyType": {
+      "description": "Type of company: business or vendor.",
+      "enum": [
+        "Undefined",
+        "Business",
+        "Vendor"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "CompanyType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Business",
+            "value": 1
+          },
+          {
+            "name": "Vendor",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "CompanyDetails": {
+      "description": "Company Information",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CompanyName": {
+          "description": "The name of the company entity.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "TaxId": {
+          "description": "The tax ID for the company entity. As unique identifier can be used to present saved payment methods for company entity on the epay webpage.",
+          "type": "string"
+        },
+        "Address": {
+          "description": "The physical street address for the company.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Secondary Address information.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "City": {
+          "description": "The city for the company.",
+          "maxLength": 30,
+          "minLength": 0,
+          "type": "string"
+        },
+        "State": {
+          "description": "The state for the company.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code for the company.",
+          "type": "string"
+        },
+        "ContactDetails": {
+          "$ref": "#/definitions/ContactDetails",
+          "description": "Details on the company contact person to whom the payment method will be associated."
+        },
+        "CompanyType": {
+          "$ref": "#/definitions/CompanyType"
+        }
+      }
+    },
+    "IndividualDetails": {
+      "description": "Individual Information",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "FirstName": {
+          "description": "The first name of the Payee to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "LastName": {
+          "description": "The last name of the Payee to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "Email": {
+          "description": "The Payee’s email address; will pre-populate ePay email Address if available.",
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address": {
+          "description": "The street address for the individual payee.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Secondary Address information.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "City": {
+          "description": "The city for the individual payee.",
+          "maxLength": 30,
+          "minLength": 0,
+          "type": "string"
+        },
+        "State": {
+          "description": "The state for the individual payee.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code for the individual payee.",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "The Payee's phone number.",
+          "type": "string"
+        },
+        "ExternalIndividualId": {
+          "description": "A unique external identifier for individual contact.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "WebAccessType": {
+      "description": "Value that will indicate if the contact will have access to the company website.\r\nIf property is not provided, default value is enable.",
+      "enum": [
+        "Enabled",
+        "Disabled"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "WebAccessType",
+        "values": [
+          {
+            "name": "Enabled",
+            "value": 0
+          },
+          {
+            "name": "Disabled",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "ContactDetails": {
+      "description": "Contact Information",
+      "required": [
+        "WebAccess"
+      ],
+      "type": "object",
+      "properties": {
+        "ContactId": {
+          "format": "int32",
+          "description": "The contactId that is stored in the ClaimsPay system for the company contact.\r\n If this value is provided, the system will update the stored information.\r\n If the value is not provided the system will create a new account.",
+          "type": "integer"
+        },
+        "FirstName": {
+          "description": "The first name of the company contact to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "LastName": {
+          "description": "The last name of the company contact to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "Email": {
+          "description": "The email address for the company contact; will pre-populate ePay email Address if available.",
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "The phone number for the company contact.",
+          "type": "string"
+        },
+        "WebAccess": {
+          "$ref": "#/definitions/WebAccessType"
+        },
+        "CompanyContactInformation": {
+          "description": "Additional company or contact information which if present will be used for mailing address.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ExternalCompanyContactId": {
+          "description": "A unique external identifier for company contact.",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "CreateAccountResponse": {
+      "description": "CreateAccount Response",
+      "required": [
+        "AccountId",
+        "ContactId",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "ContactId",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CreateContactRequest": {
+      "description": "CreateContact Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "FirstName": {
+              "description": "The first name of the company contact.",
+              "maxLength": 50,
+              "minLength": 2,
+              "type": "string"
+            },
+            "LastName": {
+              "description": "The last name of the company contact.",
+              "maxLength": 50,
+              "minLength": 2,
+              "type": "string"
+            },
+            "Email": {
+              "description": "The email address for the company contact.",
+              "maxLength": 256,
+              "minLength": 0,
+              "type": "string"
+            },
+            "Phone": {
+              "description": "The phone number for the company contact.",
+              "type": "string"
+            },
+            "CompanyContactInformation": {
+              "description": "Additional company or contact information which if present will be used for mailing address.",
+              "maxLength": 60,
+              "minLength": 0,
+              "type": "string"
+            },
+            "ExternalCompanyContactId": {
+              "description": "The unique identifier for company contact. Use this field as ExternalCustomerId for creating customer account in PortalOne API",
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CreateContactResponse": {
+      "description": "CreateContact Response",
+      "required": [
+        "AccountId",
+        "ContactId",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "ContactId",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateAccountRequest": {
+      "description": "UpdateAccount Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "IndividualProfileDetails": {
+              "$ref": "#/definitions/IndividualProfileDetails",
+              "description": "Individual profile information."
+            },
+            "CompanyProfileDetails": {
+              "$ref": "#/definitions/CompanyProfileDetails",
+              "description": "Company and contact profile information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "IndividualProfileDetails": {
+      "description": "Individual Profile Information",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "FirstName": {
+          "description": "The first name of the Payee to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "LastName": {
+          "description": "The last name of the Payee to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "Phone": {
+          "description": "The Payee's phone number.",
+          "type": "string"
+        },
+        "Address": {
+          "description": "The street address for the individual payee.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Secondary Address information.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "City": {
+          "description": "The city for the individual payee.",
+          "maxLength": 30,
+          "minLength": 0,
+          "type": "string"
+        },
+        "State": {
+          "description": "The state for the individual payee.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code for the individual payee.",
+          "type": "string"
+        },
+        "ExternalIndividualId": {
+          "description": "The unique identifier for individual contact. Use this field as ExternalCustomerId for creating customer account in PortalOne API",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "CompanyProfileDetails": {
+      "description": "Company Profile Information",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CompanyName": {
+          "description": "The name of the company entity.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address": {
+          "description": "The physical street address for the company.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Secondary Address information.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "City": {
+          "description": "The city for the company.",
+          "maxLength": 30,
+          "minLength": 0,
+          "type": "string"
+        },
+        "State": {
+          "description": "The state for the company.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code for the company.",
+          "type": "string"
+        },
+        "ContactDetails": {
+          "$ref": "#/definitions/ContactProfileDetails",
+          "description": "Details on the company contact person profile."
+        }
+      }
+    },
+    "ContactProfileDetails": {
+      "description": "Contact Profile Information",
+      "required": [
+        "WebAccessType"
+      ],
+      "type": "object",
+      "properties": {
+        "ContactId": {
+          "format": "int32",
+          "description": "The ContactId that is stored in the ClaimsPay system for the company contact.",
+          "type": "integer"
+        },
+        "FirstName": {
+          "description": "The first name of the company contact to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "LastName": {
+          "description": "The last name of the company contact to whom the payment method will be associated.",
+          "maxLength": 50,
+          "minLength": 2,
+          "type": "string"
+        },
+        "Phone": {
+          "description": "The phone number for the company contact.",
+          "type": "string"
+        },
+        "Email": {
+          "description": "The email address for the company contact.",
+          "maxLength": 256,
+          "minLength": 0,
+          "type": "string"
+        },
+        "WebAccessType": {
+          "$ref": "#/definitions/WebAccessType"
+        },
+        "CompanyContactInformation": {
+          "description": "Additional company or contact information which if present will be used for mailing address.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "ExternalCompanyContactId": {
+          "description": "The unique identifier for company contact. Use this field as ExternalCustomerId for creating customer account in PortalOne API",
+          "maxLength": 250,
+          "minLength": 0,
+          "type": "string"
+        }
+      }
+    },
+    "UpdateAccountResponse": {
+      "description": "UpdateAccount Response",
+      "required": [
+        "TransactionId",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TransactionId",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "format": "int32",
+              "description": "Transaction identifier.",
+              "type": "integer"
+            },
+            "IndividualProfileDetails": {
+              "$ref": "#/definitions/IndividualProfileDetails",
+              "description": "Individual profile information."
+            },
+            "CompanyProfileDetails": {
+              "$ref": "#/definitions/CompanyProfileDetails",
+              "description": "Company and contact profile information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetAccountInfoRequest": {
+      "description": "GetAccountInfo Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetAccountInfoResponse": {
+      "description": "GetAccountInfo Response",
+      "required": [
+        "HasPrepaidCardAccount",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "HasPrepaidCardAccount",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "IndividualDetails": {
+              "$ref": "#/definitions/IndividualDetails",
+              "description": "Stored information for the Individual ClaimsPay AccountID."
+            },
+            "CompanyInformation": {
+              "$ref": "#/definitions/CompanyInformation",
+              "description": "Stored information for the Company ClaimsPay AccountID. The object will return an array of contactId's for the company."
+            },
+            "BankAccounts": {
+              "description": "Array of bank accounts that are associated to the AccountId. The array will return a BankAccountSummary object (token and supporting information that can be used to process an EFT Credit payments.) for each bank account: See BankAccountSummary object.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BankAccountSummary"
+              }
+            },
+            "Cards": {
+              "description": "Array of cards that are associated to the AccountId. The array will return an object (token and supporting information that can be used to process a Push to Card payment) for each card.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CardSummary"
+              }
+            },
+            "HasPrepaidCardAccount": {
+              "description": "Bool which will indicate if a prepaid card account exists for the AccountId.",
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CompanyInformation": {
+      "description": "Company Information",
+      "required": [
+        "CompanyType"
+      ],
+      "type": "object",
+      "properties": {
+        "CompanyName": {
+          "description": "The name of the company entity.",
+          "type": "string"
+        },
+        "TaxId": {
+          "description": "The tax ID for the company entity. As unique identifier can be used to present saved payment methods for company entity on the epay webpage.",
+          "type": "string"
+        },
+        "Address": {
+          "description": "The physical street address for the company.",
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Secondary Address information.",
+          "type": "string"
+        },
+        "City": {
+          "description": "The city for the company.",
+          "type": "string"
+        },
+        "State": {
+          "description": "The state for the company.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code for the company.",
+          "type": "string"
+        },
+        "CompanyType": {
+          "$ref": "#/definitions/CompanyType"
+        },
+        "ContactsDetails": {
+          "description": "Array of ContactDetails associated to the company.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactDetails"
+          }
+        }
+      }
+    },
+    "BankAccountType": {
+      "description": "Checking / Savings.",
+      "enum": [
+        "Checking",
+        "Savings"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "BankAccountType",
+        "values": [
+          {
+            "name": "Checking",
+            "value": 0
+          },
+          {
+            "name": "Savings",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "BankAccountSummary": {
+      "description": "Bank Account Summary",
+      "required": [
+        "AccountType"
+      ],
+      "type": "object",
+      "properties": {
+        "Token": {
+          "description": "Bank Account payment token.",
+          "type": "string"
+        },
+        "AccountType": {
+          "$ref": "#/definitions/BankAccountType"
+        },
+        "LastFourDigits": {
+          "description": "Last four digits of the bank account number.",
+          "type": "string"
+        },
+        "BankName": {
+          "description": "Name of Bank based on Routing Number.",
+          "type": "string"
+        },
+        "NameOnAccount": {
+          "description": "Name on Bank Account. For Individual it will be PayeeName, for Company will be Company Name.",
+          "type": "string"
+        }
+      }
+    },
+    "CardType": {
+      "description": "Card type.",
+      "enum": [
+        "Undefined",
+        "Visa",
+        "MasterCard",
+        "AmericanExpress",
+        "Discover",
+        "PinlessDebitGeneric",
+        "Star",
+        "Nyce",
+        "Pulse",
+        "Other"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "CardType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Visa",
+            "value": 1
+          },
+          {
+            "name": "MasterCard",
+            "value": 2
+          },
+          {
+            "name": "AmericanExpress",
+            "value": 3
+          },
+          {
+            "name": "Discover",
+            "value": 4
+          },
+          {
+            "name": "PinlessDebitGeneric",
+            "value": 5
+          },
+          {
+            "name": "Star",
+            "value": 6
+          },
+          {
+            "name": "Nyce",
+            "value": 7
+          },
+          {
+            "name": "Pulse",
+            "value": 8
+          },
+          {
+            "name": "Other",
+            "value": 99
+          }
+        ]
+      }
+    },
+    "CardSummary": {
+      "description": "Card Summary",
+      "required": [
+        "CardType"
+      ],
+      "type": "object",
+      "properties": {
+        "Token": {
+          "description": "Card payment token.",
+          "type": "string"
+        },
+        "LastFourDigits": {
+          "description": "Last four digits of the card number.",
+          "type": "string"
+        },
+        "CardType": {
+          "$ref": "#/definitions/CardType"
+        },
+        "ExpirationYear": {
+          "description": "Year of the expiration of the card.",
+          "type": "string"
+        },
+        "ExpirationMonth": {
+          "description": "Month of the expiration of the card.",
+          "type": "string"
+        },
+        "Holder": {
+          "$ref": "#/definitions/Customer",
+          "description": "Card holder."
+        }
+      }
+    },
+    "Customer": {
+      "description": "Customer",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "Customer name.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "Customer zip code.",
+          "type": "string"
+        },
+        "Address": {
+          "description": "Customer address.",
+          "type": "string"
+        },
+        "City": {
+          "description": "Customer city.",
+          "type": "string"
+        },
+        "State": {
+          "description": "Customer state.",
+          "type": "string"
+        },
+        "Phone": {
+          "description": "Customer phone.",
+          "type": "string"
+        }
+      }
+    },
+    "CreateApprovalRequestRequest": {
+      "description": "Create ApprovalRequest request",
+      "required": [
+        "TotalAmount",
+        "IsAuthorityHold"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "TotalAmount",
+            "IsAuthorityHold"
+          ],
+          "type": "object",
+          "properties": {
+            "ClaimNumber": {
+              "description": "Claim number for which the approval process will be completed.",
+              "type": "string"
+            },
+            "TotalAmount": {
+              "format": "decimal",
+              "description": "The total payment amount that will be paid out as part of the current approval request.",
+              "type": "number"
+            },
+            "ProcessType": {
+              "description": "Specifies the process that the system will follow for the approval request. Allowable values:\r\n1. MultiPartyPayment. System will create an approval request involving multiple parties. Once all claim parties have completed the required actions based upon the role, a payment will be processed.\r\n2. SinglePartyPayment. System will create an approval request for a single party. Once the party completes the required action, the system will process a payment.\r\n3. SinglePartySave. System will create an approval request for a single party to capture a payment method option.\r\n4. IssueCheckPayment. System will create an approval request to issue a check made out to one to four parties. Parties will not be required to complete any action.",
+              "type": "string"
+            },
+            "IsAuthorityHold": {
+              "description": "Indicates if the approval request was created with an Authority Hold which requires the approval request to be released prior to initiating the payment process to the approval request parties.",
+              "type": "boolean"
+            },
+            "ClaimDetails": {
+              "description": "Claim detail information that will be displayed to the claim party in the website and emails or that will be printed on the check Stub for checks fulfilled by One Inc.\r\nPrinted information will be limited to 19 lines with up to 111 characters each line. If a string is sent that is greater than 111 characters, the values will be parsed into multiple lines by splitting the lines at spaces. If the data sent results in over 19 rows after parsing, the system will only print the first 19 rows.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups. If payments are processed with the approval request, the system will use the provided AccountGroupCode.\r\nFor payments made via check, the AccountGroupCode will indicate to the system which bank account and routing number should be used to issue the check.",
+              "type": "string"
+            },
+            "ApprovalRequestParties": {
+              "description": "Array of ApprovalRequestParty objects for each of the parties that have an interest in the claim. The number of parties allowable are based upon the ProcessType:\r\nSinglePartyPayment and SinglePartySave, can have 1 party.\r\nMultiPartyPayment can have 2-10 parties.\r\nIssueCheckPayment can have 1-4 parties.\r\nAt least one party must be a payment recipient. Each party must have a unique AccountId.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApprovalRequestParty"
+              }
+            },
+            "ComposeCheckProperties": {
+              "$ref": "#/definitions/ComposeCheckProperties",
+              "description": "Information that will be used to define how the check will be made when the approval request results in a check payment."
+            },
+            "ExtendedParameters": {
+              "description": "The collection of key value pairs for optional parameters.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ApprovalRequestPartyRole": {
+      "description": "The role that defines the actions the claim party will complete as part of the approval request.",
+      "enum": [
+        "Undefined",
+        "ApprovalOnly",
+        "PaymentOnly",
+        "ApprovalAndPayment",
+        "PaymentOnlyActionBypass",
+        "MailToCheckParty",
+        "NamedCheckParty"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ApprovalRequestPartyRole",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "ApprovalOnly",
+            "value": 1
+          },
+          {
+            "name": "PaymentOnly",
+            "value": 2
+          },
+          {
+            "name": "ApprovalAndPayment",
+            "value": 3
+          },
+          {
+            "name": "PaymentOnlyActionBypass",
+            "value": 4
+          },
+          {
+            "name": "MailToCheckParty",
+            "value": 5
+          },
+          {
+            "name": "NamedCheckParty",
+            "value": 6
+          }
+        ]
+      }
+    },
+    "MessageDeliveryType": {
+      "description": "The delivery method to receive the link to the ClaimsPay approval portal. This can be by email or text message.",
+      "enum": [
+        "Undefined",
+        "Email",
+        "Text"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "MessageDeliveryType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Email",
+            "value": 1
+          },
+          {
+            "name": "Text",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "PaymentMethodType": {
+      "description": "The type of payment method that will be used to process the payment for an approval party with the role of PaymentOnlyActionBypass.",
+      "enum": [
+        "Undefined",
+        "BankAccount",
+        "Check",
+        "VirtualCard",
+        "PushToCard"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "PaymentMethodType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "BankAccount",
+            "value": 1
+          },
+          {
+            "name": "Check",
+            "value": 2
+          },
+          {
+            "name": "VirtualCard",
+            "value": 3
+          },
+          {
+            "name": "PushToCard",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "ApprovalRequestParty": {
+      "description": "Object that defines a claim party role, contact method, user interface display for the claim payment that will be made for the approval request. May also specify the payment method to be used for the claim payment if the party is not required to approve the payment.",
+      "required": [
+        "PaymentAmount"
+      ],
+      "type": "object",
+      "properties": {
+        "AccountId": {
+          "format": "int32",
+          "description": "ClaimsPay Account Identifier.",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "description": "Company Contact identifier. Only applicable to company accounts.",
+          "type": "integer"
+        },
+        "ExternalIndividualId": {
+          "description": "A unique external identifier for individual contact that was used as externalCustomerId to manage customer notification preferences.",
+          "type": "string"
+        },
+        "ExternalCompanyContactId": {
+          "description": "A unique external identifier for company contact that was used as externalCustomerId to manage customer notification preferences.",
+          "type": "string"
+        },
+        "ApprovalRole": {
+          "$ref": "#/definitions/ApprovalRequestPartyRole"
+        },
+        "LinkDeliveryType": {
+          "$ref": "#/definitions/MessageDeliveryType"
+        },
+        "PhoneNumber": {
+          "description": "The Phone Number for the party to which the Approval Request text message will be sent. If DeliveryType is Text and it is not populated, the text will be sent to the Phone Number associated to the AccountId by default (unless modified by the Adjustor in the Adjustor Modal)",
+          "type": "string"
+        },
+        "EmailAddress": {
+          "description": "The email address for the party to which the Multi-Payee Approval emails will be sent. If DeliveryType is Email and it is not populated, the email will be sent to the email address stored for the AccountId by default (unless modified by the Adjustor in the Adjustor Modal).",
+          "type": "string"
+        },
+        "PaymentAmount": {
+          "format": "decimal",
+          "description": "The amount of the payment that the approval party will receive. If role is ApprovalOnly, send 0.00.",
+          "type": "number"
+        },
+        "DisplayOtherPartiesInfo": {
+          "description": "Information to be displayed to the current party about the other approval request parties that are part of the request.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DisplayOtherPartyInfo"
+          }
+        },
+        "PaymentMethodType": {
+          "$ref": "#/definitions/PaymentMethodType"
+        },
+        "Token": {
+          "description": "Token for the bank account or card that will receive the payment for an approval party with the role of PaymentOnlyActionBypass if PaymentMethodType is Bank Account or Card.",
+          "type": "string"
+        },
+        "Address": {
+          "$ref": "#/definitions/MailingAddress",
+          "description": "Address to which a check will be sent if the claim party selects the payment method of check. If the object is not sent and the portal settings allow for check as a payment option, the system will display the address stored for the AccountId or ContactId. Note: the stored primary address will not be updated."
+        },
+        "PartyCheckProperties": {
+          "$ref": "#/definitions/PartyCheckProperties",
+          "description": "Properties which will be used to compose a check if the payment method is check fulfilled by One Inc. When the ProcessType is IssueCheckPayment the information should be provided for the party with the role of MailToCheckParty."
+        },
+        "ExtendedParameters": {
+          "description": "The collection of key value pairs for optional parameters.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "BypassVendorNetwork": {
+          "description": "When true, the system will bypass the Vendor's Payment Method and Delivery Method from the Vendor Network.\r\nThe VendorPay Welcome Email (i.e. Instant Payment) will be sent to the email provided or associated with the vendor.",
+          "type": "boolean"
+        }
+      }
+    },
+    "ComposeCheckProperties": {
+      "required": [
+        "PayToAccountId"
+      ],
+      "type": "object",
+      "properties": {
+        "PayToAccountId": {
+          "format": "int32",
+          "description": "AccountId of person or company that is named on the check.",
+          "type": "integer"
+        },
+        "AdditionalPayToParties": {
+          "description": "AccountId of additional persons or companies that will be listed as additional recipients on the check. Each name must be preceded with either AND or OR.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AdditionalPayToParty"
+          }
+        }
+      }
+    },
+    "DisplayOtherPartyInfo": {
+      "description": "Display claim party info model.",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "Name that will be displayed to the user in the approval portal Claim Information.",
+          "type": "string"
+        },
+        "Role": {
+          "$ref": "#/definitions/ApprovalRequestPartyRole"
+        },
+        "Amount": {
+          "format": "decimal",
+          "description": "Payment Amount that will be displayed to the user in the approval portal Claim Information.",
+          "type": "number"
+        }
+      }
+    },
+    "MailingAddress": {
+      "description": "Mailing address model.",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CompanyContactInformation": {
+          "description": "Address field for additional company or contact information such as department or title. This applies to company accounts only.",
+          "type": "string"
+        },
+        "Attention": {
+          "description": "For payment method of check, the Attention line to provide additional identifying information for the recipient. For a company, the contact name will be used.",
+          "type": "string"
+        },
+        "Address": {
+          "description": "Address to which the check will be mailed.",
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Address Line 2 to which the check will be mailed.",
+          "type": "string"
+        },
+        "City": {
+          "description": "The city to which the check will be mailed.",
+          "type": "string"
+        },
+        "State": {
+          "description": "The state to which the check will be mailed.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code to which the check will be mailed.",
+          "type": "string"
+        }
+      }
+    },
+    "MailDeliveryType": {
+      "description": "Defines the mailing method that will be used for the check. If absent, default value will be Standard.",
+      "enum": [
+        "Undefined",
+        "Standard",
+        "NextDay"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "MailDeliveryType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Standard",
+            "value": 1
+          },
+          {
+            "name": "NextDay",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "PartyCheckProperties": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Memo": {
+          "description": "Check memo line text.",
+          "type": "string"
+        },
+        "MailDeliveryType": {
+          "$ref": "#/definitions/MailDeliveryType"
+        },
+        "CustomPayToName": {
+          "description": "Name of Person or company that is the recipient of the check that is different that the name on an AccountID.\r\nSystem will use 'CustomPayToName' as the first name or only name on a check when provided.",
+          "type": "string"
+        }
+      }
+    },
+    "Separator": {
+      "description": "Merge operator for additional persons or companies.",
+      "enum": [
+        "Undefined",
+        "And",
+        "Or"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "Separator",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "And",
+            "value": 1
+          },
+          {
+            "name": "Or",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "AdditionalPayToParty": {
+      "required": [
+        "Separator",
+        "AccountId"
+      ],
+      "type": "object",
+      "properties": {
+        "Separator": {
+          "$ref": "#/definitions/Separator"
+        },
+        "AccountId": {
+          "format": "int32",
+          "description": "AccountId of additional persons or companies.",
+          "type": "integer"
+        }
+      }
+    },
+    "ApprovalRequestStatus": {
+      "description": "The status of the approval request process.",
+      "enum": [
+        "Undefined",
+        "Initiated",
+        "Completed",
+        "Rejected",
+        "Cancelled",
+        "Expired",
+        "Incomplete",
+        "AuthorityHold"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ApprovalRequestStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Initiated",
+            "value": 1
+          },
+          {
+            "name": "Completed",
+            "value": 2
+          },
+          {
+            "name": "Rejected",
+            "value": 3
+          },
+          {
+            "name": "Cancelled",
+            "value": 4
+          },
+          {
+            "name": "Expired",
+            "value": 5
+          },
+          {
+            "name": "Incomplete",
+            "value": 6
+          },
+          {
+            "name": "AuthorityHold",
+            "value": 7
+          }
+        ]
+      }
+    },
+    "CreateApprovalRequestResponse": {
+      "description": "Create approval request response",
+      "required": [
+        "ApprovalRequestId",
+        "CreationDate",
+        "ExpirationDate",
+        "Status",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "ApprovalRequestId",
+            "CreationDate",
+            "ExpirationDate",
+            "Status",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the approval request.",
+              "type": "integer"
+            },
+            "CreationDate": {
+              "format": "date-time",
+              "description": "Date the approval request was created.",
+              "type": "string"
+            },
+            "ExpirationDate": {
+              "format": "date-time",
+              "description": "Date the approval request will expire.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Approval request time zone.",
+              "type": "string"
+            },
+            "ProcessType": {
+              "description": "The process type for the approval request.",
+              "type": "string"
+            },
+            "AccountGroupCode": {
+              "description": "The account group code of created approval request.",
+              "type": "string"
+            },
+            "Status": {
+              "$ref": "#/definitions/ApprovalRequestStatus"
+            },
+            "ApprovalRequestParties": {
+              "description": "The array of the claim party information object which includes identifying information on each claim party.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApprovalRequestPartySummary"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ApprovalRequestPartyStatus": {
+      "description": "Status of the approval action for the claim party.",
+      "enum": [
+        "Undefined",
+        "Initiated",
+        "FailedWelcomeCommunication",
+        "WebsiteAccessBlocked",
+        "Rejected",
+        "WaitingForOtherParties",
+        "Completed",
+        "PaymentIncomplete",
+        "PaymentScheduled",
+        "AuthorityHold"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ApprovalRequestPartyStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Initiated",
+            "value": 1
+          },
+          {
+            "name": "FailedWelcomeCommunication",
+            "value": 2
+          },
+          {
+            "name": "WebsiteAccessBlocked",
+            "value": 3
+          },
+          {
+            "name": "Rejected",
+            "value": 4
+          },
+          {
+            "name": "WaitingForOtherParties",
+            "value": 5
+          },
+          {
+            "name": "Completed",
+            "value": 6
+          },
+          {
+            "name": "PaymentIncomplete",
+            "value": 7
+          },
+          {
+            "name": "PaymentScheduled",
+            "value": 8
+          },
+          {
+            "name": "AuthorityHold",
+            "value": 9
+          }
+        ]
+      }
+    },
+    "ApprovalRequestPartySummary": {
+      "description": "Approval request party summary model.",
+      "required": [
+        "ApprovalRequestPartyId",
+        "AccountId",
+        "Status"
+      ],
+      "type": "object",
+      "properties": {
+        "ApprovalRequestPartyId": {
+          "format": "int32",
+          "description": "ClaimsPay Approval Request Party Identifier.",
+          "type": "integer"
+        },
+        "AccountId": {
+          "format": "int32",
+          "description": "ClaimsPay Account Identifier.",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "description": "Company Contact identifier. Only applicable to company accounts.",
+          "type": "integer"
+        },
+        "EmailAddress": {
+          "description": "The email address to which the approval email was sent.",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "The Phone Number to which the approval text message was sent.",
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/ApprovalRequestPartyStatus"
+        }
+      }
+    },
+    "GetApprovalRequestByIdRequest": {
+      "description": "Get approval request by id request.",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the Approval request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetApprovalRequestByIdResponse": {
+      "description": "Get approval request by id response.",
+      "required": [
+        "ApprovalRequestId",
+        "Status",
+        "CreationDate",
+        "ExpirationDate",
+        "IsAuthorityHold",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "ApprovalRequestId",
+            "Status",
+            "CreationDate",
+            "ExpirationDate",
+            "IsAuthorityHold",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the approval request.",
+              "type": "integer"
+            },
+            "ClaimNumber": {
+              "description": "Claim number associated to the approval request.",
+              "type": "string"
+            },
+            "Status": {
+              "$ref": "#/definitions/ApprovalRequestStatus"
+            },
+            "CreationDate": {
+              "format": "date-time",
+              "description": "Date the approval request was initiated.",
+              "type": "string"
+            },
+            "ExpirationDate": {
+              "format": "date-time",
+              "description": "The expiration date of the approval request.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Approval request time zone.",
+              "type": "string"
+            },
+            "ProcessType": {
+              "description": "The process type for the approval request.",
+              "type": "string"
+            },
+            "IsAuthorityHold": {
+              "description": "Indicates if the approval request was created with an Authority Hold which requires the approval request to be released prior to initiating the payment process to the approval request parties.",
+              "type": "boolean"
+            },
+            "AccountGroupCode": {
+              "description": "The account group code of the approval request.",
+              "type": "string"
+            },
+            "ApprovalRequestPartiesInfo": {
+              "description": "Information on each of the approval request party.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApprovalRequestPartyInfo"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ApprovalRequestPartyInfo": {
+      "description": "Approval request party info model.",
+      "required": [
+        "ApprovalRequestPartyId",
+        "AccountId",
+        "Status"
+      ],
+      "type": "object",
+      "properties": {
+        "ApprovalRequestPartyId": {
+          "format": "int32",
+          "description": "Claims pay approval request party identifier.",
+          "type": "integer"
+        },
+        "AccountId": {
+          "format": "int32",
+          "description": "Claims pay account identifier.",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "description": "Company contact identifier. Only applicable to company accounts.",
+          "type": "integer"
+        },
+        "EmailAddress": {
+          "description": "The email address to which the approval email was sent.",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "The Phone Number to which the approval text message was sent.",
+          "type": "string"
+        },
+        "FullName": {
+          "description": "First and Last name of the approval request party.",
+          "type": "string"
+        },
+        "CompanyName": {
+          "description": "Company name if the ClaimsPayAccountType is Company.",
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/ApprovalRequestPartyStatus"
+        },
+        "DisputeComment": {
+          "description": "Applicable to ApprovalRequestPartyStatus is Rejected. The optional text entered by the approval request party when they disputed the claim payment.",
+          "type": "string"
+        },
+        "PaymentSummary": {
+          "$ref": "#/definitions/PaymentSummary",
+          "description": "Payment method information and if payment has been processed, payment transaction information."
+        }
+      }
+    },
+    "PaymentSummary": {
+      "description": "Payment summary model.",
+      "required": [
+        "PaymentMethodType"
+      ],
+      "type": "object",
+      "properties": {
+        "CheckSummary": {
+          "$ref": "#/definitions/CheckSummary",
+          "description": "Check summary information that was saved with the Approval Request."
+        },
+        "MailingAddress": {
+          "$ref": "#/definitions/MailingAddress",
+          "description": "Selected mailing address for check."
+        },
+        "BankAccountSummary": {
+          "$ref": "#/definitions/BankAccountSummary",
+          "description": "Bank account summary information that was saved with the Approval request."
+        },
+        "CardInfo": {
+          "$ref": "#/definitions/CardInfo",
+          "description": "Card summary information that was saved with the Approval request."
+        },
+        "PaymentMethodType": {
+          "$ref": "#/definitions/PaymentMethodType"
+        },
+        "TransactionSummary": {
+          "$ref": "#/definitions/TransactionSummary",
+          "description": "Payment processing information."
+        }
+      }
+    },
+    "CheckFulfillmentOwnerType": {
+      "description": "Identifies if the check was fulfilled by One Inc or returned to the client for fulfillment.",
+      "enum": [
+        "Undefined",
+        "OneInc",
+        "Client"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "CheckFulfillmentOwnerType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "OneInc",
+            "value": 1
+          },
+          {
+            "name": "Client",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "CheckSummary": {
+      "required": [
+        "MailDeliveryType",
+        "CheckFulfillmentOwner"
+      ],
+      "type": "object",
+      "properties": {
+        "PayTo": {
+          "description": "Name(s) on the check.",
+          "type": "string"
+        },
+        "CheckMemo": {
+          "description": "Check Memo.",
+          "type": "string"
+        },
+        "CheckStubData": {
+          "description": "Information that was printed on the check stub.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "DocumentUrl": {
+          "description": "The URL of the the pdf to be printed and mailed with the check if it was provided for the check payment.",
+          "type": "string"
+        },
+        "MailDeliveryType": {
+          "$ref": "#/definitions/MailDeliveryType"
+        },
+        "CheckFulfillmentOwner": {
+          "$ref": "#/definitions/CheckFulfillmentOwnerType"
+        }
+      }
+    },
+    "CardInfo": {
+      "description": "Card Info",
+      "required": [
+        "CardType"
+      ],
+      "type": "object",
+      "properties": {
+        "Token": {
+          "description": "Card payment token.",
+          "type": "string"
+        },
+        "LastFourDigits": {
+          "description": "Last four digits of the card number.",
+          "type": "string"
+        },
+        "CardType": {
+          "$ref": "#/definitions/CardType"
+        },
+        "HolderName": {
+          "description": "Card holder name.",
+          "type": "string"
+        }
+      }
+    },
+    "PaymentProcessingStatus": {
+      "description": "The status of the claim party payment.",
+      "enum": [
+        "Undefined",
+        "Successful",
+        "Failed",
+        "Skipped"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "PaymentProcessingStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Successful",
+            "value": 1
+          },
+          {
+            "name": "Failed",
+            "value": 2
+          },
+          {
+            "name": "Skipped",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "TransactionSummary": {
+      "description": "Transaction summary model.",
+      "required": [
+        "BatchNumber",
+        "PaymentProcessingStatus"
+      ],
+      "type": "object",
+      "properties": {
+        "TransactionId": {
+          "description": "Transaction identifier for the payment.",
+          "type": "string"
+        },
+        "TransactionDate": {
+          "format": "date-time",
+          "description": "The date when transaction was executed.",
+          "type": "string"
+        },
+        "BatchNumber": {
+          "format": "int32",
+          "description": "ProcessOne BatchNumber or CheckBatchNumber.",
+          "type": "integer"
+        },
+        "PaymentProcessingStatus": {
+          "$ref": "#/definitions/PaymentProcessingStatus"
+        },
+        "PaymentResponseMessage": {
+          "description": "Information from the payment transaction.",
+          "type": "string"
+        }
+      }
+    },
+    "GetApprovalRequestsByStatusRequest": {
+      "description": "Find approval request by status request.",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AuthenticationKeys": {
+              "description": "Authentication keys to define the search query.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "Statuses": {
+              "description": "Approval Request statuses.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApprovalRequestStatus"
+              }
+            },
+            "StartDate": {
+              "format": "date-time",
+              "description": "Search start date. If not provided start date would be -180 days from provided end date or -180 days from the current date if end date is empty.",
+              "type": "string"
+            },
+            "EndDate": {
+              "format": "date-time",
+              "description": "Search end date. If not provided end date would be +180 days from provided start date or the current date if start date is empty.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetApprovalRequestsByStatusResponse": {
+      "description": "Get approval request by status response.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ApprovalRequests": {
+              "description": "The result of get by status query.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApprovalRequestSummary"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ApprovalRequestSummary": {
+      "description": "Approval request summary.",
+      "required": [
+        "ApprovalRequestId",
+        "Status",
+        "CreationDate",
+        "ExpirationDate",
+        "IsAuthorityHold"
+      ],
+      "type": "object",
+      "properties": {
+        "ApprovalRequestId": {
+          "format": "int32",
+          "description": "Unique identifier for the approval request.",
+          "type": "integer"
+        },
+        "ClaimNumber": {
+          "description": "Claim number associated to the approval request.",
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/ApprovalRequestStatus"
+        },
+        "CreationDate": {
+          "format": "date-time",
+          "description": "Date the approval request was initiated.",
+          "type": "string"
+        },
+        "ExpirationDate": {
+          "format": "date-time",
+          "description": "Date the approval request will expire.",
+          "type": "string"
+        },
+        "TimeZone": {
+          "description": "Approval request time zone.",
+          "type": "string"
+        },
+        "ProcessType": {
+          "description": "The process type for the approval request.",
+          "type": "string"
+        },
+        "IsAuthorityHold": {
+          "description": "Indicates if the approval request was created with an Authority Hold which requires the approval request to be released prior to initiating the payment process to the approval request parties.",
+          "type": "boolean"
+        },
+        "AccountGroupCode": {
+          "description": "The account group code of the approval request.",
+          "type": "string"
+        },
+        "ApprovalRequestPartyInfos": {
+          "description": "Information about each Approval request party.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ApprovalRequestPartyInfo"
+          }
+        }
+      }
+    },
+    "CancelApprovalRequestRequest": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the Approval request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelApprovalRequestResponse": {
+      "description": "Cancel approval request response.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "ResendApprovalRequestRequest": {
+      "description": "Resend approval request request.",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the Approval request.",
+              "type": "integer"
+            },
+            "ResendParties": {
+              "description": "Information for each claim party to which the initiation information will be resent.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ResendApprovalRequestPartyInfo"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ResendApprovalRequestPartyInfo": {
+      "description": "Approval request party resend initiation model.",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "AccountId": {
+          "format": "int32",
+          "description": "ClaimsPay Account Identifier.",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "description": "Company Contact identifier. Only applicable to company accounts.",
+          "type": "integer"
+        },
+        "LinkDeliveryType": {
+          "$ref": "#/definitions/MessageDeliveryType"
+        },
+        "PhoneNumber": {
+          "description": "The verified (opted-in) phone number for the party to which the Multi-Payee Approval SMS messages will be sent. If DeliveryType is Text and it is not populated, SMS will be sent to the phone number stored for the AccountId or ContactId.",
+          "type": "string"
+        },
+        "EmailAddress": {
+          "description": "The email address for the party to which the Multi-Payee Approval emails will be sent. If DeliveryType is Email and it is not populated, the email will be sent to the email address stored for the AccountId or ContactId.",
+          "type": "string"
+        }
+      }
+    },
+    "ResendApprovalRequestResponse": {
+      "description": "Resend approval request response.",
+      "required": [
+        "ApprovalRequestId",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "ApprovalRequestId",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the Approval request.",
+              "type": "integer"
+            },
+            "PartiesSummary": {
+              "description": "The array of the approval party information object for each of the approval parties which were included in request.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ResendApprovalRequestPartySummary"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ResendApprovalRequestPartySummary": {
+      "description": "Approval request party summary model.",
+      "required": [
+        "ApprovalRequestPartyId",
+        "AccountId"
+      ],
+      "type": "object",
+      "properties": {
+        "ApprovalRequestPartyId": {
+          "format": "int32",
+          "description": "ClaimsPay Approval Request Party Identifier.",
+          "type": "integer"
+        },
+        "AccountId": {
+          "format": "int32",
+          "description": "ClaimsPay Account Identifier.",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "description": "Company Contact identifier. Only applicable to company accounts.",
+          "type": "integer"
+        },
+        "EmailAddress": {
+          "description": "The email address to which the approval email will be sent.",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "The Phone Number to which the approval text message will be sent.",
+          "type": "string"
+        },
+        "ResendStatus": {
+          "description": "Resend operation response code.",
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "description": "Response message.",
+          "type": "string"
+        }
+      }
+    },
+    "ReleaseApprovalRequestRequest": {
+      "description": "Release Approval Request request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ApprovalRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the Approval request.",
+              "type": "integer"
+            },
+            "ReleasedBy": {
+              "description": "User name of the authorized user that is releasing the Approval Request",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReleaseApprovalRequestResponse": {
+      "description": "Release Approval Request response.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "CreditBankAccountRequest": {
+      "description": "CreditBankAccount Request",
+      "required": [
+        "AccountId",
+        "Amount",
+        "BypassBankAccountValidation"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "Amount",
+            "BypassBankAccountValidation"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts. If sent, will be used to identify the recipient of the payment complete email.",
+              "type": "integer"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of payment.",
+              "type": "number"
+            },
+            "Token": {
+              "description": "Saved bank account token.",
+              "type": "string"
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups.",
+              "type": "string"
+            },
+            "BankAccountDetails": {
+              "$ref": "#/definitions/BankAccountDetails",
+              "description": "Bank Account details."
+            },
+            "ClaimNumber": {
+              "description": "Claim number that will be associated to the payment.",
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim details which will be sent in the payment email.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            },
+            "BypassBankAccountValidation": {
+              "description": "Bypasses bank account validation during save when BankAccountDetails are sent.",
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "BankAccountDetails": {
+      "description": "Bank Account Information",
+      "required": [
+        "AccountType"
+      ],
+      "type": "object",
+      "properties": {
+        "RoutingNumber": {
+          "description": "The bank routing number.  Must only contain numbers.",
+          "type": "string"
+        },
+        "AccountNumber": {
+          "description": "The bank account number. Must only contain numbers.",
+          "type": "string"
+        },
+        "CustomerName": {
+          "description": "Customer Name for this Bank Account.",
+          "type": "string"
+        },
+        "AccountType": {
+          "$ref": "#/definitions/BankAccountType"
+        }
+      }
+    },
+    "CreditBankAccountResponse": {
+      "description": "CreditBankAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "BatchNumber",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "BatchNumber",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            },
+            "BankAccountSummary": {
+              "$ref": "#/definitions/BankAccountSummary",
+              "description": "Bank account summary information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "VoidCreditRequest": {
+      "description": "VoidCredit request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "VoidCreditResponse": {
+      "description": "VoidCredit response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "BatchNumber",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "BatchNumber",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "VerifyBankAccountRequest": {
+      "description": "VerifyBankAccount Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "BankAccountDetails": {
+              "$ref": "#/definitions/BankAccountDetails",
+              "description": "Bank Account details."
+            },
+            "Token": {
+              "description": "Previously saved Payment Token.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "User identifier/name for reporting purposes.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "VerifyBankAccountResponse": {
+      "description": "VerifyBankAccount Response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ServerReferenceData": {
+              "$ref": "#/definitions/ServerReferenceData",
+              "description": "Additional response data."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ServerReferenceData": {
+      "description": "Server Reference Data",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ServerReferenceData1": {
+          "description": "ServerReferenceData1.",
+          "type": "string"
+        }
+      }
+    },
+    "ClaimsPayApprovalRequestUpdateEventType": {
+      "enum": [
+        "Undefined",
+        "Completed",
+        "Rejected",
+        "Expired",
+        "Cancelled",
+        "MarkedIncomplete",
+        "AuthorityRelease"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayApprovalRequestUpdateEventType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Completed",
+            "value": 1
+          },
+          {
+            "name": "Rejected",
+            "value": 2
+          },
+          {
+            "name": "Expired",
+            "value": 3
+          },
+          {
+            "name": "Cancelled",
+            "value": 4
+          },
+          {
+            "name": "MarkedIncomplete",
+            "value": 5
+          },
+          {
+            "name": "AuthorityRelease",
+            "value": 6
+          }
+        ]
+      }
+    },
+    "ClaimsPayApprovalRequestStatus": {
+      "enum": [
+        "Undefined",
+        "Initiated",
+        "Completed",
+        "Rejected",
+        "Cancelled",
+        "Expired",
+        "Incomplete",
+        "AuthorityHold"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayApprovalRequestStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Initiated",
+            "value": 1
+          },
+          {
+            "name": "Completed",
+            "value": 2
+          },
+          {
+            "name": "Rejected",
+            "value": 3
+          },
+          {
+            "name": "Cancelled",
+            "value": 4
+          },
+          {
+            "name": "Expired",
+            "value": 5
+          },
+          {
+            "name": "Incomplete",
+            "value": 6
+          },
+          {
+            "name": "AuthorityHold",
+            "value": 7
+          }
+        ]
+      }
+    },
+    "Core.ClaimsPayApprovalRequestUpdateRequest": {
+      "required": [
+        "EventType",
+        "EventDate",
+        "ApprovalRequestId",
+        "IsAuthorityHold",
+        "Status"
+      ],
+      "type": "object",
+      "properties": {
+        "OperationId": {
+          "type": "string"
+        },
+        "EventType": {
+          "$ref": "#/definitions/ClaimsPayApprovalRequestUpdateEventType"
+        },
+        "EventDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "TimeZone": {
+          "type": "string"
+        },
+        "ClaimNumber": {
+          "type": "string"
+        },
+        "ApprovalRequestId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProcessType": {
+          "type": "string"
+        },
+        "IsAuthorityHold": {
+          "type": "boolean"
+        },
+        "Status": {
+          "$ref": "#/definitions/ClaimsPayApprovalRequestStatus"
+        }
+      }
+    },
+    "ResultCode": {
+      "enum": [
+        "Success",
+        "InternalError",
+        "PolicyNotFound",
+        "InvalidRoutingNumber",
+        "InvalidEftAmount",
+        "InvalidCardNumber",
+        "InvalidAccountNumber",
+        "AvsVerificationFailed",
+        "EftCustomerNameMissing",
+        "IncorrectValidationValue",
+        "CardExpired",
+        "CardTypeNotExcepted",
+        "Declined",
+        "CannotUpdateRecurringPaymentStatus",
+        "SubmitPaymentFailed",
+        "PaymentsNotAllowed",
+        "SaveCreditCardFailed",
+        "ErrorOnThirdPartySide",
+        "ExternalServiceUnavailable",
+        "DuplicateTransaction",
+        "OverMaximumPayment",
+        "Call",
+        "InvalidCreditCardAmount",
+        "InvalidExpirationDate",
+        "InvalidReason",
+        "InvalidZipcode",
+        "CreditCardCustomerNameMissing",
+        "NoProcessorResponse",
+        "CardTypeNotAccepted",
+        "InvalidEpay",
+        "InvalidRequest",
+        "Unauthorized"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ResultCode",
+        "values": [
+          {
+            "name": "Success",
+            "value": 0
+          },
+          {
+            "name": "InternalError",
+            "value": 1
+          },
+          {
+            "name": "PolicyNotFound",
+            "value": 2
+          },
+          {
+            "name": "InvalidRoutingNumber",
+            "value": 3
+          },
+          {
+            "name": "InvalidEftAmount",
+            "value": 4
+          },
+          {
+            "name": "InvalidCardNumber",
+            "value": 5
+          },
+          {
+            "name": "InvalidAccountNumber",
+            "value": 6
+          },
+          {
+            "name": "AvsVerificationFailed",
+            "value": 7
+          },
+          {
+            "name": "EftCustomerNameMissing",
+            "value": 8
+          },
+          {
+            "name": "IncorrectValidationValue",
+            "value": 9
+          },
+          {
+            "name": "CardExpired",
+            "value": 10
+          },
+          {
+            "name": "CardTypeNotExcepted",
+            "value": 11
+          },
+          {
+            "name": "Declined",
+            "value": 12
+          },
+          {
+            "name": "CannotUpdateRecurringPaymentStatus",
+            "value": 13
+          },
+          {
+            "name": "SubmitPaymentFailed",
+            "value": 14
+          },
+          {
+            "name": "PaymentsNotAllowed",
+            "value": 15
+          },
+          {
+            "name": "SaveCreditCardFailed",
+            "value": 16
+          },
+          {
+            "name": "ErrorOnThirdPartySide",
+            "value": 17
+          },
+          {
+            "name": "ExternalServiceUnavailable",
+            "value": 18
+          },
+          {
+            "name": "DuplicateTransaction",
+            "value": 19
+          },
+          {
+            "name": "OverMaximumPayment",
+            "value": 20
+          },
+          {
+            "name": "Call",
+            "value": 21
+          },
+          {
+            "name": "InvalidCreditCardAmount",
+            "value": 22
+          },
+          {
+            "name": "InvalidExpirationDate",
+            "value": 23
+          },
+          {
+            "name": "InvalidReason",
+            "value": 24
+          },
+          {
+            "name": "InvalidZipcode",
+            "value": 25
+          },
+          {
+            "name": "CreditCardCustomerNameMissing",
+            "value": 26
+          },
+          {
+            "name": "NoProcessorResponse",
+            "value": 27
+          },
+          {
+            "name": "CardTypeNotAccepted",
+            "value": 28
+          },
+          {
+            "name": "InvalidEpay",
+            "value": 29
+          },
+          {
+            "name": "InvalidRequest",
+            "value": 30
+          },
+          {
+            "name": "Unauthorized",
+            "value": 31
+          }
+        ]
+      }
+    },
+    "Core.ClaimsPayApprovalRequestUpdateResponse": {
+      "required": [
+        "IsSuccessful",
+        "ResultCode"
+      ],
+      "type": "object",
+      "properties": {
+        "ResponseMessage": {
+          "type": "string"
+        },
+        "ResponseCode": {
+          "type": "string"
+        },
+        "IsSuccessful": {
+          "type": "boolean"
+        },
+        "ResultCode": {
+          "$ref": "#/definitions/ResultCode"
+        }
+      }
+    },
+    "ClaimsPayApprovalRequestPartyUpdateEventType": {
+      "enum": [
+        "Undefined",
+        "CommunicationSendError",
+        "ActionCompleted",
+        "Rejected",
+        "PaymentFailed",
+        "PaymentSuccessful",
+        "WebsiteAccessBlocked",
+        "PrepareCheck",
+        "PaymentIncomplete",
+        "MessageDeliveryChanged"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayApprovalRequestPartyUpdateEventType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "CommunicationSendError",
+            "value": 1
+          },
+          {
+            "name": "ActionCompleted",
+            "value": 2
+          },
+          {
+            "name": "Rejected",
+            "value": 3
+          },
+          {
+            "name": "PaymentFailed",
+            "value": 4
+          },
+          {
+            "name": "PaymentSuccessful",
+            "value": 5
+          },
+          {
+            "name": "WebsiteAccessBlocked",
+            "value": 6
+          },
+          {
+            "name": "PrepareCheck",
+            "value": 7
+          },
+          {
+            "name": "PaymentIncomplete",
+            "value": 8
+          },
+          {
+            "name": "MessageDeliveryChanged",
+            "value": 9
+          }
+        ]
+      }
+    },
+    "ClaimsPayMessageDeliveryType": {
+      "enum": [
+        "Undefined",
+        "Email",
+        "Text"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayMessageDeliveryType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Email",
+            "value": 1
+          },
+          {
+            "name": "Text",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "ClaimsPayApprovalRequestPartyRole": {
+      "enum": [
+        "Undefined",
+        "ApprovalOnly",
+        "PaymentOnly",
+        "ApprovalAndPayment",
+        "PaymentOnlyActionBypass",
+        "MailToCheckParty",
+        "NamedCheckParty"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayApprovalRequestPartyRole",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "ApprovalOnly",
+            "value": 1
+          },
+          {
+            "name": "PaymentOnly",
+            "value": 2
+          },
+          {
+            "name": "ApprovalAndPayment",
+            "value": 3
+          },
+          {
+            "name": "PaymentOnlyActionBypass",
+            "value": 4
+          },
+          {
+            "name": "MailToCheckParty",
+            "value": 5
+          },
+          {
+            "name": "NamedCheckParty",
+            "value": 6
+          }
+        ]
+      }
+    },
+    "ClaimsPayApprovalRequestPartyStatus": {
+      "enum": [
+        "Undefined",
+        "Initiated",
+        "FailedWelcomeCommunication",
+        "WebsiteAccessBlocked",
+        "Rejected",
+        "WaitingForOtherParties",
+        "Completed",
+        "PaymentIncomplete",
+        "PaymentScheduled",
+        "AuthorityHold"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayApprovalRequestPartyStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Initiated",
+            "value": 1
+          },
+          {
+            "name": "FailedWelcomeCommunication",
+            "value": 2
+          },
+          {
+            "name": "WebsiteAccessBlocked",
+            "value": 3
+          },
+          {
+            "name": "Rejected",
+            "value": 4
+          },
+          {
+            "name": "WaitingForOtherParties",
+            "value": 5
+          },
+          {
+            "name": "Completed",
+            "value": 6
+          },
+          {
+            "name": "PaymentIncomplete",
+            "value": 7
+          },
+          {
+            "name": "PaymentScheduled",
+            "value": 8
+          },
+          {
+            "name": "AuthorityHold",
+            "value": 9
+          }
+        ]
+      }
+    },
+    "Core.ClaimsPayApprovalRequestPartyUpdateRequest": {
+      "required": [
+        "EventType",
+        "EventDate",
+        "ApprovalRequestPartyId",
+        "AccountId",
+        "LinkDeliveryType",
+        "ApprovalRole",
+        "Status"
+      ],
+      "type": "object",
+      "properties": {
+        "OperationId": {
+          "type": "string"
+        },
+        "EventType": {
+          "$ref": "#/definitions/ClaimsPayApprovalRequestPartyUpdateEventType"
+        },
+        "EventDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "TimeZone": {
+          "type": "string"
+        },
+        "ApprovalRequestPartyId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "AccountId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ContactId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ProcessType": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        },
+        "FullName": {
+          "type": "string"
+        },
+        "CompanyName": {
+          "type": "string"
+        },
+        "LinkDeliveryType": {
+          "$ref": "#/definitions/ClaimsPayMessageDeliveryType"
+        },
+        "ApprovalRole": {
+          "$ref": "#/definitions/ClaimsPayApprovalRequestPartyRole"
+        },
+        "DisputeComment": {
+          "type": "string"
+        },
+        "Status": {
+          "$ref": "#/definitions/ClaimsPayApprovalRequestPartyStatus"
+        },
+        "PaymentSummary": {
+          "$ref": "#/definitions/Core.ClaimsPayPaymentSummary"
+        }
+      }
+    },
+    "ClaimsPayPaymentMethodType": {
+      "enum": [
+        "Undefined",
+        "BankAccount",
+        "Check",
+        "VirtualCard",
+        "PushToCard"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsPayPaymentMethodType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "BankAccount",
+            "value": 1
+          },
+          {
+            "name": "Check",
+            "value": 2
+          },
+          {
+            "name": "VirtualCard",
+            "value": 3
+          },
+          {
+            "name": "PushToCard",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "Core.ClaimsPayPaymentSummary": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "PaymentMethodType": {
+          "$ref": "#/definitions/ClaimsPayPaymentMethodType"
+        },
+        "BankAccountSummary": {
+          "$ref": "#/definitions/SIMSClaims.BankAccountSummary"
+        },
+        "CardInfo": {
+          "$ref": "#/definitions/Core.CardInfo"
+        },
+        "CheckSummary": {
+          "$ref": "#/definitions/Core.CheckSummary"
+        },
+        "Address": {
+          "$ref": "#/definitions/Core.MailingAddress"
+        },
+        "TransactionSummary": {
+          "$ref": "#/definitions/ClaimsPayTransactionSummary"
+        }
+      }
+    },
+    "EftAccountType": {
+      "enum": [
+        "Undefined",
+        "Checking",
+        "Savings"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "EftAccountType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Checking",
+            "value": 1
+          },
+          {
+            "name": "Savings",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "SIMSClaims.BankAccountSummary": {
+      "required": [
+        "AccountType"
+      ],
+      "type": "object",
+      "properties": {
+        "Token": {
+          "type": "string"
+        },
+        "AccountType": {
+          "$ref": "#/definitions/EftAccountType"
+        },
+        "LastFourDigits": {
+          "type": "string"
+        },
+        "BankName": {
+          "type": "string"
+        },
+        "NameOnAccount": {
+          "type": "string"
+        }
+      }
+    },
+    "CreditCardType": {
+      "enum": [
+        "Undefined",
+        "Visa",
+        "MasterCard",
+        "AmericanExpress",
+        "Discover",
+        "PinlessDebitGeneric",
+        "Star",
+        "Nyce",
+        "Pulse",
+        "Other"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "CreditCardType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Visa",
+            "value": 1
+          },
+          {
+            "name": "MasterCard",
+            "value": 2
+          },
+          {
+            "name": "AmericanExpress",
+            "value": 3
+          },
+          {
+            "name": "Discover",
+            "value": 4
+          },
+          {
+            "name": "PinlessDebitGeneric",
+            "value": 5
+          },
+          {
+            "name": "Star",
+            "value": 6
+          },
+          {
+            "name": "Nyce",
+            "value": 7
+          },
+          {
+            "name": "Pulse",
+            "value": 8
+          },
+          {
+            "name": "Other",
+            "value": 99
+          }
+        ]
+      }
+    },
+    "Core.CardInfo": {
+      "required": [
+        "CardType"
+      ],
+      "type": "object",
+      "properties": {
+        "Token": {
+          "type": "string"
+        },
+        "LastFourDigits": {
+          "type": "string"
+        },
+        "CardType": {
+          "$ref": "#/definitions/CreditCardType"
+        },
+        "HolderName": {
+          "type": "string"
+        }
+      }
+    },
+    "Core.CheckSummary": {
+      "required": [
+        "MailDeliveryType",
+        "CheckFulfillmentOwner"
+      ],
+      "type": "object",
+      "properties": {
+        "PayTo": {
+          "type": "string"
+        },
+        "CheckMemo": {
+          "type": "string"
+        },
+        "CheckStubData": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "DocumentUrl": {
+          "type": "string"
+        },
+        "MailDeliveryType": {
+          "$ref": "#/definitions/MailDeliveryType"
+        },
+        "CheckFulfillmentOwner": {
+          "$ref": "#/definitions/CheckFulfillmentOwnerType"
+        }
+      }
+    },
+    "Core.MailingAddress": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CompanyContactInformation": {
+          "type": "string"
+        },
+        "Attention": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "Address2": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "Zip": {
+          "type": "string"
+        }
+      }
+    },
+    "ClaimsPayTransactionSummary": {
+      "required": [
+        "BatchNumber"
+      ],
+      "type": "object",
+      "properties": {
+        "TransactionId": {
+          "type": "string"
+        },
+        "TransactionDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "PaymentProcessingStatus": {
+          "$ref": "#/definitions/PaymentProcessingStatus"
+        },
+        "PaymentResponseMessage": {
+          "type": "string"
+        },
+        "BatchNumber": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "Core.ClaimsPayApprovalRequestPartyUpdateResponse": {
+      "required": [
+        "IsSuccessful",
+        "ResultCode"
+      ],
+      "type": "object",
+      "properties": {
+        "ResponseMessage": {
+          "type": "string"
+        },
+        "ResponseCode": {
+          "type": "string"
+        },
+        "IsSuccessful": {
+          "type": "boolean"
+        },
+        "ResultCode": {
+          "$ref": "#/definitions/ResultCode"
+        }
+      }
+    },
+    "PushFundsToCardRequest": {
+      "description": "PushFundsToCard Request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts. If sent, will be used to identify the recipient of the payment complete email.",
+              "type": "integer"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of payment.",
+              "type": "number"
+            },
+            "Token": {
+              "description": "Previously saved card token.",
+              "type": "string"
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups.",
+              "type": "string"
+            },
+            "ClaimNumber": {
+              "description": "Claim number that will be associated to the payment.",
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim details which will be sent in the payment email.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "PushFundsToCardResponse": {
+      "description": "PushFundsToCard Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "BatchNumber",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "BatchNumber",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            },
+            "CardInfo": {
+              "$ref": "#/definitions/CardInfo",
+              "description": "Card summary information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "IssueCheckRequest": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts. If sent, will be used to identify the recipient of the payment complete email.",
+              "type": "integer"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of payment.",
+              "type": "number"
+            },
+            "ClaimNumber": {
+              "description": "Claim number that will be associated to the payment.",
+              "maxLength": 25,
+              "minLength": 0,
+              "type": "string"
+            },
+            "Memo": {
+              "description": "Check memo line text.",
+              "maxLength": 40,
+              "minLength": 0,
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim detail information that will be printed on the check Stub.\r\nPrinted information will be limited to 19 lines with up to 111 characters each line.\r\nIf a string is sent that is greater than 111 characters, the values will be parsed into multiple lines by splitting the lines at spaces.\r\nIf the data sent results in over 19 rows after parsing, the system will only print the first 19 rows.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "DocumentUrl": {
+              "description": "URL for the pdf support documentation for the claim payment. Up to 250 characters.\r\nIf the party is sent a check fulfilled by One Inc, the pdf will be sent with the mailed check; the pdf must be limited to four (4) pages in length.\r\nIf the pdf exceeds the allowable length, the mailing of the check will fail.",
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            },
+            "MailDeliveryType": {
+              "$ref": "#/definitions/MailDeliveryType"
+            },
+            "RecipientInfo": {
+              "$ref": "#/definitions/RecipientInfo",
+              "description": "Check recipient information."
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups.\r\nFor payments made via check, the AccountGroupCode will indicate to the system which bank account and routing number should be used to issue the check.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "RecipientInfo": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "PayToName": {
+          "description": "Name of person or company that is the recipient of the check.",
+          "type": "string"
+        },
+        "AdditionalPayToNames": {
+          "description": "Name of additional persons or companies that will be listed as additional recipients on the check. Each name must be preceded with either AND or OR.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AdditionalPayToName"
+          }
+        },
+        "ShipToAddress": {
+          "$ref": "#/definitions/ShipToAddress",
+          "description": "The ship to information for check delivery."
+        }
+      }
+    },
+    "AdditionalPayToName": {
+      "required": [
+        "Separator"
+      ],
+      "type": "object",
+      "properties": {
+        "Separator": {
+          "$ref": "#/definitions/Separator"
+        },
+        "PayToName": {
+          "description": "Name of additional persons or companies.",
+          "type": "string"
+        }
+      }
+    },
+    "ShipToAddress": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "The person or company to which the check will be mailed.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "CompanyContactInformation": {
+          "description": "Address field for additional company or contact information such as department or title.\r\nThis applies to company accounts only.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Attention": {
+          "description": "Attention line to provide additional identifying information for the recipient.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address1": {
+          "description": "Address to which the check will be mailed.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "Address2": {
+          "description": "Address Line 2 to which the check will be mailed.",
+          "maxLength": 60,
+          "minLength": 0,
+          "type": "string"
+        },
+        "City": {
+          "description": "The city to which the check will be mailed.",
+          "maxLength": 30,
+          "minLength": 0,
+          "type": "string"
+        },
+        "State": {
+          "description": "The state to which the check will be mailed.",
+          "type": "string"
+        },
+        "Zip": {
+          "description": "The zip code to which the check will be mailed.",
+          "type": "string"
+        }
+      }
+    },
+    "IssueCheckResponse": {
+      "description": "IssueCheck response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the check batch.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelCheckRequest": {
+      "description": "CancelCheck Request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelCheckResponse": {
+      "description": "CancelCheck Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "An id of the cancel transaction.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "AdjusterModal.GetScreenFlowsConfigurationResponse": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ScreenFlows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AdjusterModal.ScreenFlowDefinition"
+          }
+        },
+        "ResponseCode": {
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "AdjusterModal.ScreenFlowDefinition": {
+      "required": [
+        "Version"
+      ],
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "ScreenFlow": {
+          "type": "string"
+        },
+        "Version": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "RemovePaymentMethodRequest": {
+      "description": "RemovePaymentMethod request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "Token": {
+              "description": "Saved bank account token.",
+              "type": "string"
+            },
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "RemovePaymentMethodResponse": {
+      "description": "RemovePaymentMethod Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "SavePaymentMethodRequest": {
+      "description": "SavePaymentMethod request",
+      "required": [
+        "AccountId",
+        "BypassBankAccountValidation"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "BypassBankAccountValidation"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ClaimNumber": {
+              "description": "Optional field for a claim number that will be associated to the operation.",
+              "type": "string"
+            },
+            "BankAccountDetails": {
+              "$ref": "#/definitions/BankAccountDetails",
+              "description": "Bank Account details."
+            },
+            "BypassBankAccountValidation": {
+              "description": "Bypasses bank account validation.",
+              "type": "boolean"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SavePaymentMethodResponse": {
+      "description": "SavePaymentMethod Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "TokenCreationTime",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TokenCreationTime",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "TokenCreationTime": {
+              "format": "date-time",
+              "description": "Token creation date and time in merchant time zone.",
+              "type": "string"
+            },
+            "BankAccountSummary": {
+              "$ref": "#/definitions/BankAccountSummary",
+              "description": "Bank account summary information."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetPaymentMethodInfoRequest": {
+      "description": "GetPaymentMethodInfo request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetPaymentMethodInfoResponse": {
+      "description": "GetPaymentMethodInfo Response",
+      "required": [
+        "HasPrepaidCardAccount",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "HasPrepaidCardAccount",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "BankAccounts": {
+              "description": "Array of bank accounts that are associated to the AccountId.\r\nThe array will return a {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.BankAccountSummary} object\r\n(token and supporting information that can be used to process an EFT Credit payments) for each bank account.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BankAccountSummary"
+              }
+            },
+            "Cards": {
+              "description": "Array of cards that are associated to the AccountId.\r\nThe array will return an {OneInc.PortalOne.ClaimsPay.RestApi.Contracts.DataContracts.CardSummary} object\r\n(token and supporting information that can be used to process a Push to Card payment) for each card.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CardSummary"
+              }
+            },
+            "HasPrepaidCardAccount": {
+              "description": "Bool which will indicate if a prepaid card account exists for the AccountId.",
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateCardRequest": {
+      "description": "UpdateCardRequest Request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "Token": {
+              "description": "Previously saved card token.",
+              "type": "string"
+            },
+            "Zip": {
+              "description": "Card holder zip.",
+              "type": "string"
+            },
+            "Address": {
+              "description": "Card holder address.",
+              "maxLength": 60,
+              "minLength": 0,
+              "type": "string"
+            },
+            "City": {
+              "description": "Card holder city.",
+              "maxLength": 30,
+              "minLength": 0,
+              "type": "string"
+            },
+            "State": {
+              "description": "Card holder state.",
+              "type": "string"
+            },
+            "Phone": {
+              "description": "Customer phone.",
+              "type": "string"
+            },
+            "ExpirationYear": {
+              "format": "int32",
+              "description": "Year of the expiration of the credit card.",
+              "type": "integer"
+            },
+            "ExpirationMonth": {
+              "format": "int32",
+              "description": "Month of the expiration of the credit card.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateCardResponse": {
+      "description": "UpdateCardResponse Response",
+      "required": [
+        "UpdateTime",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "UpdateTime",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TimeZone": {
+              "description": "Short time zone name with daylight saving time suffix.",
+              "type": "string"
+            },
+            "UpdateTime": {
+              "format": "date-time",
+              "description": "Update date and time in merchant time zone.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "LoadPrepaidCardAccountRequest": {
+      "description": "LoadPrepaidCardAccount Request",
+      "required": [
+        "AccountId",
+        "Amount",
+        "ActivateCard"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "Amount",
+            "ActivateCard"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts. If sent, will be used to identify the recipient of the payment complete email.",
+              "type": "integer"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of payment.",
+              "type": "number"
+            },
+            "ClaimNumber": {
+              "description": "The claim number that is associated to the claim payment.",
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim details which will be sent in the payment email.",
+              "type": "string"
+            },
+            "PrepaidCardReferenceNumber": {
+              "description": "If making a Prepaid Card payment to a physical card\r\n(by handing the card to the payee or mailing the card to the payee),\r\n provide the Prepaid Card Reference Number that is associated to that card.",
+              "type": "string"
+            },
+            "ActivateCard": {
+              "description": "Flag which indicates if the physical card will be activated.\r\n If the card is being handed to the payee, the card can be activated.\r\nIf the card is being mailed to the payee, the card should not be activated.",
+              "type": "boolean"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "LoadPrepaidCardAccountResponse": {
+      "description": "LoadPrepaidCardAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "TransactionDate",
+        "BatchNumber",
+        "PrepaidAccountBalance",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TransactionDate",
+            "BatchNumber",
+            "PrepaidAccountBalance",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            },
+            "PrepaidAccountBalance": {
+              "format": "decimal",
+              "description": "If paymentMethod was PrepaidCard, the prepaid account balance after payment was completed.",
+              "type": "number"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReverseLoadPrepaidCardAccountRequest": {
+      "description": "ReverseLoadPrepaidCardAccount Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "TransactionId": {
+              "description": "Transaction identifier of load that is to be reversed.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReverseLoadPrepaidCardAccountResponse": {
+      "description": "ReverseLoadPrepaidCardAccount Response",
+      "required": [
+        "TransactionDate",
+        "BatchNumber",
+        "PrepaidAccountBalance",
+        "OriginalPrepaidAccountBalance",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TransactionDate",
+            "BatchNumber",
+            "PrepaidAccountBalance",
+            "OriginalPrepaidAccountBalance",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier of the reverse load operation.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            },
+            "PrepaidAccountBalance": {
+              "format": "decimal",
+              "description": "Balance of the prepaid account after the reverse load has been completed.",
+              "type": "number"
+            },
+            "OriginalPrepaidAccountBalance": {
+              "format": "decimal",
+              "description": "Original balance of the prepaid account prior to the reverse load request.",
+              "type": "number"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "DisbursementType": {
+      "description": "Type of method to disburse funds.",
+      "enum": [
+        "Undefined",
+        "Ach",
+        "Check"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "DisbursementType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Ach",
+            "value": 1
+          },
+          {
+            "name": "Check",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "DisburseFundsRequest": {
+      "required": [
+        "Amount",
+        "DisbursementType"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "Amount",
+            "DisbursementType"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Original Transaction identification which you would like to DisburseFunds",
+              "type": "string"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of the disbursement.",
+              "type": "number"
+            },
+            "ClaimNumber": {
+              "description": "Claim number that will be associated to the payment.",
+              "type": "string"
+            },
+            "DisbursementType": {
+              "$ref": "#/definitions/DisbursementType"
+            },
+            "BankAccountDetails": {
+              "$ref": "#/definitions/BankAccountDetails",
+              "description": "Bank Account details."
+            },
+            "Token": {
+              "description": "Saved bank account token.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user who initiated the Disburse request",
+              "type": "string"
+            },
+            "AddressDetails": {
+              "$ref": "#/definitions/AddressDetails",
+              "description": "Details on the address to which the check should be mailed."
+            },
+            "Contact": {
+              "description": "For Company AccountTypes only.\r\nFor Company, the First and Last name of the ContactId who is initiating the action.\r\nWill be displayed in the outbound transaction report in the Contact Field",
+              "type": "string"
+            },
+            "Comment": {
+              "description": "Optional alphanumeric string",
+              "maxLength": 255,
+              "minLength": 0,
+              "type": "string"
+            },
+            "CheckMemo": {
+              "description": "Optional field contains information for a check",
+              "maxLength": 50,
+              "minLength": 0,
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "AddressDetails": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "Address1": {
+          "type": "string"
+        },
+        "ContactName": {
+          "type": "string"
+        },
+        "NameOnAccount": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "Zip": {
+          "type": "string"
+        }
+      }
+    },
+    "DisburseFundsResponse": {
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "PrepaidAccountBalance": {
+              "format": "decimal",
+              "description": "Balance of the prepaid account after the disbursement has been completed.",
+              "type": "number"
+            },
+            "TransactionId": {
+              "description": "Transaction identifier",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "Address": {
+              "$ref": "#/definitions/AddressDetails",
+              "description": "Transaction address details."
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ClaimsPayRequestBase": {
+      "required": [
+        "discriminator_ClaimsPayRequestBase"
+      ],
+      "type": "object",
+      "properties": {
+        "ClaimsPayAuthenticationKey": {
+          "description": "ClaimsPay instance authentication key.",
+          "type": "string"
+        },
+        "discriminator_ClaimsPayRequestBase": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_ClaimsPayRequestBase"
+    },
+    "CreateSessionRequest": {
+      "description": "CreateSession Request",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ClaimsPayAuthenticationKey": {
+          "description": "ClaimsPay instance authentication key.",
+          "type": "string"
+        }
+      }
+    },
+    "LoadReservedPrepaidCardAccountRequest": {
+      "description": "LoadReservedPrepaidCardAccount Request",
+      "required": [
+        "AccountId",
+        "Amount"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "Amount"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "TransactionId": {
+              "description": "Transaction identifier from the transaction where the physical card was originally reserved for a future load.",
+              "type": "string"
+            },
+            "Amount": {
+              "format": "decimal",
+              "description": "Amount of payment.",
+              "type": "number"
+            },
+            "ClaimNumber": {
+              "description": "The claim number that is associated to the claim payment.",
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim details which will be sent in the payment email.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            },
+            "AccountGroupCode": {
+              "description": "This field is used to route money from different accounts based on a predefined groups.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReservePrepaidCardAccountRequest": {
+      "description": "ReservePrepaidCardAccount Request",
+      "required": [
+        "AccountId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ClaimNumber": {
+              "description": "Optional field for a claim number that will be associated to the operation.",
+              "type": "string"
+            },
+            "ClaimDetails": {
+              "description": "Claim details which will be sent in the payment email.",
+              "type": "string"
+            },
+            "PrepaidCardReferenceNumber": {
+              "description": "If making a Prepaid Card payment to a physical card,\r\n provide the Prepaid Card Reference Number that is associated to that card.",
+              "type": "string"
+            },
+            "SourceUser": {
+              "description": "Identifier/name of user in the source system for reporting purposes.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "BatchAccountImportRequest": {
+      "description": "BatchAccountImport request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "Accounts": {
+              "description": "List of new accounts to add.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ClaimsPayAccount"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ClaimsPayAccount": {
+      "description": "ClaimsPay account",
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CompanyDetails": {
+          "$ref": "#/definitions/CompanyDetails",
+          "description": "Details on the company and contact for which the ClaimsPay Account will be created."
+        },
+        "IndividualDetails": {
+          "$ref": "#/definitions/IndividualDetails",
+          "description": "Details on the individual for which the ClaimsPay Account will be created."
+        },
+        "ClaimNumber": {
+          "description": "Optional field for a claim number that will be associated to the operation.",
+          "type": "string"
+        },
+        "ExternalAccountId": {
+          "description": "External account identifier.",
+          "type": "string"
+        }
+      }
+    },
+    "EpayRequestType": {
+      "description": "Type of ePay delivery method that was used for the request.",
+      "enum": [
+        "Email",
+        "TextMessage"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "EpayRequestType",
+        "values": [
+          {
+            "name": "Email",
+            "value": 0
+          },
+          {
+            "name": "TextMessage",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "CreateEpayRequest": {
+      "description": "CreateEpay request",
+      "required": [
+        "EpayRequestType",
+        "ExtendedParameters"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "EpayRequestType",
+            "ExtendedParameters"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts.",
+              "type": "integer"
+            },
+            "ClaimNumber": {
+              "description": "Optional field for a claim number that will be associated to the operation.",
+              "type": "string"
+            },
+            "EpayEmailAddress": {
+              "description": "The email address for the EPay request. If it is not populated,\r\n the email will be sent to the Email Address stored for the AccountId or ContactId.",
+              "type": "string"
+            },
+            "EpayRequestType": {
+              "$ref": "#/definitions/EpayRequestType"
+            },
+            "EpayPhoneNumber": {
+              "description": "Phone number to which the ePay SMS was sent.",
+              "type": "string"
+            },
+            "ExtendedParameters": {
+              "description": "Extended Parameters.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReleaseEpayRequest": {
+      "description": "Release Epay Request",
+      "required": [
+        "EpayRequestId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "EpayRequestId"
+          ],
+          "type": "object",
+          "properties": {
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the ePay request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelEpayRequest": {
+      "description": "CancelEpay Request",
+      "required": [
+        "EpayRequestId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "EpayRequestId"
+          ],
+          "type": "object",
+          "properties": {
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the ePay request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetStatusByEpayRequest": {
+      "description": "GetStatusByEpay Request",
+      "required": [
+        "EpayRequestId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "EpayRequestId"
+          ],
+          "type": "object",
+          "properties": {
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the ePay request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ResendEpayRequest": {
+      "description": "ResendEpay Request",
+      "required": [
+        "EpayRequestId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "EpayRequestId"
+          ],
+          "type": "object",
+          "properties": {
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the ePay request.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SendWebsiteEmailRequest": {
+      "description": "SendWebsiteEmail Request",
+      "required": [
+        "IsUsernameRecovery"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "IsUsernameRecovery"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts.",
+              "type": "integer"
+            },
+            "EmailAddress": {
+              "description": "Email address to which the website email will be sent.\r\n This email address will be updated in the ClaimsPay system for the Contact or Individual.",
+              "type": "string"
+            },
+            "IsUsernameRecovery": {
+              "description": "Setting to indicate if the email is being sent to allow the user to reset their website profile credentials.\r\n If yes, the user will be re-authenticated and directed to update their username and password.\r\n For a user that does not have a web profile, the value should be no.",
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateCompanyTypeRequest": {
+      "description": "UpdateCompanyType Request",
+      "required": [
+        "AccountId",
+        "CompanyType"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "CompanyType"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "CompanyType": {
+              "$ref": "#/definitions/CompanyType"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "DeleteAccountRequest": {
+      "description": "DeleteAccount Request",
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ClaimsPayResponseBase": {
+      "required": [
+        "discriminator_ClaimsPayResponseBase"
+      ],
+      "type": "object",
+      "properties": {
+        "ResponseCode": {
+          "description": "Operation response code.",
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "description": "Response message.",
+          "type": "string"
+        },
+        "discriminator_ClaimsPayResponseBase": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_ClaimsPayResponseBase"
+    },
+    "AuthenticationFailedResponse": {
+      "description": "Authentication Failed Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "CreateSessionResponse": {
+      "description": "CreateSession Response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "SessionId": {
+              "description": "Temporary identifier in a GUID format.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "LoadReservedPrepaidCardAccountResponse": {
+      "description": "LoadReservedPrepaidCardAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "TransactionDate",
+        "PrepaidAccountBalance",
+        "BatchNumber",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TransactionDate",
+            "PrepaidAccountBalance",
+            "BatchNumber",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction identifier for the LoadReserved transaction.",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            },
+            "PrepaidAccountBalance": {
+              "format": "decimal",
+              "description": "Balance of the prepaid account after the release load request was made.",
+              "type": "number"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReservePrepaidCardAccountResponse": {
+      "description": "ReservePrepaidCardAccount Response",
+      "required": [
+        "TransactionId",
+        "TransactionDate",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "TransactionId",
+            "TransactionDate",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "format": "int32",
+              "description": "Transaction identifier that can be used to load the reserved prepaid card.",
+              "type": "integer"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time.",
+              "type": "string"
+            },
+            "TimeZone": {
+              "description": "Transaction time zone.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "BatchAccountImportResponse": {
+      "description": "BatchAccountImport response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "BatchAccountProcessingResponses": {
+              "description": "List of each account creation responses.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ClaimsPayAccountResponse"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ClaimsPayAccountResponse": {
+      "description": "Single account creation response",
+      "required": [
+        "AccountId",
+        "ContactId",
+        "EpayRequestId",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "ContactId",
+            "EpayRequestId",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "ExternalAccountId": {
+              "description": "External account identifier.",
+              "type": "string"
+            },
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Contact identifier.",
+              "type": "integer"
+            },
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Epay identifier.",
+              "type": "integer"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CreateEpayResponse": {
+      "description": "CreateEpay response",
+      "required": [
+        "EpayRequestId",
+        "EpayRequestType",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "EpayRequestId",
+            "EpayRequestType",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "EpayRequestId": {
+              "format": "int32",
+              "description": "Unique identifier for the ePay request.",
+              "type": "integer"
+            },
+            "EpayRequestDate": {
+              "format": "date-time",
+              "description": "Date the epay request was created.",
+              "type": "string"
+            },
+            "EpayEmailAddress": {
+              "description": "Email address to which the epay email was sent.",
+              "type": "string"
+            },
+            "EpayRequestType": {
+              "$ref": "#/definitions/EpayRequestType"
+            },
+            "EpayPhoneNumber": {
+              "description": "Phone number to which the ePay SMS was sent.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ReleaseEpayResponse": {
+      "description": "Release Epay Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "CancelEpayResponse": {
+      "description": "CancelEpay Response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "ClaimsEpayRequestStatus": {
+      "description": "Status of the ePay request.",
+      "enum": [
+        "Undefined",
+        "Initiated",
+        "Canceled",
+        "Expired",
+        "Complete"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "ClaimsEpayRequestStatus",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Initiated",
+            "value": 1
+          },
+          {
+            "name": "Canceled",
+            "value": 2
+          },
+          {
+            "name": "Expired",
+            "value": 3
+          },
+          {
+            "name": "Complete",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "GetStatusByEpayResponse": {
+      "description": "GetStatusByEpay Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "AccountId",
+        "ContactId",
+        "EpayRequestStatus",
+        "EpayRequestDate",
+        "EpayRequestType",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "AccountId",
+            "ContactId",
+            "EpayRequestStatus",
+            "EpayRequestDate",
+            "EpayRequestType",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "AccountId": {
+              "format": "int32",
+              "description": "ClaimsPay Account Identifier.",
+              "type": "integer"
+            },
+            "ContactId": {
+              "format": "int32",
+              "description": "Company Contact identifier. Only applicable to company accounts.",
+              "type": "integer"
+            },
+            "ClaimNumber": {
+              "description": "Claim number associated to the ePay request.",
+              "type": "string"
+            },
+            "EpayEmailAddress": {
+              "description": "Email address to which the ePay email was sent.",
+              "type": "string"
+            },
+            "EpayRequestStatus": {
+              "$ref": "#/definitions/ClaimsEpayRequestStatus"
+            },
+            "EpayRequestDate": {
+              "format": "date-time",
+              "description": "Date the ePay request was initiated.",
+              "type": "string"
+            },
+            "BankAccountSummary": {
+              "$ref": "#/definitions/BankAccountSummary",
+              "description": "Bank account summary information that was saved with the ePay request."
+            },
+            "EpayRequestType": {
+              "$ref": "#/definitions/EpayRequestType"
+            },
+            "EpayPhoneNumber": {
+              "description": "Phone number to which the ePay SMS was sent.",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ResendEpayResponse": {
+      "description": "ResendEpay Response\r\nMethod response will include a valid HTTPStatusCode.",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "SendWebsiteEmailResponse": {
+      "description": "SendWebsiteEmail Response\r\nResponse will include a valid HTTPStatusCode.",
+      "required": [
+        "EmailUpdateSuccess",
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "EmailUpdateSuccess",
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {
+            "EmailUpdateSuccess": {
+              "description": "Indicates if the email address was updated successfully.",
+              "type": "boolean"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "UpdateCompanyTypeResponse": {
+      "description": "UpdateCompanyType Response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "DeleteAccountResponse": {
+      "description": "DeleteAccount Response",
+      "required": [
+        "IsSuccessful"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ClaimsPayResponseBase"
+        },
+        {
+          "required": [
+            "IsSuccessful"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "RenderViewAsStringRequest": {
+      "required": [
+        "discriminator_RenderViewAsStringRequest"
+      ],
+      "type": "object",
+      "properties": {
+        "AssemblyQualifiedModelName": {
+          "type": "string"
+        },
+        "Payload": {
+          "type": "string"
+        },
+        "TemplateType": {
+          "type": "string"
+        },
+        "discriminator_RenderViewAsStringRequest": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_RenderViewAsStringRequest"
+    },
+    "RenderViewAsStringResponse": {
+      "required": [
+        "discriminator_RenderViewAsStringResponse"
+      ],
+      "type": "object",
+      "properties": {
+        "StringView": {
+          "type": "string"
+        },
+        "discriminator_RenderViewAsStringResponse": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_RenderViewAsStringResponse"
+    }
+  }
+}
