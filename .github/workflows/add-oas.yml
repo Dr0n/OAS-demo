@@ -16,7 +16,7 @@ jobs:
       - name: Checkout needed branch
         uses: actions/checkout@v2
         with:
-          ref: add-oas-example
+          ref: latest
       - name: Create needed folders at GitHub
         run: |
           mkdir -p ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}
