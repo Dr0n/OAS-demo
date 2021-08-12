@@ -1,0 +1,2062 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "External",
+    "title": "OneInc.PortalOne.Communication"
+  },
+  "host": "testportalone.processonepayments.com",
+  "basePath": "/Communication",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/Messages/Send": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Schedule message for send",
+        "operationId": "Send",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Model with message description and parameters",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendCommunicationMessageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SendCommunicationMessageResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/SendBatch": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Schedule collection of messages for send",
+        "operationId": "SendBatch",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Model with collection of messages",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendCommunicationMessageBatchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SendCommunicationMessageBatchResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/Get": {
+      "get": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Get message info by ExternalMessageId",
+        "operationId": "Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "externalMessageId",
+            "in": "query",
+            "description": "External Message Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "portalOneAuthenticationKey",
+            "in": "query",
+            "description": "PortalOne Authentication Key",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetCommunicationMessageResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/SendVerificationCode": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Schedule verification code message for send",
+        "operationId": "SendVerificationCode",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Model with message description and parameters",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendVerificationCodeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SendVerificationCodeResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/ValidateVerificationCode": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Validate verification code",
+        "operationId": "ValidateVerificationCode",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Parameters for find verification message and code",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ValidateVerificationCodeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ValidateVerificationCodeResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/IsVerificationCodeValidated": {
+      "get": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Is verification code validated",
+        "operationId": "IsVerificationCodeValidated",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "externalMessageId",
+            "in": "query",
+            "description": "External Message Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "description": "Phone Number",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "portalOneAuthenticationKey",
+            "in": "query",
+            "description": "PortalOne Authentication Key",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/IsVerificationCodeValidatedResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Messages/CancelPayByLink": {
+      "post": {
+        "tags": [
+          "Messages"
+        ],
+        "summary": "Cancels pay by link",
+        "operationId": "CancelPayByLink",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Parameters to find communication message",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CancelPayByLinkMessageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CancelPayByLinkMessageResponse"
+            }
+          }
+        }
+      }
+    },
+    "/MessageTemplates/GetTemplatesInfo": {
+      "get": {
+        "tags": [
+          "MessageTemplates"
+        ],
+        "summary": "Get available template codes in the portal identified by authentication key",
+        "operationId": "GetTemplatesInfo",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "portalOneAuthenticationKey",
+            "in": "query",
+            "description": "PortalOne Authentication Key",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GetCommunicationTemplateInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Receipt/GenerateReceiptData": {
+      "post": {
+        "tags": [
+          "Receipt"
+        ],
+        "operationId": "GenerateReceiptData",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GenerateReceiptInfoRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/GenerateReceiptInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/SendingConfirmation/AmazonSnsSubscription": {
+      "post": {
+        "tags": [
+          "SendingConfirmation"
+        ],
+        "summary": "Internal endpoint for consume AWS SNS notifications about sending status",
+        "operationId": "AmazonSnsSubscription",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data",
+          "text/plain"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "json",
+            "in": "body",
+            "description": "JSON as string (due to AWS send text/plain request)",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/SendingConfirmation/TwilioPostBack/{id}": {
+      "post": {
+        "tags": [
+          "SendingConfirmation"
+        ],
+        "operationId": "TwilioPostBack",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TwilioPostbackRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/SendingConfirmation/PlivoPostBack/{id}": {
+      "post": {
+        "tags": [
+          "SendingConfirmation"
+        ],
+        "operationId": "PlivoPostBack",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PlivoPostbackRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/Subscriptions/GetSubscriptionDetails": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "summary": "Get subscription statuses by phone number/email/customer id/external customer id",
+        "operationId": "GetSubscriptionDetails",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Parameters for find subscriptions",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/GetSubscriptionDetailsRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SubscriptionDetailsDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Subscriptions/OptOutFromText": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "summary": "Opt out customer phone number from text notifications",
+        "operationId": "OptOutFromText",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Opt out from text request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OptOutFromTextRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/OptOutFromTextResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Subscriptions/OptOutFromEmail": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "summary": "Opt out customer email from notifications",
+        "operationId": "OptOutFromEmail",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Opt out from email request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OptOutFromEmailRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/OptOutFromEmailResponse"
+            }
+          }
+        }
+      }
+    },
+    "/Subscriptions/OptOutFromPhoneCall": {
+      "post": {
+        "tags": [
+          "Subscriptions"
+        ],
+        "summary": "Opt out customer phone number from phone calls",
+        "operationId": "OptOutFromPhoneCall",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "description": "Opt out from phone call request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OptOutFromPhoneCallRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/OptOutFromPhoneCallResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SendCommunicationMessageRequest": {
+      "required": [
+        "PortalOneAuthenticationKey",
+        "ExternalMessageId",
+        "TemplateCode",
+        "PhoneNumber",
+        "EmailAddress"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/SendCommunicationMessage"
+        },
+        {
+          "required": [
+            "PortalOneAuthenticationKey",
+            "ExternalMessageId",
+            "TemplateCode",
+            "PhoneNumber",
+            "EmailAddress"
+          ],
+          "type": "object",
+          "properties": {
+            "PortalOneAuthenticationKey": {
+              "description": "PortalOne Authentication Key",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SendCommunicationMessageExecutionResult": {
+      "description": "Execution Result",
+      "enum": [
+        "Failed",
+        "ValidationFailed",
+        "OptOutFailed",
+        "Success"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "SendCommunicationMessageExecutionResult",
+        "values": [
+          {
+            "name": "Failed",
+            "value": 1
+          },
+          {
+            "name": "ValidationFailed",
+            "value": 2
+          },
+          {
+            "name": "OptOutFailed",
+            "value": 3
+          },
+          {
+            "name": "Success",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "SendCommunicationMessageResponse": {
+      "required": [
+        "ExecutionResult"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [
+            "ExecutionResult"
+          ],
+          "type": "object",
+          "properties": {
+            "ExecutionResult": {
+              "$ref": "#/definitions/SendCommunicationMessageExecutionResult"
+            },
+            "ExecutionResultDescription": {
+              "description": "Result Description",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SendCommunicationMessageBatchRequest": {
+      "required": [
+        "Messages",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "Messages",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "Messages": {
+              "description": "Communication Messages",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SendCommunicationMessage"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CommunicationMessageType": {
+      "description": "Communication Message Type",
+      "enum": [
+        "Undefined",
+        "Message",
+        "Conversation",
+        "VerificationCode",
+        "Receipt",
+        "System"
+      ],
+      "type": "string",
+      "x-nullable": true,
+      "x-ms-enum": {
+        "name": "CommunicationMessageType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Message",
+            "value": 1
+          },
+          {
+            "name": "Conversation",
+            "value": 2
+          },
+          {
+            "name": "VerificationCode",
+            "value": 3
+          },
+          {
+            "name": "Receipt",
+            "value": 4
+          },
+          {
+            "name": "System",
+            "value": 5
+          }
+        ]
+      }
+    },
+    "CommunicationMessageChannelType": {
+      "description": "Communication Message Channel",
+      "enum": [
+        "Undefined",
+        "Email",
+        "Text",
+        "PhoneCall"
+      ],
+      "type": "string",
+      "x-nullable": true,
+      "x-ms-enum": {
+        "name": "CommunicationMessageChannelType",
+        "values": [
+          {
+            "name": "Undefined",
+            "value": 0
+          },
+          {
+            "name": "Email",
+            "value": 1
+          },
+          {
+            "name": "Text",
+            "value": 2
+          },
+          {
+            "name": "PhoneCall",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "SendCommunicationMessage": {
+      "required": [
+        "discriminator_SendCommunicationMessage"
+      ],
+      "type": "object",
+      "properties": {
+        "ExternalMessageId": {
+          "description": "External MessageId",
+          "type": "string"
+        },
+        "TemplateCode": {
+          "description": "Template Code",
+          "type": "string"
+        },
+        "Type": {
+          "$ref": "#/definitions/CommunicationMessageType"
+        },
+        "Channel": {
+          "$ref": "#/definitions/CommunicationMessageChannelType"
+        },
+        "TimezoneId": {
+          "description": "Time Zone",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "Phone Number.\r\nRequired if Channel is Text or PhoneCall",
+          "type": "string"
+        },
+        "EmailAddress": {
+          "description": "Email Address.\r\nRequired if Channel is Email",
+          "type": "string"
+        },
+        "CustomerId": {
+          "format": "uuid",
+          "description": "Customer Id.\r\nRequired if ExternalCustomerId is null or empty",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000",
+          "x-nullable": true
+        },
+        "ExternalCustomerId": {
+          "description": "External Customer Id.\r\nRequired if CustomerId is null or empty",
+          "type": "string"
+        },
+        "Properties": {
+          "description": "Some External Properties",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "AccountId": {
+          "description": "Account Id",
+          "type": "string"
+        },
+        "discriminator_SendCommunicationMessage": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_SendCommunicationMessage"
+    },
+    "SendCommunicationMessageBatchResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "Results": {
+              "description": "Communication Messages",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SendCommunicationMessageResult"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SendCommunicationMessageResult": {
+      "required": [
+        "ExecutionResult"
+      ],
+      "type": "object",
+      "properties": {
+        "ExternalMessageId": {
+          "description": "External Message Id",
+          "type": "string"
+        },
+        "ExecutionResult": {
+          "$ref": "#/definitions/SendCommunicationMessageExecutionResult"
+        },
+        "ExecutionResultDescription": {
+          "description": "Result Description",
+          "type": "string"
+        }
+      }
+    },
+    "GetCommunicationMessageRequest": {
+      "required": [
+        "ExternalMessageId",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "ExternalMessageId": {
+          "description": "External Message Id",
+          "type": "string"
+        },
+        "PortalOneAuthenticationKey": {
+          "description": "PortalOne Authentication Key",
+          "type": "string"
+        }
+      }
+    },
+    "GetCommunicationMessageResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ExecutionResultDescription": {
+              "description": "Result Description",
+              "type": "string"
+            },
+            "CommunicationMessage": {
+              "$ref": "#/definitions/GetCommunicationMessageSnapshotDto",
+              "description": "Communication Message"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CommunicationMessageStatus": {
+      "description": "Communication Message Status",
+      "enum": [
+        "New",
+        "IgnoredDueValidation",
+        "IgnoredDueOptOut",
+        "Scheduled",
+        "Sent",
+        "FailedToSend",
+        "Delivered",
+        "DeliveredWithComplaint",
+        "Bounced",
+        "AwaitingOptIn",
+        "IgnoredDueAwaitingOptIn"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "CommunicationMessageStatus",
+        "values": [
+          {
+            "name": "New",
+            "value": 1
+          },
+          {
+            "name": "IgnoredDueValidation",
+            "value": 2
+          },
+          {
+            "name": "IgnoredDueOptOut",
+            "value": 3
+          },
+          {
+            "name": "Scheduled",
+            "value": 4
+          },
+          {
+            "name": "Sent",
+            "value": 5
+          },
+          {
+            "name": "FailedToSend",
+            "value": 6
+          },
+          {
+            "name": "Delivered",
+            "value": 7
+          },
+          {
+            "name": "DeliveredWithComplaint",
+            "value": 8
+          },
+          {
+            "name": "Bounced",
+            "value": 9
+          },
+          {
+            "name": "AwaitingOptIn",
+            "value": 10
+          },
+          {
+            "name": "IgnoredDueAwaitingOptIn",
+            "value": 11
+          }
+        ]
+      }
+    },
+    "GetCommunicationMessageSnapshotDto": {
+      "required": [
+        "Channel",
+        "MessageStatus"
+      ],
+      "type": "object",
+      "properties": {
+        "CommunicationMessageId": {
+          "format": "int32",
+          "description": "Communication Message Id",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "MessageExternalId": {
+          "description": "External Message Id",
+          "type": "string"
+        },
+        "Channel": {
+          "$ref": "#/definitions/CommunicationMessageChannelType"
+        },
+        "Payload": {
+          "description": "Payload",
+          "type": "string"
+        },
+        "MessageStatus": {
+          "$ref": "#/definitions/CommunicationMessageStatus"
+        },
+        "StatusDescription": {
+          "description": "Status Description",
+          "type": "string"
+        },
+        "Timezone": {
+          "description": "Timezone",
+          "type": "string"
+        },
+        "ExpirationDateUtc": {
+          "format": "date-time",
+          "description": "Expiration Date in UTC format",
+          "type": "string",
+          "x-emitDefaultValue": true
+        },
+        "LastUpdatedDateUtc": {
+          "format": "date-time",
+          "description": "Last Updated Date in UTC format",
+          "type": "string",
+          "x-emitDefaultValue": true
+        },
+        "SendingDateUtc": {
+          "format": "date-time",
+          "description": "Sending Date in UTC format",
+          "type": "string",
+          "x-nullable": true
+        }
+      }
+    },
+    "SendVerificationCodeRequest": {
+      "required": [
+        "ExternalMessageId",
+        "PhoneNumber",
+        "EmailAddress",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "ExternalMessageId",
+            "PhoneNumber",
+            "EmailAddress",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "ExternalMessageId": {
+              "description": "External MessageId",
+              "type": "string"
+            },
+            "Channel": {
+              "$ref": "#/definitions/CommunicationMessageChannelType"
+            },
+            "TimezoneId": {
+              "description": "Time Zone",
+              "type": "string"
+            },
+            "PhoneNumber": {
+              "description": "Phone Number.\r\nRequired if Channel is Text or PhoneCall",
+              "type": "string"
+            },
+            "EmailAddress": {
+              "description": "Email Address.\r\nRequired if Channel is Email",
+              "type": "string"
+            },
+            "CustomerId": {
+              "format": "uuid",
+              "description": "Customer Id.\r\nRequired if ExternalCustomerId is null or empty",
+              "type": "string",
+              "example": "00000000-0000-0000-0000-000000000000",
+              "x-nullable": true
+            },
+            "ExternalCustomerId": {
+              "description": "External Customer Id.\r\nRequired if CustomerId is null or empty",
+              "type": "string"
+            },
+            "AccountId": {
+              "description": "Account Id",
+              "type": "string"
+            },
+            "Properties": {
+              "description": "External Properties",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SendVerificationCodeResponse": {
+      "required": [
+        "ExecutionResult"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/SendCommunicationMessageResponse"
+        },
+        {
+          "required": [
+            "ExecutionResult"
+          ],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "ValidateVerificationCodeRequest": {
+      "required": [
+        "ExternalMessageId",
+        "VerificationCode",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "ExternalMessageId",
+            "VerificationCode",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "ExternalMessageId": {
+              "description": "External Message Id",
+              "type": "string"
+            },
+            "VerificationCode": {
+              "description": "Verification Code",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ValidateVerificationCodeStatus": {
+      "description": "Validate Verification Code",
+      "enum": [
+        "NotValid",
+        "Locked",
+        "Expired",
+        "Valid"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "ValidateVerificationCodeStatus",
+        "values": [
+          {
+            "name": "NotValid",
+            "value": 1
+          },
+          {
+            "name": "Locked",
+            "value": 2
+          },
+          {
+            "name": "Expired",
+            "value": 3
+          },
+          {
+            "name": "Valid",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "ValidateVerificationCodeResponse": {
+      "required": [
+        "Result"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [
+            "Result"
+          ],
+          "type": "object",
+          "properties": {
+            "Result": {
+              "$ref": "#/definitions/ValidateVerificationCodeStatus"
+            },
+            "RemainingAttemptsCount": {
+              "format": "int32",
+              "description": "Remaining Attempts Count",
+              "type": "integer",
+              "x-nullable": true
+            },
+            "ExpirationDate": {
+              "format": "date-time",
+              "description": "Expiration Date",
+              "type": "string",
+              "x-nullable": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "IsVerificationCodeValidatedRequest": {
+      "required": [
+        "ExternalMessageId",
+        "PhoneNumber",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "ExternalMessageId": {
+          "description": "External Message Id",
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "description": "Phone Number",
+          "type": "string"
+        },
+        "PortalOneAuthenticationKey": {
+          "description": "PortalOne Authentication Key",
+          "type": "string"
+        }
+      }
+    },
+    "IsVerificationCodeValidatedResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "IsValidated": {
+              "description": "Is Verification Code Validated",
+              "type": "boolean",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelPayByLinkMessageRequest": {
+      "required": [
+        "ExternalMessageId",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "ExternalMessageId",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "ExternalMessageId": {
+              "description": "External Message Id",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CancelPayByLinkMessageResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "GetCommunicationTemplateInfoRequest": {
+      "required": [
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "PortalOneAuthenticationKey": {
+          "description": "PortalOne Authentication Key",
+          "type": "string"
+        }
+      }
+    },
+    "GetCommunicationTemplateInfoResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "TemplatesInfo": {
+              "description": "Collection of Templates Info",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CommunicationMessageTemplateInfo"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CommunicationMessageTemplateInfo": {
+      "required": [
+        "Channel"
+      ],
+      "type": "object",
+      "properties": {
+        "Key": {
+          "description": "Template Key",
+          "type": "string"
+        },
+        "Channel": {
+          "$ref": "#/definitions/CommunicationMessageChannelType"
+        }
+      }
+    },
+    "GenerateReceiptInfoRequest": {
+      "required": [
+        "ClientId",
+        "ReceiptTemplateKey",
+        "ReceiptEmailParameters",
+        "PaymentsInfo",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "properties": {
+        "ClientId": {
+          "format": "int32",
+          "type": "integer",
+          "x-emitDefaultValue": true
+        },
+        "ReceiptTemplateKey": {
+          "type": "string"
+        },
+        "ReceiptEmailParameters": {
+          "type": "string"
+        },
+        "PaymentsInfo": {
+          "type": "string"
+        },
+        "PortalOneAuthenticationKey": {
+          "type": "string"
+        }
+      }
+    },
+    "GenerateReceiptInfoResponse": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ReceiptBody": {
+          "type": "string"
+        },
+        "ReceiptAttachment": {
+          "format": "byte",
+          "type": "string"
+        },
+        "ResponseCode": {
+          "description": "Response Code",
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "description": "Response Message",
+          "type": "string"
+        }
+      }
+    },
+    "TwilioPostbackRequest": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "To": {
+          "type": "string"
+        },
+        "From": {
+          "type": "string"
+        },
+        "MessageStatus": {
+          "type": "string"
+        },
+        "ErrorCode": {
+          "type": "string"
+        }
+      }
+    },
+    "PlivoPostbackRequest": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "To": {
+          "type": "string"
+        },
+        "From": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "ErrorCode": {
+          "type": "string"
+        }
+      }
+    },
+    "GetSubscriptionDetailsRequest": {
+      "required": [
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "PhoneNumberList": {
+              "description": "Collection of Phone Numbers",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "EmailList": {
+              "description": "Collection of Email Addresses",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "CustomerIdList": {
+              "description": "Collection of Customer Id",
+              "type": "array",
+              "items": {
+                "format": "uuid",
+                "type": "string",
+                "example": "00000000-0000-0000-0000-000000000000"
+              }
+            },
+            "ExternalCustomerIdList": {
+              "description": "Collection of External Customer ID",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SubscriptionDetailsStatus": {
+      "description": "Subscription Detail Status for Text Messages",
+      "enum": [
+        "NotEnrolled",
+        "OptedIn",
+        "OptedOut",
+        "AwaitingOptIn"
+      ],
+      "type": "string",
+      "x-emitDefaultValue": true,
+      "x-ms-enum": {
+        "name": "SubscriptionDetailsStatus",
+        "values": [
+          {
+            "name": "NotEnrolled",
+            "value": 0
+          },
+          {
+            "name": "OptedIn",
+            "value": 1
+          },
+          {
+            "name": "OptedOut",
+            "value": 2
+          },
+          {
+            "name": "AwaitingOptIn",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "SubscriptionDetailsDto": {
+      "required": [
+        "TextSubscriptionStatus",
+        "EmailSubscriptionStatus",
+        "PhoneCallSubscriptionStatus"
+      ],
+      "type": "object",
+      "properties": {
+        "CustomerId": {
+          "format": "uuid",
+          "description": "Customer Id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000",
+          "x-emitDefaultValue": true
+        },
+        "ExternalCustomerId": {
+          "description": "External Customer Id",
+          "type": "string"
+        },
+        "TextSubscriptionStatus": {
+          "$ref": "#/definitions/SubscriptionDetailsStatus"
+        },
+        "TextSubscriptionContact": {
+          "description": "Text Subscription Contact",
+          "type": "string"
+        },
+        "EmailSubscriptionStatus": {
+          "$ref": "#/definitions/SubscriptionDetailsStatus"
+        },
+        "EmailSubscriptionContact": {
+          "description": "Email Subscription Contact",
+          "type": "string"
+        },
+        "PhoneCallSubscriptionStatus": {
+          "$ref": "#/definitions/SubscriptionDetailsStatus"
+        },
+        "PhoneCallSubscriptionContact": {
+          "description": "Phone Call Subscription Contact",
+          "type": "string"
+        },
+        "ResultCode": {
+          "description": "Result Code",
+          "type": "string"
+        },
+        "ResultMessage": {
+          "description": "Result Message",
+          "type": "string"
+        }
+      }
+    },
+    "OptOutFromTextRequest": {
+      "required": [
+        "PhoneNumber",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/OptOutRequestBase"
+        },
+        {
+          "required": [
+            "PhoneNumber",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "PhoneNumber": {
+              "description": "Phone Number",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutFromTextResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutFromEmailRequest": {
+      "required": [
+        "EmailAddress",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/OptOutRequestBase"
+        },
+        {
+          "required": [
+            "EmailAddress",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "EmailAddress": {
+              "description": "Email Address",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutFromEmailResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutFromPhoneCallRequest": {
+      "required": [
+        "PhoneNumber",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/OptOutRequestBase"
+        },
+        {
+          "required": [
+            "PhoneNumber",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "PhoneNumber": {
+              "description": "Phone Number",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutFromPhoneCallResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
+    "ApiRequestBase": {
+      "required": [
+        "discriminator_ApiRequestBase"
+      ],
+      "type": "object",
+      "properties": {
+        "PortalOneAuthenticationKey": {
+          "description": "PortalOne Authentication Key",
+          "type": "string"
+        },
+        "discriminator_ApiRequestBase": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_ApiRequestBase"
+    },
+    "GetAllSubscriptionDetailsRequest": {
+      "required": [
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "CustomerIdList": {
+              "description": "Collection of Customer Id",
+              "type": "array",
+              "items": {
+                "format": "uuid",
+                "type": "string",
+                "example": "00000000-0000-0000-0000-000000000000"
+              }
+            },
+            "ExternalCustomerIdList": {
+              "description": "Collection of External Customer ID",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetKeyPerformanceIndicatorsRequest": {
+      "required": [
+        "StartDate",
+        "EndDate",
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "StartDate",
+            "EndDate",
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "StartDate": {
+              "format": "date-time",
+              "type": "string",
+              "x-nullable": true
+            },
+            "EndDate": {
+              "format": "date-time",
+              "type": "string",
+              "x-nullable": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "OptOutRequestBase": {
+      "required": [
+        "PortalOneAuthenticationKey"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "PortalOneAuthenticationKey"
+          ],
+          "type": "object",
+          "properties": {
+            "CustomerId": {
+              "format": "uuid",
+              "description": "Customer Id",
+              "type": "string",
+              "example": "00000000-0000-0000-0000-000000000000",
+              "x-nullable": true
+            },
+            "ExternalCustomerId": {
+              "description": "Customer Id at external system",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ApiResponseBase": {
+      "required": [
+        "discriminator_ApiResponseBase"
+      ],
+      "type": "object",
+      "properties": {
+        "ResponseCode": {
+          "description": "Response Code",
+          "type": "string"
+        },
+        "ResponseMessage": {
+          "description": "Response Message",
+          "type": "string"
+        },
+        "discriminator_ApiResponseBase": {
+          "type": "string"
+        }
+      },
+      "discriminator": "discriminator_ApiResponseBase"
+    },
+    "GetKeyPerformanceIndicatorsResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "MessagesSent": {
+              "format": "int32",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            },
+            "CustomersReached": {
+              "format": "int32",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            },
+            "CustomersOptedIn": {
+              "format": "int32",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            },
+            "CustomersOptedOut": {
+              "format": "int32",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetAllSubscriptionDetailsResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "SubscriptionDetailsList": {
+              "description": "Collection of Subscription Details",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SubscriptionAllDetails"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "SubscriptionAllDetails": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CustomerId": {
+          "format": "uuid",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000",
+          "x-emitDefaultValue": true
+        },
+        "ExternalCustomerId": {
+          "type": "string"
+        },
+        "Contacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommunicationModuleContact"
+          }
+        },
+        "ResultCode": {
+          "type": "string"
+        },
+        "ResultMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "CommunicationModuleContact": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "CustomerName": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "LastSentDateUtc": {
+          "format": "date-time",
+          "type": "string",
+          "x-nullable": true
+        }
+      }
+    }
+  }
+}
