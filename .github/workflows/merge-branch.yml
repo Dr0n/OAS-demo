@@ -20,4 +20,4 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch --all
           git checkout main
-          git merge latest
+          git merge --allow-unrelated latest
