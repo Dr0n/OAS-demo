@@ -13,6 +13,16 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: latest
+      - name: Create needed folders at GitHub
+        run: |
+          mkdir -p ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}
+          mkdir -p ${{ github.workspace }}/${{ secrets.OAS_PRODENVIRONMENT_FOLDER_NAME }}
+      - name: Download OAS files
+        run: |
+          curl ${{ secrets.OAS_TESTENVIRONMENT_URL_EXTERNAL_PORTALONE }} -o ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}/PortalOneExternalApi.json
+          curl ${{ secrets.OAS_TESTENVIRONMENT_URL_EXTERNAL_CLAIMSPAY }} -o ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}/ClaimsPayExternalApi.json
+          curl ${{ secrets.OAS_TESTENVIRONMENT_URL_EXTERNAL_COMMUNICATIONMODEULE }} -o ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}/CommunicationModuleExternalApi.json
+          curl ${{ secrets.OAS_TESTENVIRONMENT_URL_EXTERNAL_INSTALLMENTSONE }} -o ${{ github.workspace }}/${{ secrets.OAS_TESTENVIRONMENT_FOLDER_NAME }}/InstallmentsOneExternalApi.json
       - name: Add to local git branch
         run: |
           git config --global user.name "github-actions[bot]"
