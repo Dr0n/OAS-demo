@@ -32,9 +32,9 @@ jobs:
         id: diff
         run: |
           if git diff --exit-code; then
-            echo '::set-output name=changes_exist::false'
-          else
             echo '::set-output name=changes_exist::true'
+          else
+            echo '::set-output name=changes_exist::false'
           fi
       - name: Commit if changes
         if: ${{ steps.diff.outputs.changes_exist == 'true' }}
