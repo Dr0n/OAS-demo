@@ -19,14 +19,15 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add --all
       - name: Check for changes in local git branch
+        id: diff
         run: |
           if git diff --exit-code; then
-            echo "::set-env name=changes_exist::false"
+            echo '::set-output name=changes_exist::false'
           else
-            echo "::set-env name=changes_exist::true"
+            echo '::set-output name=changes_exist::true'
           fi
       - name: Commit if changes
-        if: env.changes_exist == 'true'
+        if: ${{ steps.diff.outputs.changes_exist == 'true' }}
         run: |
           git commit -am "Updating OAS files"
           git push
