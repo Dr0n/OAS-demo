@@ -1067,6 +1067,44 @@
         }
       }
     },
+    "/ScheduledPayment/Process": {
+      "post": {
+        "tags": [
+          "ScheduledPayment"
+        ],
+        "operationId": "Process",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ScheduledPaymentProcessRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ScheduledPaymentProcessResponse"
+            }
+          }
+        }
+      }
+    },
     "/Session/Create": {
       "get": {
         "tags": [
@@ -3655,6 +3693,49 @@
         }
       }
     },
+    "ScheduledPaymentProcessRequest": {
+      "description": "Process Scheduled Payment operation request",
+      "required": [
+        "PublicId"
+      ],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [
+            "PublicId"
+          ],
+          "type": "object",
+          "properties": {
+            "PublicId": {
+              "format": "uuid",
+              "description": "PublicId to process scheduled payment for",
+              "type": "string",
+              "example": "00000000-0000-0000-0000-000000000000",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "ScheduledPaymentProcessResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
+    },
     "CreateSessionRequest": {
       "description": "Create Session parameters",
       "required": [],
@@ -3856,6 +3937,97 @@
         }
       },
       "discriminator": "discriminator_ApiRequestBase"
+    },
+    "AuthorizePayPalOrderRequest": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "OrderId": {
+              "description": "Order Id",
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CreatePayPalOrderRequest": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "Amount": {
+              "format": "decimal",
+              "description": "Charge amount",
+              "type": "number",
+              "x-emitDefaultValue": true
+            },
+            "ChargeFee": {
+              "type": "boolean",
+              "x-emitDefaultValue": true
+            },
+            "UserAction": {
+              "type": "string"
+            },
+            "ClientReferenceData": {
+              "$ref": "#/definitions/ClientReferenceData"
+            },
+            "AccountGroupCode": {
+              "type": "string"
+            },
+            "ConvenienceFeeType": {
+              "type": "string"
+            },
+            "Name": {
+              "type": "string"
+            },
+            "Zip": {
+              "type": "string"
+            },
+            "Address": {
+              "type": "string"
+            },
+            "City": {
+              "type": "string"
+            },
+            "State": {
+              "type": "string"
+            },
+            "Phone": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetPayPalSettingsRequest": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiRequestBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {}
+        }
+      ],
+      "properties": {}
     },
     "GetScheduledPaymentsByPaymentMethodRequest": {
       "description": "Get scheduled payments by payment method token",
@@ -4220,6 +4392,28 @@
       ],
       "properties": {}
     },
+    "ScheduledPaymentEngineType": {
+      "description": "This field will define who will control Scheduled Payments - whether it is Carrier Controlled or ScheduledPaymentEngine controlled.",
+      "enum": [
+        "ScheduledPaymentEngine",
+        "Carrier"
+      ],
+      "type": "string",
+      "x-nullable": true,
+      "x-ms-enum": {
+        "name": "ScheduledPaymentEngineType",
+        "values": [
+          {
+            "name": "ScheduledPaymentEngine",
+            "value": 0
+          },
+          {
+            "name": "Carrier",
+            "value": 1
+          }
+        ]
+      }
+    },
     "ScheduleCardPaymentRequest": {
       "description": "Schedule Card payment operation request",
       "required": [],
@@ -4262,6 +4456,9 @@
             "AccountGroupCode": {
               "description": "Account group code",
               "type": "string"
+            },
+            "EngineType": {
+              "$ref": "#/definitions/ScheduledPaymentEngineType"
             }
           }
         }
@@ -4396,6 +4593,9 @@
             "AccountGroupCode": {
               "description": "Account group code",
               "type": "string"
+            },
+            "EngineType": {
+              "$ref": "#/definitions/ScheduledPaymentEngineType"
             }
           }
         }
@@ -6765,6 +6965,159 @@
       },
       "discriminator": "discriminator_ApiResponseBase"
     },
+    "AuthorizePayPalOrderResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "TransactionId": {
+              "description": "Transaction ID",
+              "type": "string"
+            },
+            "TransactionDate": {
+              "format": "date-time",
+              "description": "Transaction date and time",
+              "type": "string",
+              "x-nullable": true
+            },
+            "TimeZone": {
+              "description": "Transaction time zone",
+              "type": "string"
+            },
+            "BatchNumber": {
+              "format": "int32",
+              "description": "Number of the batch",
+              "type": "integer",
+              "x-emitDefaultValue": true
+            },
+            "ReceiptId": {
+              "description": "Receipt ID",
+              "type": "string"
+            },
+            "AcknowledgmentDelivered": {
+              "description": "Indicates that successful payment has been acknowledged by a customer service",
+              "type": "boolean",
+              "x-nullable": true
+            },
+            "PostedAmount": {
+              "format": "decimal",
+              "description": "Posted amount of the transaction",
+              "type": "number",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "CreatePayPalOrderResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "OrderId": {
+              "description": "PayPal Order Id",
+              "type": "string"
+            },
+            "PaymentId": {
+              "description": "PayPal Payment Id",
+              "type": "string"
+            },
+            "PostedAmount": {
+              "format": "decimal",
+              "description": "Amount posted to PayPal",
+              "type": "number",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "GetCommunicationModulePortalsResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "PortalOneAuthKeyList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PortalData"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
+    "PortalData": {
+      "required": [],
+      "type": "object",
+      "properties": {
+        "ClientName": {
+          "type": "string"
+        },
+        "PortalName": {
+          "type": "string"
+        },
+        "PortalOneAuthKey": {
+          "type": "string"
+        }
+      }
+    },
+    "GetPayPalSettingsResponse": {
+      "required": [],
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ApiResponseBase"
+        },
+        {
+          "required": [],
+          "type": "object",
+          "properties": {
+            "ClientId": {
+              "type": "string"
+            },
+            "MerchantId": {
+              "type": "string"
+            },
+            "Intent": {
+              "type": "string"
+            },
+            "Environment": {
+              "type": "string"
+            },
+            "Currency": {
+              "type": "string"
+            },
+            "Commit": {
+              "type": "boolean",
+              "x-emitDefaultValue": true
+            }
+          }
+        }
+      ],
+      "properties": {}
+    },
     "GetScheduledPaymentsByPaymentMethodResponse": {
       "description": "Get scheduled payments by payment method token",
       "required": [],
@@ -8646,6 +8999,9 @@
             },
             "InstallmentPlanEngineType": {
               "$ref": "#/definitions/AutoPayEngineType"
+            },
+            "ScheduledPaymentEngineType": {
+              "$ref": "#/definitions/ScheduledPaymentEngineType"
             },
             "ExternalSchedulerEndpoint": {
               "description": "This field value should only be sent when autoPayEngineType = \"Carrier\".\r\nDigital Payments will then use this endpoint to eventually send user-selected Payment Preferences for Auto-Pay Plan creation and scheduling.",
