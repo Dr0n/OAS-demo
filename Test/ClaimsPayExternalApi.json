@@ -16,7 +16,7 @@
           "Account"
         ],
         "summary": "This method is used to create a ClaimsPay account and associated claims records, company/contact records and individual records.",
-        "operationId": "Create",
+        "operationId": "Account_Create",
         "consumes": [
           "application/json",
           "text/json",
@@ -47,7 +47,9 @@
               "$ref": "#/definitions/CreateAccountResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Create",
+        "x-operation-name-lower": "create"
       }
     },
     "/Account/CreateContact": {
@@ -56,7 +58,7 @@
           "Account"
         ],
         "summary": "This method is used to create a ClaimsPay contact associated with ClaimsPay account.",
-        "operationId": "CreateContact",
+        "operationId": "Account_CreateContact",
         "consumes": [
           "application/json",
           "text/json",
@@ -87,7 +89,9 @@
               "$ref": "#/definitions/CreateContactResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "CreateContact",
+        "x-operation-name-lower": "createcontact"
       }
     },
     "/Account/Update": {
@@ -96,7 +100,7 @@
           "Account"
         ],
         "summary": "This method is used to update a ClaimsPay account profile and Prepaid Account vendor profile.",
-        "operationId": "Update",
+        "operationId": "Account_Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -127,7 +131,9 @@
               "$ref": "#/definitions/UpdateAccountResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Update",
+        "x-operation-name-lower": "update"
       }
     },
     "/Account/GetInfo": {
@@ -136,7 +142,7 @@
           "Account"
         ],
         "summary": "This method is used to get a ClaimsPay account information.",
-        "operationId": "GetInfo",
+        "operationId": "Account_GetInfo",
         "consumes": [
           "application/json",
           "text/json",
@@ -167,7 +173,9 @@
               "$ref": "#/definitions/GetAccountInfoResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetInfo",
+        "x-operation-name-lower": "getinfo"
       }
     },
     "/ApprovalRequest/Create": {
@@ -176,7 +184,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to create new approval request. The approval request will send a communication to each of the approval request parties and direct them to a portal where they will complete their approval request actions per their role.",
-        "operationId": "Create",
+        "operationId": "ApprovalRequest_Create",
         "consumes": [
           "application/json",
           "text/json",
@@ -207,7 +215,9 @@
               "$ref": "#/definitions/CreateApprovalRequestResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Create",
+        "x-operation-name-lower": "create"
       }
     },
     "/ApprovalRequest/GetById": {
@@ -216,7 +226,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to get approval request by id.",
-        "operationId": "GetById",
+        "operationId": "ApprovalRequest_GetById",
         "consumes": [
           "application/json",
           "text/json",
@@ -247,7 +257,9 @@
               "$ref": "#/definitions/GetApprovalRequestByIdResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetById",
+        "x-operation-name-lower": "getbyid"
       }
     },
     "/ApprovalRequest/GetByStatus": {
@@ -256,7 +268,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to get approval requests by status.",
-        "operationId": "GetByStatus",
+        "operationId": "ApprovalRequest_GetByStatus",
         "consumes": [
           "application/json",
           "text/json",
@@ -287,7 +299,9 @@
               "$ref": "#/definitions/GetApprovalRequestsByStatusResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetByStatus",
+        "x-operation-name-lower": "getbystatus"
       }
     },
     "/ApprovalRequest/Cancel": {
@@ -296,7 +310,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to cancel approval request.",
-        "operationId": "Cancel",
+        "operationId": "ApprovalRequest_Cancel",
         "consumes": [
           "application/json",
           "text/json",
@@ -327,7 +341,9 @@
               "$ref": "#/definitions/CancelApprovalRequestResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Cancel",
+        "x-operation-name-lower": "cancel"
       }
     },
     "/ApprovalRequest/Resend": {
@@ -336,7 +352,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to resend invitation message to one or more approval request parties.",
-        "operationId": "Resend",
+        "operationId": "ApprovalRequest_Resend",
         "consumes": [
           "application/json",
           "text/json",
@@ -367,7 +383,9 @@
               "$ref": "#/definitions/ResendApprovalRequestResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Resend",
+        "x-operation-name-lower": "resend"
       }
     },
     "/ApprovalRequest/Release": {
@@ -376,7 +394,7 @@
           "ApprovalRequest"
         ],
         "summary": "This method is used to resend invitation message to one or more approval request parties.",
-        "operationId": "Release",
+        "operationId": "ApprovalRequest_Release",
         "consumes": [
           "application/json",
           "text/json",
@@ -407,7 +425,9 @@
               "$ref": "#/definitions/ReleaseApprovalRequestResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Release",
+        "x-operation-name-lower": "release"
       }
     },
     "/BankAccount/Credit": {
@@ -416,7 +436,7 @@
           "BankAccount"
         ],
         "summary": "This method is used to submit BankAccount payment.",
-        "operationId": "Credit",
+        "operationId": "BankAccount_Credit",
         "consumes": [
           "application/json",
           "text/json",
@@ -447,7 +467,9 @@
               "$ref": "#/definitions/CreditBankAccountResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Credit",
+        "x-operation-name-lower": "credit"
       }
     },
     "/BankAccount/VoidCredit": {
@@ -456,7 +478,7 @@
           "BankAccount"
         ],
         "summary": "This method is used to void EFT payment.",
-        "operationId": "VoidCredit",
+        "operationId": "BankAccount_VoidCredit",
         "consumes": [
           "application/json",
           "text/json",
@@ -487,7 +509,9 @@
               "$ref": "#/definitions/VoidCreditResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "VoidCredit",
+        "x-operation-name-lower": "voidcredit"
       }
     },
     "/BankAccount/Verify": {
@@ -496,7 +520,7 @@
           "BankAccount"
         ],
         "summary": "This method is used to verify BankAccount.",
-        "operationId": "Verify",
+        "operationId": "BankAccount_Verify",
         "consumes": [
           "application/json",
           "text/json",
@@ -527,7 +551,9 @@
               "$ref": "#/definitions/VerifyBankAccountResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Verify",
+        "x-operation-name-lower": "verify"
       }
     },
     "/Card/PushFunds": {
@@ -535,7 +561,7 @@
         "tags": [
           "Card"
         ],
-        "operationId": "PushFunds",
+        "operationId": "Card_PushFunds",
         "consumes": [
           "application/json",
           "text/json",
@@ -565,45 +591,9 @@
               "$ref": "#/definitions/PushFundsToCardResponse"
             }
           }
-        }
-      }
-    },
-    "/Card": {
-      "post": {
-        "tags": [
-          "Card"
-        ],
-        "operationId": "PushFunds",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/PushFundsToCardRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/PushFundsToCardResponse"
-            }
-          }
-        }
+        },
+        "x-operation-name": "PushFunds",
+        "x-operation-name-lower": "pushfunds"
       }
     },
     "/Check/Issue": {
@@ -612,7 +602,7 @@
           "Check"
         ],
         "summary": "This method is used to issue a check associated to a ClaimsPay AccountID.",
-        "operationId": "Issue",
+        "operationId": "Check_Issue",
         "consumes": [
           "application/json",
           "text/json",
@@ -643,7 +633,9 @@
               "$ref": "#/definitions/IssueCheckResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Issue",
+        "x-operation-name-lower": "issue"
       }
     },
     "/Check/Cancel": {
@@ -652,7 +644,7 @@
           "Check"
         ],
         "summary": "This method is used to cancel a check.",
-        "operationId": "Cancel",
+        "operationId": "Check_Cancel",
         "consumes": [
           "application/json",
           "text/json",
@@ -683,54 +675,9 @@
               "$ref": "#/definitions/CancelCheckResponse"
             }
           }
-        }
-      }
-    },
-    "/Configuration/GetScreenFlows": {
-      "get": {
-        "tags": [
-          "Configuration"
-        ],
-        "summary": "This operation returns default ScreenFlows",
-        "operationId": "GetScreenFlows",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/AdjusterModal.GetScreenFlowsConfigurationResponse"
-            }
-          }
-        }
-      }
-    },
-    "/Configuration/GetDefaultConfiguration": {
-      "get": {
-        "tags": [
-          "Configuration"
-        ],
-        "operationId": "GetDefaultConfiguration",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          }
-        }
+        },
+        "x-operation-name": "Cancel",
+        "x-operation-name-lower": "cancel"
       }
     },
     "/PaymentMethod/Remove": {
@@ -739,7 +686,7 @@
           "PaymentMethod"
         ],
         "summary": "This method is used to remove a saved payment method that is associated to a ClaimsPay AccountID.",
-        "operationId": "Remove",
+        "operationId": "PaymentMethod_Remove",
         "consumes": [
           "application/json",
           "text/json",
@@ -770,7 +717,9 @@
               "$ref": "#/definitions/RemovePaymentMethodResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Remove",
+        "x-operation-name-lower": "remove"
       }
     },
     "/PaymentMethod/Save": {
@@ -779,7 +728,7 @@
           "PaymentMethod"
         ],
         "summary": "This method is used to save a payment method under an associated ClaimsPay AccountID.",
-        "operationId": "Save",
+        "operationId": "PaymentMethod_Save",
         "consumes": [
           "application/json",
           "text/json",
@@ -810,7 +759,9 @@
               "$ref": "#/definitions/SavePaymentMethodResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Save",
+        "x-operation-name-lower": "save"
       }
     },
     "/PaymentMethod/GetInfo": {
@@ -819,7 +770,7 @@
           "PaymentMethod"
         ],
         "summary": "This method is used to get information on the payment methods that are associated to a ClaimsPay AccountID.",
-        "operationId": "GetInfo",
+        "operationId": "PaymentMethod_GetInfo",
         "consumes": [
           "application/json",
           "text/json",
@@ -850,7 +801,9 @@
               "$ref": "#/definitions/GetPaymentMethodInfoResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetInfo",
+        "x-operation-name-lower": "getinfo"
       }
     },
     "/PaymentMethod/UpdateCard": {
@@ -859,7 +812,7 @@
           "PaymentMethod"
         ],
         "summary": "This method is intended to update the stored card information with a new information.",
-        "operationId": "UpdateCard",
+        "operationId": "PaymentMethod_UpdateCard",
         "consumes": [
           "application/json",
           "text/json",
@@ -890,127 +843,9 @@
               "$ref": "#/definitions/UpdateCardResponse"
             }
           }
-        }
-      }
-    },
-    "/PrepaidCardAccount/Load": {
-      "post": {
-        "tags": [
-          "PrepaidCardAccount"
-        ],
-        "summary": "This method is used to make a payment to a virtual or physical prepaid card account.",
-        "operationId": "Load",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "body",
-            "description": "Load prepaid card account request.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/LoadPrepaidCardAccountRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/LoadPrepaidCardAccountResponse"
-            }
-          }
-        }
-      }
-    },
-    "/PrepaidCardAccount/ReverseLoad": {
-      "post": {
-        "tags": [
-          "PrepaidCardAccount"
-        ],
-        "summary": "This method is used to reverse a payment in full that was previously made to a prepaid card account.",
-        "operationId": "ReverseLoad",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "body",
-            "description": "Reverse load request.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ReverseLoadPrepaidCardAccountRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/ReverseLoadPrepaidCardAccountResponse"
-            }
-          }
-        }
-      }
-    },
-    "/PrepaidCardAccount/DisburseFunds": {
-      "post": {
-        "tags": [
-          "PrepaidCardAccount"
-        ],
-        "summary": "This method is used to disburse funds from a prepaid card account.\r\nYou can use DisbursementType.Ach or DisbursementType.Check",
-        "operationId": "DisburseFunds",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "body",
-            "description": "Reverse load request.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/DisburseFundsRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/DisburseFundsResponse"
-            }
-          }
-        }
+        },
+        "x-operation-name": "UpdateCard",
+        "x-operation-name-lower": "updatecard"
       }
     }
   },
@@ -1278,14 +1113,12 @@
     },
     "CreateAccountResponse": {
       "description": "CreateAccount Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "AccountId": {
@@ -1372,14 +1205,12 @@
     },
     "CreateContactResponse": {
       "description": "CreateContact Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "AccountId": {
@@ -1436,7 +1267,6 @@
     },
     "IndividualProfileDetails": {
       "description": "Individual Profile Information",
-      "required": [],
       "type": "object",
       "properties": {
         "FirstName": {
@@ -1491,7 +1321,6 @@
     },
     "CompanyProfileDetails": {
       "description": "Company Profile Information",
-      "required": [],
       "type": "object",
       "properties": {
         "CompanyName": {
@@ -1586,14 +1415,12 @@
     },
     "UpdateAccountResponse": {
       "description": "UpdateAccount Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TransactionId": {
@@ -1646,14 +1473,12 @@
     },
     "GetAccountInfoResponse": {
       "description": "GetAccountInfo Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "IndividualDetails": {
@@ -2180,7 +2005,6 @@
       }
     },
     "ComposeCheckProperties": {
-      "required": [],
       "type": "object",
       "properties": {
         "PayToAccountId": {
@@ -2288,7 +2112,6 @@
       }
     },
     "PartyCheckProperties": {
-      "required": [],
       "type": "object",
       "properties": {
         "Memo": {
@@ -2944,14 +2767,12 @@
     },
     "GetApprovalRequestsByStatusResponse": {
       "description": "Get approval request by status response.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "ApprovalRequests": {
@@ -3054,14 +2875,12 @@
     },
     "CancelApprovalRequestResponse": {
       "description": "Cancel approval request response.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -3138,14 +2957,12 @@
     },
     "ResendApprovalRequestResponse": {
       "description": "Resend approval request response.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "ApprovalRequestId": {
@@ -3168,7 +2985,6 @@
     },
     "ResendApprovalRequestPartySummary": {
       "description": "Approval request party summary model.",
-      "required": [],
       "type": "object",
       "properties": {
         "ApprovalRequestPartyId": {
@@ -3242,14 +3058,12 @@
     },
     "ReleaseApprovalRequestResponse": {
       "description": "Release Approval Request response.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -3356,14 +3170,12 @@
     },
     "CreditBankAccountResponse": {
       "description": "CreditBankAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TransactionId": {
@@ -3424,14 +3236,12 @@
     },
     "VoidCreditResponse": {
       "description": "VoidCredit response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "BatchNumber": {
@@ -3488,14 +3298,12 @@
     },
     "VerifyBankAccountResponse": {
       "description": "VerifyBankAccount Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "ServerReferenceData": {
@@ -3509,7 +3317,6 @@
     },
     "ServerReferenceData": {
       "description": "Server Reference Data",
-      "required": [],
       "type": "object",
       "properties": {
         "ServerReferenceData1": {
@@ -3587,14 +3394,12 @@
     },
     "PushFundsToCardResponse": {
       "description": "PushFundsToCard Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TransactionId": {
@@ -3809,14 +3614,12 @@
     },
     "IssueCheckResponse": {
       "description": "IssueCheck response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TransactionId": {
@@ -3873,14 +3676,12 @@
     },
     "CancelCheckResponse": {
       "description": "CancelCheck Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TransactionId": {
@@ -3891,44 +3692,6 @@
         }
       ],
       "properties": {}
-    },
-    "AdjusterModal.GetScreenFlowsConfigurationResponse": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "ScreenFlows": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/AdjusterModal.ScreenFlowDefinition"
-          }
-        },
-        "ResponseCode": {
-          "type": "string"
-        },
-        "ResponseMessage": {
-          "type": "string"
-        }
-      }
-    },
-    "AdjusterModal.ScreenFlowDefinition": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "DisplayName": {
-          "type": "string"
-        },
-        "ScreenFlow": {
-          "type": "string"
-        },
-        "Version": {
-          "format": "int32",
-          "type": "integer",
-          "x-emitDefaultValue": true
-        }
-      }
     },
     "RemovePaymentMethodRequest": {
       "description": "RemovePaymentMethod request",
@@ -3967,14 +3730,12 @@
     },
     "RemovePaymentMethodResponse": {
       "description": "RemovePaymentMethod Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -4031,14 +3792,12 @@
     },
     "SavePaymentMethodResponse": {
       "description": "SavePaymentMethod Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TimeZone": {
@@ -4089,14 +3848,12 @@
     },
     "GetPaymentMethodInfoResponse": {
       "description": "GetPaymentMethodInfo Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "BankAccounts": {
@@ -4196,14 +3953,12 @@
     },
     "UpdateCardResponse": {
       "description": "UpdateCardResponse Response",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ClaimsPayResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TimeZone": {
@@ -4215,372 +3970,6 @@
               "description": "Update date and time in merchant time zone.",
               "type": "string",
               "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "LoadPrepaidCardAccountRequest": {
-      "description": "LoadPrepaidCardAccount Request",
-      "required": [
-        "AccountId",
-        "Amount",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "AccountId",
-            "Amount",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "ContactId": {
-              "format": "int32",
-              "description": "Company Contact identifier. Only applicable to company accounts. If sent, will be used to identify the recipient of the payment complete email.",
-              "type": "integer",
-              "x-nullable": true
-            },
-            "Amount": {
-              "format": "decimal",
-              "description": "Amount of payment.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            },
-            "ClaimNumber": {
-              "description": "The claim number that is associated to the claim payment.",
-              "type": "string"
-            },
-            "ClaimDetails": {
-              "description": "Claim details which will be sent in the payment email.",
-              "type": "string"
-            },
-            "PrepaidCardReferenceNumber": {
-              "description": "If making a Prepaid Card payment to a physical card\r\n(by handing the card to the payee or mailing the card to the payee),\r\n provide the Prepaid Card Reference Number that is associated to that card.",
-              "type": "string"
-            },
-            "ActivateCard": {
-              "description": "Flag which indicates if the physical card will be activated.\r\n If the card is being handed to the payee, the card can be activated.\r\nIf the card is being mailed to the payee, the card should not be activated.",
-              "type": "boolean",
-              "x-emitDefaultValue": true
-            },
-            "SourceUser": {
-              "description": "Identifier/name of user in the source system for reporting purposes.",
-              "type": "string"
-            },
-            "AccountGroupCode": {
-              "description": "This field is used to route money from different accounts based on a predefined groups.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "LoadPrepaidCardAccountResponse": {
-      "description": "LoadPrepaidCardAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "TransactionId": {
-              "description": "Transaction identifier.",
-              "type": "string"
-            },
-            "TransactionDate": {
-              "format": "date-time",
-              "description": "Transaction date and time.",
-              "type": "string",
-              "x-emitDefaultValue": true
-            },
-            "TimeZone": {
-              "description": "Transaction time zone.",
-              "type": "string"
-            },
-            "BatchNumber": {
-              "format": "int32",
-              "description": "Number of the batch.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "PrepaidAccountBalance": {
-              "format": "decimal",
-              "description": "If paymentMethod was PrepaidCard, the prepaid account balance after payment was completed.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReverseLoadPrepaidCardAccountRequest": {
-      "description": "ReverseLoadPrepaidCardAccount Request",
-      "required": [
-        "AccountId",
-        "TransactionId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "AccountId",
-            "TransactionId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "TransactionId": {
-              "description": "Transaction identifier of load that is to be reversed.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReverseLoadPrepaidCardAccountResponse": {
-      "description": "ReverseLoadPrepaidCardAccount Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "TransactionId": {
-              "description": "Transaction identifier of the reverse load operation.",
-              "type": "string"
-            },
-            "TransactionDate": {
-              "format": "date-time",
-              "description": "Transaction date and time.",
-              "type": "string",
-              "x-emitDefaultValue": true
-            },
-            "TimeZone": {
-              "description": "Transaction time zone.",
-              "type": "string"
-            },
-            "BatchNumber": {
-              "format": "int32",
-              "description": "Number of the batch.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "PrepaidAccountBalance": {
-              "format": "decimal",
-              "description": "Balance of the prepaid account after the reverse load has been completed.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            },
-            "OriginalPrepaidAccountBalance": {
-              "format": "decimal",
-              "description": "Original balance of the prepaid account prior to the reverse load request.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "DisbursementType": {
-      "description": "Type of method to disburse funds.",
-      "enum": [
-        "Undefined",
-        "Ach",
-        "Check"
-      ],
-      "type": "string",
-      "x-emitDefaultValue": true,
-      "x-ms-enum": {
-        "name": "DisbursementType",
-        "values": [
-          {
-            "name": "Undefined",
-            "value": 0
-          },
-          {
-            "name": "Ach",
-            "value": 1
-          },
-          {
-            "name": "Check",
-            "value": 2
-          }
-        ]
-      }
-    },
-    "DisburseFundsRequest": {
-      "required": [
-        "TransactionId",
-        "Amount",
-        "DisbursementType",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "TransactionId",
-            "Amount",
-            "DisbursementType",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "TransactionId": {
-              "description": "Original Transaction identification which you would like to DisburseFunds",
-              "type": "string"
-            },
-            "Amount": {
-              "format": "decimal",
-              "description": "Amount of the disbursement.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            },
-            "ClaimNumber": {
-              "description": "Claim number that will be associated to the payment.",
-              "type": "string"
-            },
-            "DisbursementType": {
-              "$ref": "#/definitions/DisbursementType"
-            },
-            "BankAccountDetails": {
-              "$ref": "#/definitions/BankAccountDetails",
-              "description": "Bank Account details."
-            },
-            "Token": {
-              "description": "Saved bank account token.",
-              "type": "string"
-            },
-            "SourceUser": {
-              "description": "Identifier/name of user who initiated the Disburse request",
-              "type": "string"
-            },
-            "AddressDetails": {
-              "$ref": "#/definitions/AddressDetails",
-              "description": "Details on the address to which the check should be mailed."
-            },
-            "Contact": {
-              "description": "For Company AccountTypes only.\r\nFor Company, the First and Last name of the ContactId who is initiating the action.\r\nWill be displayed in the outbound transaction report in the Contact Field",
-              "type": "string"
-            },
-            "Comment": {
-              "description": "Optional alphanumeric string",
-              "maxLength": 255,
-              "minLength": 0,
-              "type": "string"
-            },
-            "CheckMemo": {
-              "description": "Optional field contains information for a check",
-              "maxLength": 50,
-              "minLength": 0,
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "AddressDetails": {
-      "required": [
-        "Address1",
-        "City",
-        "State",
-        "Zip"
-      ],
-      "type": "object",
-      "properties": {
-        "Address1": {
-          "type": "string"
-        },
-        "ContactName": {
-          "type": "string"
-        },
-        "NameOnAccount": {
-          "type": "string"
-        },
-        "City": {
-          "type": "string"
-        },
-        "State": {
-          "type": "string"
-        },
-        "Zip": {
-          "type": "string"
-        }
-      }
-    },
-    "DisburseFundsResponse": {
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "PrepaidAccountBalance": {
-              "format": "decimal",
-              "description": "Balance of the prepaid account after the disbursement has been completed.",
-              "type": "number",
-              "x-nullable": true
-            },
-            "TransactionId": {
-              "description": "Transaction identifier",
-              "type": "string"
-            },
-            "TransactionDate": {
-              "format": "date-time",
-              "description": "Transaction date and time",
-              "type": "string",
-              "x-nullable": true
-            },
-            "TimeZone": {
-              "description": "Transaction time zone.",
-              "type": "string"
-            },
-            "Address": {
-              "$ref": "#/definitions/AddressDetails",
-              "description": "Transaction address details."
             }
           }
         }
@@ -4616,463 +4005,6 @@
         }
       }
     },
-    "LoadReservedPrepaidCardAccountRequest": {
-      "description": "LoadReservedPrepaidCardAccount Request",
-      "required": [
-        "AccountId",
-        "TransactionId",
-        "Amount",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "AccountId",
-            "TransactionId",
-            "Amount",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "TransactionId": {
-              "description": "Transaction identifier from the transaction where the physical card was originally reserved for a future load.",
-              "type": "string"
-            },
-            "Amount": {
-              "format": "decimal",
-              "description": "Amount of payment.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            },
-            "ClaimNumber": {
-              "description": "The claim number that is associated to the claim payment.",
-              "type": "string"
-            },
-            "ClaimDetails": {
-              "description": "Claim details which will be sent in the payment email.",
-              "type": "string"
-            },
-            "SourceUser": {
-              "description": "Identifier/name of user in the source system for reporting purposes.",
-              "type": "string"
-            },
-            "AccountGroupCode": {
-              "description": "This field is used to route money from different accounts based on a predefined groups.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReservePrepaidCardAccountRequest": {
-      "description": "ReservePrepaidCardAccount Request",
-      "required": [
-        "PrepaidCardReferenceNumber",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "PrepaidCardReferenceNumber",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "ClaimNumber": {
-              "description": "Optional field for a claim number that will be associated to the operation.",
-              "type": "string"
-            },
-            "ClaimDetails": {
-              "description": "Claim details which will be sent in the payment email.",
-              "type": "string"
-            },
-            "PrepaidCardReferenceNumber": {
-              "description": "If making a Prepaid Card payment to a physical card,\r\n provide the Prepaid Card Reference Number that is associated to that card.",
-              "type": "string"
-            },
-            "SourceUser": {
-              "description": "Identifier/name of user in the source system for reporting purposes.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "BatchAccountImportRequest": {
-      "description": "BatchAccountImport request",
-      "required": [
-        "Accounts",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "Accounts",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "Accounts": {
-              "description": "List of new accounts to add.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ClaimsPayAccount"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ClaimsPayAccount": {
-      "description": "ClaimsPay account",
-      "required": [],
-      "type": "object",
-      "properties": {
-        "CompanyDetails": {
-          "$ref": "#/definitions/CompanyDetails",
-          "description": "Details on the company and contact for which the ClaimsPay Account will be created."
-        },
-        "IndividualDetails": {
-          "$ref": "#/definitions/IndividualDetails",
-          "description": "Details on the individual for which the ClaimsPay Account will be created."
-        },
-        "ClaimNumber": {
-          "description": "Optional field for a claim number that will be associated to the operation.",
-          "type": "string"
-        },
-        "ExternalAccountId": {
-          "description": "External account identifier.",
-          "type": "string"
-        }
-      }
-    },
-    "EpayRequestType": {
-      "description": "Type of ePay delivery method that was used for the request.",
-      "enum": [
-        "Email",
-        "TextMessage"
-      ],
-      "type": "string",
-      "x-emitDefaultValue": true,
-      "x-ms-enum": {
-        "name": "EpayRequestType",
-        "values": [
-          {
-            "name": "Email",
-            "value": 0
-          },
-          {
-            "name": "TextMessage",
-            "value": 1
-          }
-        ]
-      }
-    },
-    "CreateEpayRequest": {
-      "description": "CreateEpay request",
-      "required": [
-        "EpayRequestType",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EpayRequestType",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-nullable": true
-            },
-            "ContactId": {
-              "format": "int32",
-              "description": "Company Contact identifier. Only applicable to company accounts.",
-              "type": "integer",
-              "x-nullable": true
-            },
-            "ClaimNumber": {
-              "description": "Optional field for a claim number that will be associated to the operation.",
-              "type": "string"
-            },
-            "EpayEmailAddress": {
-              "description": "The email address for the EPay request. If it is not populated,\r\n the email will be sent to the Email Address stored for the AccountId or ContactId.",
-              "type": "string"
-            },
-            "EpayRequestType": {
-              "$ref": "#/definitions/EpayRequestType"
-            },
-            "EpayPhoneNumber": {
-              "description": "Phone number to which the ePay SMS was sent.",
-              "type": "string"
-            },
-            "ExtendedParameters": {
-              "description": "Extended Parameters.",
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReleaseEpayRequest": {
-      "description": "Release Epay Request",
-      "required": [
-        "EpayRequestId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EpayRequestId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Unique identifier for the ePay request.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "CancelEpayRequest": {
-      "description": "CancelEpay Request",
-      "required": [
-        "EpayRequestId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EpayRequestId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Unique identifier for the ePay request.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "GetStatusByEpayRequest": {
-      "description": "GetStatusByEpay Request",
-      "required": [
-        "EpayRequestId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EpayRequestId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Unique identifier for the ePay request.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ResendEpayRequest": {
-      "description": "ResendEpay Request",
-      "required": [
-        "EpayRequestId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EpayRequestId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Unique identifier for the ePay request.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "SendWebsiteEmailRequest": {
-      "description": "SendWebsiteEmail Request",
-      "required": [
-        "EmailAddress",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "EmailAddress",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-nullable": true
-            },
-            "ContactId": {
-              "format": "int32",
-              "description": "Company Contact identifier. Only applicable to company accounts.",
-              "type": "integer",
-              "x-nullable": true
-            },
-            "EmailAddress": {
-              "description": "Email address to which the website email will be sent.\r\n This email address will be updated in the ClaimsPay system for the Contact or Individual.",
-              "type": "string"
-            },
-            "IsUsernameRecovery": {
-              "description": "Setting to indicate if the email is being sent to allow the user to reset their website profile credentials.\r\n If yes, the user will be re-authenticated and directed to update their username and password.\r\n For a user that does not have a web profile, the value should be no.",
-              "type": "boolean",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "UpdateCompanyTypeRequest": {
-      "description": "UpdateCompanyType Request",
-      "required": [
-        "CompanyType",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "CompanyType",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "CompanyType": {
-              "$ref": "#/definitions/CompanyType"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "DeleteAccountRequest": {
-      "description": "DeleteAccount Request",
-      "required": [
-        "AccountId",
-        "ClaimsPayAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayRequestBase"
-        },
-        {
-          "required": [
-            "AccountId",
-            "ClaimsPayAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-nullable": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
     "ClaimsPayResponseBase": {
       "required": [
         "discriminator_ClaimsPayResponseBase"
@@ -5092,464 +4024,6 @@
         }
       },
       "discriminator": "discriminator_ClaimsPayResponseBase"
-    },
-    "AuthenticationFailedResponse": {
-      "description": "Authentication Failed Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "CreateSessionResponse": {
-      "description": "CreateSession Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "SessionId": {
-              "description": "Temporary identifier in a GUID format.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "LoadReservedPrepaidCardAccountResponse": {
-      "description": "LoadReservedPrepaidCardAccount Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "TransactionId": {
-              "description": "Transaction identifier for the LoadReserved transaction.",
-              "type": "string"
-            },
-            "TransactionDate": {
-              "format": "date-time",
-              "description": "Transaction date and time.",
-              "type": "string",
-              "x-emitDefaultValue": true
-            },
-            "TimeZone": {
-              "description": "Transaction time zone.",
-              "type": "string"
-            },
-            "PrepaidAccountBalance": {
-              "format": "decimal",
-              "description": "Balance of the prepaid account after the release load request was made.",
-              "type": "number",
-              "x-emitDefaultValue": true
-            },
-            "BatchNumber": {
-              "format": "int32",
-              "description": "Number of the batch.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReservePrepaidCardAccountResponse": {
-      "description": "ReservePrepaidCardAccount Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "TransactionId": {
-              "format": "int32",
-              "description": "Transaction identifier that can be used to load the reserved prepaid card.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "TransactionDate": {
-              "format": "date-time",
-              "description": "Transaction date and time.",
-              "type": "string",
-              "x-emitDefaultValue": true
-            },
-            "TimeZone": {
-              "description": "Transaction time zone.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "BatchAccountImportResponse": {
-      "description": "BatchAccountImport response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "BatchAccountProcessingResponses": {
-              "description": "List of each account creation responses.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ClaimsPayAccountResponse"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ClaimsPayAccountResponse": {
-      "description": "Single account creation response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "ExternalAccountId": {
-              "description": "External account identifier.",
-              "type": "string"
-            },
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "ContactId": {
-              "format": "int32",
-              "description": "Contact identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Epay identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "CreateEpayResponse": {
-      "description": "CreateEpay response",
-      "required": [
-        "EpayRequestType"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [
-            "EpayRequestType"
-          ],
-          "type": "object",
-          "properties": {
-            "EpayRequestId": {
-              "format": "int32",
-              "description": "Unique identifier for the ePay request.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "EpayRequestDate": {
-              "format": "date-time",
-              "description": "Date the epay request was created.",
-              "type": "string",
-              "x-nullable": true
-            },
-            "EpayEmailAddress": {
-              "description": "Email address to which the epay email was sent.",
-              "type": "string"
-            },
-            "EpayRequestType": {
-              "$ref": "#/definitions/EpayRequestType"
-            },
-            "EpayPhoneNumber": {
-              "description": "Phone number to which the ePay SMS was sent.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ReleaseEpayResponse": {
-      "description": "Release Epay Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "CancelEpayResponse": {
-      "description": "CancelEpay Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "ClaimsEpayRequestStatus": {
-      "description": "Status of the ePay request.",
-      "enum": [
-        "Undefined",
-        "Initiated",
-        "Canceled",
-        "Expired",
-        "Complete"
-      ],
-      "type": "string",
-      "x-emitDefaultValue": true,
-      "x-ms-enum": {
-        "name": "ClaimsEpayRequestStatus",
-        "values": [
-          {
-            "name": "Undefined",
-            "value": 0
-          },
-          {
-            "name": "Initiated",
-            "value": 1
-          },
-          {
-            "name": "Canceled",
-            "value": 2
-          },
-          {
-            "name": "Expired",
-            "value": 3
-          },
-          {
-            "name": "Complete",
-            "value": 4
-          }
-        ]
-      }
-    },
-    "GetStatusByEpayResponse": {
-      "description": "GetStatusByEpay Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [
-        "EpayRequestStatus",
-        "EpayRequestType"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [
-            "EpayRequestStatus",
-            "EpayRequestType"
-          ],
-          "type": "object",
-          "properties": {
-            "AccountId": {
-              "format": "int32",
-              "description": "ClaimsPay Account Identifier.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "ContactId": {
-              "format": "int32",
-              "description": "Company Contact identifier. Only applicable to company accounts.",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "ClaimNumber": {
-              "description": "Claim number associated to the ePay request.",
-              "type": "string"
-            },
-            "EpayEmailAddress": {
-              "description": "Email address to which the ePay email was sent.",
-              "type": "string"
-            },
-            "EpayRequestStatus": {
-              "$ref": "#/definitions/ClaimsEpayRequestStatus"
-            },
-            "EpayRequestDate": {
-              "format": "date-time",
-              "description": "Date the ePay request was initiated.",
-              "type": "string",
-              "x-emitDefaultValue": true
-            },
-            "BankAccountSummary": {
-              "$ref": "#/definitions/BankAccountSummary",
-              "description": "Bank account summary information that was saved with the ePay request."
-            },
-            "EpayRequestType": {
-              "$ref": "#/definitions/EpayRequestType"
-            },
-            "EpayPhoneNumber": {
-              "description": "Phone number to which the ePay SMS was sent.",
-              "type": "string"
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "ResendEpayResponse": {
-      "description": "ResendEpay Response\r\nMethod response will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "SendWebsiteEmailResponse": {
-      "description": "SendWebsiteEmail Response\r\nResponse will include a valid HTTPStatusCode.",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "EmailUpdateSuccess": {
-              "description": "Indicates if the email address was updated successfully.",
-              "type": "boolean",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "UpdateCompanyTypeResponse": {
-      "description": "UpdateCompanyType Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "DeleteAccountResponse": {
-      "description": "DeleteAccount Response",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ClaimsPayResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {}
-        }
-      ],
-      "properties": {}
-    },
-    "RenderViewAsStringRequest": {
-      "required": [
-        "discriminator_RenderViewAsStringRequest"
-      ],
-      "type": "object",
-      "properties": {
-        "AssemblyQualifiedModelName": {
-          "type": "string"
-        },
-        "Payload": {
-          "type": "string"
-        },
-        "TemplateType": {
-          "type": "string"
-        },
-        "discriminator_RenderViewAsStringRequest": {
-          "type": "string"
-        }
-      },
-      "discriminator": "discriminator_RenderViewAsStringRequest"
-    },
-    "RenderViewAsStringResponse": {
-      "required": [
-        "discriminator_RenderViewAsStringResponse"
-      ],
-      "type": "object",
-      "properties": {
-        "StringView": {
-          "type": "string"
-        },
-        "discriminator_RenderViewAsStringResponse": {
-          "type": "string"
-        }
-      },
-      "discriminator": "discriminator_RenderViewAsStringResponse"
     }
   }
 }

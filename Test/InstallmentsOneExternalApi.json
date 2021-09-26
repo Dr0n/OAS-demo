@@ -16,7 +16,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to create a new installment plan that will process payments based upon the schedule which is created.",
-        "operationId": "Enroll",
+        "operationId": "InstallmentPlan_Enroll",
         "consumes": [
           "application/json",
           "text/json",
@@ -46,7 +46,9 @@
               "$ref": "#/definitions/EnrollInstallmentPlanResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Enroll",
+        "x-operation-name-lower": "enroll"
       }
     },
     "/InstallmentPlan/GetByInstallmentPlanId": {
@@ -55,7 +57,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) by the InstallmentPlanId.",
-        "operationId": "GetByInstallmentPlanId",
+        "operationId": "InstallmentPlan_GetByInstallmentPlanId",
         "consumes": [
           "application/json",
           "text/json",
@@ -85,7 +87,9 @@
               "$ref": "#/definitions/GetInstallmentPlanByIdResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetByInstallmentPlanId",
+        "x-operation-name-lower": "getbyinstallmentplanid"
       }
     },
     "/InstallmentPlan/GetByProfileId": {
@@ -94,7 +98,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a ProfileId.",
-        "operationId": "GetByProfileId",
+        "operationId": "InstallmentPlan_GetByProfileId",
         "consumes": [
           "application/json",
           "text/json",
@@ -124,7 +128,9 @@
               "$ref": "#/definitions/GetInstallmentPlansByProfileIdResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetByProfileId",
+        "x-operation-name-lower": "getbyprofileid"
       }
     },
     "/InstallmentPlan/GetByPolicyRefNumber": {
@@ -133,7 +139,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a PolicyRefNumber.",
-        "operationId": "GetByPolicyRefNumber",
+        "operationId": "InstallmentPlan_GetByPolicyRefNumber",
         "consumes": [
           "application/json",
           "text/json",
@@ -163,7 +169,9 @@
               "$ref": "#/definitions/GetInstallmentPlansByPolicyRefNumberResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetByPolicyRefNumber",
+        "x-operation-name-lower": "getbypolicyrefnumber"
       }
     },
     "/InstallmentPlan/GetActiveInstallmentPlanByPolicyRefNumber": {
@@ -172,7 +180,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the current installment plan information (including the InstallmentPlanPaymentDetail) that are associated to a PolicyRefNumber.",
-        "operationId": "GetActiveInstallmentPlanByPolicyRefNumber",
+        "operationId": "InstallmentPlan_GetActiveInstallmentPlanByPolicyRefNumber",
         "consumes": [
           "application/json",
           "text/json",
@@ -202,7 +210,9 @@
               "$ref": "#/definitions/GetActiveInstallmentPlanByPolicyRefNumberResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetActiveInstallmentPlanByPolicyRefNumber",
+        "x-operation-name-lower": "getactiveinstallmentplanbypolicyrefnumber"
       }
     },
     "/InstallmentPlan/GetByCustomerId": {
@@ -211,7 +221,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the installment plan information (including the InstallmentPlanPaymentDetail) on all of the installment plans that are associated to a Customer Id.",
-        "operationId": "GetByCustomerId",
+        "operationId": "InstallmentPlan_GetByCustomerId",
         "consumes": [
           "application/json",
           "text/json",
@@ -241,7 +251,9 @@
               "$ref": "#/definitions/GetInstallmentPlansByCustomerIdResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetByCustomerId",
+        "x-operation-name-lower": "getbycustomerid"
       }
     },
     "/InstallmentPlan/Cancel": {
@@ -250,7 +262,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to cancel existing installment plan.",
-        "operationId": "Cancel",
+        "operationId": "InstallmentPlan_Cancel",
         "consumes": [
           "application/json",
           "text/json",
@@ -280,7 +292,9 @@
               "$ref": "#/definitions/CancelInstallmentPlanResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Cancel",
+        "x-operation-name-lower": "cancel"
       }
     },
     "/InstallmentPlan/Update": {
@@ -289,7 +303,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to update an existing installment plan.",
-        "operationId": "Update",
+        "operationId": "InstallmentPlan_Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -319,7 +333,9 @@
               "$ref": "#/definitions/UpdateInstallmentPlanResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Update",
+        "x-operation-name-lower": "update"
       }
     },
     "/InstallmentPlan/UpdateInstallmentPlanAmount": {
@@ -328,7 +344,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to update remaining amount an existing installment plan.",
-        "operationId": "UpdateInstallmentPlanAmount",
+        "operationId": "InstallmentPlan_UpdateInstallmentPlanAmount",
         "consumes": [
           "application/json",
           "text/json",
@@ -358,7 +374,9 @@
               "$ref": "#/definitions/UpdateInstallmentPlanResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "UpdateInstallmentPlanAmount",
+        "x-operation-name-lower": "updateinstallmentplanamount"
       }
     },
     "/InstallmentPlan/UpdateInstallmentPlanFrequency": {
@@ -367,7 +385,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to update installment frequency an existing installment plan.",
-        "operationId": "UpdateInstallmentPlanFrequency",
+        "operationId": "InstallmentPlan_UpdateInstallmentPlanFrequency",
         "consumes": [
           "application/json",
           "text/json",
@@ -397,7 +415,9 @@
               "$ref": "#/definitions/UpdateInstallmentPlanResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "UpdateInstallmentPlanFrequency",
+        "x-operation-name-lower": "updateinstallmentplanfrequency"
       }
     },
     "/InstallmentPlan/GetPaymentMethodInstallmentsInfoByToken": {
@@ -406,7 +426,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to get the payment method information",
-        "operationId": "GetPaymentMethodInstallmentsInfoByToken",
+        "operationId": "InstallmentPlan_GetPaymentMethodInstallmentsInfoByToken",
         "consumes": [
           "application/json",
           "text/json",
@@ -436,7 +456,9 @@
               "$ref": "#/definitions/GetPaymentMethodInstallmentsInfoByTokenResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "GetPaymentMethodInstallmentsInfoByToken",
+        "x-operation-name-lower": "getpaymentmethodinstallmentsinfobytoken"
       }
     },
     "/InstallmentPlan/ChargePayment": {
@@ -445,7 +467,7 @@
           "InstallmentPlan"
         ],
         "summary": "This method is used to charge payment via external scheduler.",
-        "operationId": "ChargePayment",
+        "operationId": "InstallmentPlan_ChargePayment",
         "consumes": [
           "application/json",
           "text/json",
@@ -476,7 +498,9 @@
               "$ref": "#/definitions/ChargePaymentResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "ChargePayment",
+        "x-operation-name-lower": "chargepayment"
       }
     },
     "/InstallmentPlanCustomerProfile/Update": {
@@ -485,7 +509,7 @@
           "InstallmentPlanCustomerProfile"
         ],
         "summary": "This method is used to update the customer profile that is associated to one or more installment plan(s).",
-        "operationId": "Update",
+        "operationId": "InstallmentPlanCustomerProfile_Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -515,7 +539,9 @@
               "$ref": "#/definitions/UpdateCustomerProfileResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Update",
+        "x-operation-name-lower": "update"
       }
     },
     "/InstallmentPlanPayment/Update": {
@@ -524,7 +550,7 @@
           "InstallmentPlanPayment"
         ],
         "summary": "This method is used to update an individual payment that is in existing installment plan.",
-        "operationId": "Update",
+        "operationId": "InstallmentPlanPayment_Update",
         "consumes": [
           "application/json",
           "text/json",
@@ -554,7 +580,9 @@
               "$ref": "#/definitions/UpdateInstallmentPlanPaymentResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Update",
+        "x-operation-name-lower": "update"
       }
     },
     "/InstallmentPlanPayment/Cancel": {
@@ -563,7 +591,7 @@
           "InstallmentPlanPayment"
         ],
         "summary": "This method is used to cancel existing individual installment plan payment.",
-        "operationId": "Cancel",
+        "operationId": "InstallmentPlanPayment_Cancel",
         "consumes": [
           "application/json",
           "text/json",
@@ -593,7 +621,9 @@
               "$ref": "#/definitions/CancelInstallmentPlanPaymentResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Cancel",
+        "x-operation-name-lower": "cancel"
       }
     }
   },
@@ -782,7 +812,6 @@
     },
     "CustomerProfileDetails": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "properties": {
         "CustomerName": {
@@ -814,7 +843,6 @@
     },
     "InstallmentPlanPaymentMethodDetails": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "properties": {
         "TokenId": {
@@ -993,14 +1021,12 @@
     },
     "EnrollInstallmentPlanResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1290,7 +1316,6 @@
     },
     "TransactionDetails": {
       "description": "Transaction details",
-      "required": [],
       "type": "object",
       "properties": {
         "ProcessedDate": {
@@ -1481,14 +1506,12 @@
     },
     "GetInstallmentPlanByIdResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1525,14 +1548,12 @@
     },
     "GetInstallmentPlansByProfileIdResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1569,14 +1590,12 @@
     },
     "GetInstallmentPlansByPolicyRefNumberResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1613,14 +1632,12 @@
     },
     "GetActiveInstallmentPlanByPolicyRefNumberResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1656,14 +1673,12 @@
     },
     "GetInstallmentPlansByCustomerIdResponse": {
       "description": "A response to a request to get installment plans by CustomerId",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1707,14 +1722,12 @@
     },
     "CancelInstallmentPlanResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -1814,14 +1827,12 @@
     },
     "UpdateInstallmentPlanResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "InstallmentPlanDetails": {
@@ -1921,14 +1932,12 @@
     },
     "GetPaymentMethodInstallmentsInfoByTokenResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "AutoPayEnrolled": {
@@ -1950,7 +1959,6 @@
     },
     "PaymentMethodInstallmentPlanDetails": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "properties": {
         "InstallmentPlanId": {
@@ -2008,14 +2016,12 @@
     },
     "ChargePaymentResponse": {
       "description": "API response for making Installments One Payment",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "PaymentDetails": {
@@ -2028,7 +2034,6 @@
       "properties": {}
     },
     "ChargePaymentDetails": {
-      "required": [],
       "type": "object",
       "properties": {
         "AuthCode": {
@@ -2106,7 +2111,6 @@
     },
     "ProcessedDetailsBase": {
       "description": "Base class for processed payment details",
-      "required": [],
       "type": "object",
       "properties": {
         "Type": {
@@ -2165,14 +2169,12 @@
     },
     "UpdateCustomerProfileResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -2345,14 +2347,12 @@
     },
     "CancelInstallmentPlanPaymentResponse": {
       "description": "TBD",
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/InstallmentsResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -2379,30 +2379,6 @@
         }
       },
       "discriminator": "discriminator_InstallmentsResponseBase"
-    },
-    "GetAllInstallmentPlansByCustomerIdResponse": {
-      "description": "A response to a request to get installment plans by CustomerId",
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/InstallmentsResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "InstallmentPlanDetails": {
-              "description": "An array of the Installment Plans associated to the PolicyRefNumber.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/InstallmentPlanDetails"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
     }
   }
 }

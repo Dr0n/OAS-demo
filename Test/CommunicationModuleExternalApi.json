@@ -16,7 +16,7 @@
           "Messages"
         ],
         "summary": "Schedule message for send",
-        "operationId": "Send",
+        "operationId": "Messages_Send",
         "consumes": [
           "application/json",
           "text/json",
@@ -49,7 +49,9 @@
               "$ref": "#/definitions/SendCommunicationMessageResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Send",
+        "x-operation-name-lower": "send"
       }
     },
     "/Messages/SendBatch": {
@@ -58,7 +60,7 @@
           "Messages"
         ],
         "summary": "Schedule collection of messages for send",
-        "operationId": "SendBatch",
+        "operationId": "Messages_SendBatch",
         "consumes": [
           "application/json",
           "text/json",
@@ -91,7 +93,9 @@
               "$ref": "#/definitions/SendCommunicationMessageBatchResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "SendBatch",
+        "x-operation-name-lower": "sendbatch"
       }
     },
     "/Messages/Get": {
@@ -100,7 +104,7 @@
           "Messages"
         ],
         "summary": "Get message info by ExternalMessageId",
-        "operationId": "Get",
+        "operationId": "Messages_Get",
         "consumes": [],
         "produces": [
           "application/json",
@@ -132,7 +136,9 @@
               "$ref": "#/definitions/GetCommunicationMessageResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "Get",
+        "x-operation-name-lower": "get"
       }
     },
     "/Messages/SendVerificationCode": {
@@ -141,7 +147,7 @@
           "Messages"
         ],
         "summary": "Schedule verification code message for send",
-        "operationId": "SendVerificationCode",
+        "operationId": "Messages_SendVerificationCode",
         "consumes": [
           "application/json",
           "text/json",
@@ -174,7 +180,9 @@
               "$ref": "#/definitions/SendVerificationCodeResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "SendVerificationCode",
+        "x-operation-name-lower": "sendverificationcode"
       }
     },
     "/Messages/ValidateVerificationCode": {
@@ -183,7 +191,7 @@
           "Messages"
         ],
         "summary": "Validate verification code",
-        "operationId": "ValidateVerificationCode",
+        "operationId": "Messages_ValidateVerificationCode",
         "consumes": [
           "application/json",
           "text/json",
@@ -216,7 +224,9 @@
               "$ref": "#/definitions/ValidateVerificationCodeResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "ValidateVerificationCode",
+        "x-operation-name-lower": "validateverificationcode"
       }
     },
     "/Messages/IsVerificationCodeValidated": {
@@ -225,7 +235,7 @@
           "Messages"
         ],
         "summary": "Is verification code validated",
-        "operationId": "IsVerificationCodeValidated",
+        "operationId": "Messages_IsVerificationCodeValidated",
         "consumes": [],
         "produces": [
           "application/json",
@@ -264,7 +274,9 @@
               "$ref": "#/definitions/IsVerificationCodeValidatedResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "IsVerificationCodeValidated",
+        "x-operation-name-lower": "isverificationcodevalidated"
       }
     },
     "/Messages/CancelPayByLink": {
@@ -273,7 +285,7 @@
           "Messages"
         ],
         "summary": "Cancels pay by link",
-        "operationId": "CancelPayByLink",
+        "operationId": "Messages_CancelPayByLink",
         "consumes": [
           "application/json",
           "text/json",
@@ -306,7 +318,9 @@
               "$ref": "#/definitions/CancelPayByLinkMessageResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "CancelPayByLink",
+        "x-operation-name-lower": "cancelpaybylink"
       }
     },
     "/MessageTemplates/GetTemplatesInfo": {
@@ -315,7 +329,7 @@
           "MessageTemplates"
         ],
         "summary": "Get available template codes in the portal identified by authentication key",
-        "operationId": "GetTemplatesInfo",
+        "operationId": "MessageTemplates_GetTemplatesInfo",
         "consumes": [],
         "produces": [
           "application/json",
@@ -340,184 +354,9 @@
               "$ref": "#/definitions/GetCommunicationTemplateInfoResponse"
             }
           }
-        }
-      }
-    },
-    "/Receipt/GenerateReceiptData": {
-      "post": {
-        "tags": [
-          "Receipt"
-        ],
-        "operationId": "GenerateReceiptData",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "parameters": [
-          {
-            "name": "request",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/GenerateReceiptInfoRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/GenerateReceiptInfoResponse"
-            }
-          }
-        }
-      }
-    },
-    "/SendingConfirmation/AmazonSnsSubscription": {
-      "post": {
-        "tags": [
-          "SendingConfirmation"
-        ],
-        "summary": "Internal endpoint for consume AWS SNS notifications about sending status",
-        "operationId": "AmazonSnsSubscription",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data",
-          "text/plain"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "parameters": [
-          {
-            "name": "json",
-            "in": "body",
-            "description": "JSON as string (due to AWS send text/plain request)",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          }
-        }
-      }
-    },
-    "/SendingConfirmation/TwilioPostBack/{id}": {
-      "post": {
-        "tags": [
-          "SendingConfirmation"
-        ],
-        "operationId": "TwilioPostBack",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "name": "request",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/TwilioPostbackRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          }
-        }
-      }
-    },
-    "/SendingConfirmation/PlivoPostBack/{id}": {
-      "post": {
-        "tags": [
-          "SendingConfirmation"
-        ],
-        "operationId": "PlivoPostBack",
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml",
-          "multipart/form-data"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "name": "request",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/PlivoPostbackRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object"
-            }
-          }
-        }
+        },
+        "x-operation-name": "GetTemplatesInfo",
+        "x-operation-name-lower": "gettemplatesinfo"
       }
     },
     "/Subscriptions/GetSubscriptionDetails": {
@@ -526,7 +365,7 @@
           "Subscriptions"
         ],
         "summary": "Get subscription statuses by phone number/email/customer id/external customer id",
-        "operationId": "GetSubscriptionDetails",
+        "operationId": "Subscriptions_GetSubscriptionDetails",
         "consumes": [
           "application/json",
           "text/json",
@@ -562,7 +401,9 @@
               }
             }
           }
-        }
+        },
+        "x-operation-name": "GetSubscriptionDetails",
+        "x-operation-name-lower": "getsubscriptiondetails"
       }
     },
     "/Subscriptions/OptOutFromText": {
@@ -571,7 +412,7 @@
           "Subscriptions"
         ],
         "summary": "Opt out customer phone number from text notifications",
-        "operationId": "OptOutFromText",
+        "operationId": "Subscriptions_OptOutFromText",
         "consumes": [
           "application/json",
           "text/json",
@@ -604,7 +445,9 @@
               "$ref": "#/definitions/OptOutFromTextResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "OptOutFromText",
+        "x-operation-name-lower": "optoutfromtext"
       }
     },
     "/Subscriptions/OptOutFromEmail": {
@@ -613,7 +456,7 @@
           "Subscriptions"
         ],
         "summary": "Opt out customer email from notifications",
-        "operationId": "OptOutFromEmail",
+        "operationId": "Subscriptions_OptOutFromEmail",
         "consumes": [
           "application/json",
           "text/json",
@@ -646,7 +489,9 @@
               "$ref": "#/definitions/OptOutFromEmailResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "OptOutFromEmail",
+        "x-operation-name-lower": "optoutfromemail"
       }
     },
     "/Subscriptions/OptOutFromPhoneCall": {
@@ -655,7 +500,7 @@
           "Subscriptions"
         ],
         "summary": "Opt out customer phone number from phone calls",
-        "operationId": "OptOutFromPhoneCall",
+        "operationId": "Subscriptions_OptOutFromPhoneCall",
         "consumes": [
           "application/json",
           "text/json",
@@ -688,7 +533,9 @@
               "$ref": "#/definitions/OptOutFromPhoneCallResponse"
             }
           }
-        }
+        },
+        "x-operation-name": "OptOutFromPhoneCall",
+        "x-operation-name-lower": "optoutfromphonecall"
       }
     }
   },
@@ -948,14 +795,12 @@
       "discriminator": "discriminator_SendCommunicationMessage"
     },
     "SendCommunicationMessageBatchResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "Results": {
@@ -1007,14 +852,12 @@
       }
     },
     "GetCommunicationMessageResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "ExecutionResultDescription": {
@@ -1360,14 +1203,12 @@
       }
     },
     "IsVerificationCodeValidatedResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "IsValidated": {
@@ -1407,14 +1248,12 @@
       "properties": {}
     },
     "CancelPayByLinkMessageResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -1434,14 +1273,12 @@
       }
     },
     "GetCommunicationTemplateInfoResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {
             "TemplatesInfo": {
@@ -1468,92 +1305,6 @@
         },
         "Channel": {
           "$ref": "#/definitions/CommunicationMessageChannelType"
-        }
-      }
-    },
-    "GenerateReceiptInfoRequest": {
-      "required": [
-        "ClientId",
-        "ReceiptTemplateKey",
-        "ReceiptEmailParameters",
-        "PaymentsInfo",
-        "PortalOneAuthenticationKey"
-      ],
-      "type": "object",
-      "properties": {
-        "ClientId": {
-          "format": "int32",
-          "type": "integer",
-          "x-emitDefaultValue": true
-        },
-        "ReceiptTemplateKey": {
-          "type": "string"
-        },
-        "ReceiptEmailParameters": {
-          "type": "string"
-        },
-        "PaymentsInfo": {
-          "type": "string"
-        },
-        "PortalOneAuthenticationKey": {
-          "type": "string"
-        }
-      }
-    },
-    "GenerateReceiptInfoResponse": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "ReceiptBody": {
-          "type": "string"
-        },
-        "ReceiptAttachment": {
-          "format": "byte",
-          "type": "string"
-        },
-        "ResponseCode": {
-          "description": "Response Code",
-          "type": "string"
-        },
-        "ResponseMessage": {
-          "description": "Response Message",
-          "type": "string"
-        }
-      }
-    },
-    "TwilioPostbackRequest": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "To": {
-          "type": "string"
-        },
-        "From": {
-          "type": "string"
-        },
-        "MessageStatus": {
-          "type": "string"
-        },
-        "ErrorCode": {
-          "type": "string"
-        }
-      }
-    },
-    "PlivoPostbackRequest": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "To": {
-          "type": "string"
-        },
-        "From": {
-          "type": "string"
-        },
-        "Status": {
-          "type": "string"
-        },
-        "ErrorCode": {
-          "type": "string"
         }
       }
     },
@@ -1716,14 +1467,12 @@
       "properties": {}
     },
     "OptOutFromTextResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -1757,14 +1506,12 @@
       "properties": {}
     },
     "OptOutFromEmailResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -1798,14 +1545,12 @@
       "properties": {}
     },
     "OptOutFromPhoneCallResponse": {
-      "required": [],
       "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/ApiResponseBase"
         },
         {
-          "required": [],
           "type": "object",
           "properties": {}
         }
@@ -1827,76 +1572,6 @@
         }
       },
       "discriminator": "discriminator_ApiRequestBase"
-    },
-    "GetAllSubscriptionDetailsRequest": {
-      "required": [
-        "PortalOneAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ApiRequestBase"
-        },
-        {
-          "required": [
-            "PortalOneAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "CustomerIdList": {
-              "description": "Collection of Customer Id",
-              "type": "array",
-              "items": {
-                "format": "uuid",
-                "type": "string",
-                "example": "00000000-0000-0000-0000-000000000000"
-              }
-            },
-            "ExternalCustomerIdList": {
-              "description": "Collection of External Customer ID",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "GetKeyPerformanceIndicatorsRequest": {
-      "required": [
-        "StartDate",
-        "EndDate",
-        "PortalOneAuthenticationKey"
-      ],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ApiRequestBase"
-        },
-        {
-          "required": [
-            "StartDate",
-            "EndDate",
-            "PortalOneAuthenticationKey"
-          ],
-          "type": "object",
-          "properties": {
-            "StartDate": {
-              "format": "date-time",
-              "type": "string",
-              "x-nullable": true
-            },
-            "EndDate": {
-              "format": "date-time",
-              "type": "string",
-              "x-nullable": true
-            }
-          }
-        }
-      ],
-      "properties": {}
     },
     "OptOutRequestBase": {
       "required": [
@@ -1948,115 +1623,6 @@
         }
       },
       "discriminator": "discriminator_ApiResponseBase"
-    },
-    "GetKeyPerformanceIndicatorsResponse": {
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ApiResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "MessagesSent": {
-              "format": "int32",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "CustomersReached": {
-              "format": "int32",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "CustomersOptedIn": {
-              "format": "int32",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            },
-            "CustomersOptedOut": {
-              "format": "int32",
-              "type": "integer",
-              "x-emitDefaultValue": true
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "GetAllSubscriptionDetailsResponse": {
-      "required": [],
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ApiResponseBase"
-        },
-        {
-          "required": [],
-          "type": "object",
-          "properties": {
-            "SubscriptionDetailsList": {
-              "description": "Collection of Subscription Details",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SubscriptionAllDetails"
-              }
-            }
-          }
-        }
-      ],
-      "properties": {}
-    },
-    "SubscriptionAllDetails": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "CustomerId": {
-          "format": "uuid",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000",
-          "x-emitDefaultValue": true
-        },
-        "ExternalCustomerId": {
-          "type": "string"
-        },
-        "Contacts": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CommunicationModuleContact"
-          }
-        },
-        "ResultCode": {
-          "type": "string"
-        },
-        "ResultMessage": {
-          "type": "string"
-        }
-      }
-    },
-    "CommunicationModuleContact": {
-      "required": [],
-      "type": "object",
-      "properties": {
-        "CustomerName": {
-          "type": "string"
-        },
-        "Status": {
-          "type": "string"
-        },
-        "PhoneNumber": {
-          "type": "string"
-        },
-        "EmailAddress": {
-          "type": "string"
-        },
-        "LastSentDateUtc": {
-          "format": "date-time",
-          "type": "string",
-          "x-nullable": true
-        }
-      }
     }
   }
 }
