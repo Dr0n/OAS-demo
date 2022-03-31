@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "sd fsd fModified Swagger Petstore API#2 6/12/2021 11:24 AMsdf sd fsd fsdf",
+    "title": "sd fsd fModified Swagger Petstore API#2 3/31/2021 4:38 AMsdf sd fsd fsdf",
     "license": {
       "name": "MIT"
     }
@@ -23,6 +23,16 @@
         "parameters": [
           {
             "name": "limit",
+            "in": "query",
+            "description": "How many items to return at one time (max 100)",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "limit2",
             "in": "query",
             "description": "How many items to return at one time (max 100)",
             "required": false,
