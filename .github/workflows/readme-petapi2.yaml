@@ -1,0 +1,22 @@
+# This is a workflow to sync OAS files to README
+name: Sync OAS to ReadMe for API2
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches:
+    - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: readmeio/github-readme-sync@v2
+        with:
+          readme-oas-key: ${{ secrets.README_OAS_KEY_API2 }}
+          oas-file-path: './petstore-API-2.json'
