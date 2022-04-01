@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: readmeio/rdme@vXX
+      - uses: readmeio/rdme@7.0.2
         with:
-          rdme: openapi './petstore-API-2.json' --key=Iyr2oDjjmcE0cKYrpBwjxx3r9y1DgDdy --id=API_DEFINITION_ID
+          rdme: openapi './petstore-API-2.json' --key=Iyr2oDjjmcE0cKYrpBwjxx3r9y1DgDdy --id=60f7033c85ffcd001603ce27
